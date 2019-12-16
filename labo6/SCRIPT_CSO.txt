@@ -1,0 +1,33 @@
+#!/bin/bash
+
+#Affiche l'adresse Ip au Démarrage
+
+echo "\4" > etc/issue;
+
+#Crée un utilisateur de mon prénom avec un dossier home
+
+/usr/sbin/useradd -m -d /homme/YOULIAN YOULIAN
+
+#Attridu un mot de passe à l'usager
+
+echo -e "tge243\ntge243" | passwd YOULIAN
+
+#Fait partit du groupe sudo
+
+sudo usermod -aG YOULIAN
+
+#Pas besoin de demander un mot de passe lors de l'utilisation de sudo pour l'utilisateur
+
+echo 'YOULIAN ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
+
+#Generer une paire de clef ssh
+
+ssh-keygen -b 2048 -t rsa -f /home/YOULIAN/mykey -q -P "" 
+
+#N'accepte pas les connection ave Root
+
+sudo sed -i 's/PermitRootLogin yes/PermitRootLogin no/g' /etc/ssh/sshd_config
+
+#Seul l'utilisateur peut se connecter
+
+echo "AllowUsers YOULIAN" >> /etc/ssh/sshd_config
