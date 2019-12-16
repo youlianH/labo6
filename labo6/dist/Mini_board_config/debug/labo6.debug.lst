@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.10 build 88905656 
-                                                                                               Sun Dec 15 12:00:49 2019
+                                                                                               Sun Dec 15 12:00:59 2019
 
 Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1 
      1                           	processor	18F45K20
@@ -173,25 +173,25 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
    159  0024DB  00                 	db	0
    160  0000                     _PORTAbits	set	3968
    161  0000                     _PORTD	set	3971
-   162  0000                     _RCREG	set	4014
-   163  0000                     _TXREG	set	4013
-   164  0000                     _RCSTAbits	set	4011
-   165  0000                     _TXSTAbits	set	4012
-   166  0000                     _BAUDCONbits	set	4024
-   167  0000                     _SPBRG	set	4015
-   168  0000                     _SPBRGH	set	4016
-   169  0000                     _TRISCbits	set	3988
-   170  0000                     _ADRESH	set	4036
-   171  0000                     _ADCON2bits	set	4032
-   172  0000                     _ADCON1	set	4033
-   173  0000                     _ADCON0bits	set	4034
-   174  0000                     _ANSELbits	set	3966
-   175  0000                     _TRISA	set	3986
-   176  0000                     _ANSEL	set	3966
-   177  0000                     _TRISB	set	3987
-   178  0000                     _ANSELH	set	3967
-   179  0000                     _TRISD	set	3989
-   180  0000                     _PORTBbits	set	3969
+   162  0000                     _TRISCbits	set	3988
+   163  0000                     _ANSELbits	set	3966
+   164  0000                     _TRISA	set	3986
+   165  0000                     _ANSEL	set	3966
+   166  0000                     _TRISB	set	3987
+   167  0000                     _ANSELH	set	3967
+   168  0000                     _TRISD	set	3989
+   169  0000                     _PORTBbits	set	3969
+   170  0000                     _RCREG	set	4014
+   171  0000                     _TXREG	set	4013
+   172  0000                     _RCSTAbits	set	4011
+   173  0000                     _TXSTAbits	set	4012
+   174  0000                     _BAUDCONbits	set	4024
+   175  0000                     _SPBRG	set	4015
+   176  0000                     _SPBRGH	set	4016
+   177  0000                     _ADRESH	set	4036
+   178  0000                     _ADCON2bits	set	4032
+   179  0000                     _ADCON1	set	4033
+   180  0000                     _ADCON0bits	set	4034
    181  0000                     _RCIF	set	31989
    182                           
    183                           	psect	smallconst
@@ -6549,7 +6549,7 @@ Auto Spaces:
     BANK2           256      0       0
     BANK3           256      0       0
     BANK4           256      0       0
-    BANK5           256      0       0
+    BANK5           239      0       0
 
 Pointer List with Targets:
 
@@ -6902,33 +6902,43 @@ Call Graph Tables:
 
  Address spaces:
 Name               Size   Autos  Total    Cost      Usage
-BIGRAM             5FF      0       0      17        0.0%
+BIGRAM             5EE      0       0      16        0.0%
 EEDATA             100      0       0       0        0.0%
-BITBANK5           100      0       0      16        0.0%
-BANK5              100      0       0      14        0.0%
-BITBANK4           100      0       0      12        0.0%
-BANK4              100      0       0      13        0.0%
-BITBANK3           100      0       0      10        0.0%
-BANK3              100      0       0      11        0.0%
-BITBANK2           100      0       0       8        0.0%
-BANK2              100      0       0       9        0.0%
-BITBANK1           100      0       0       6        0.0%
-BANK1              100      0      94       7       57.8%
-BITBANK0            A0      0       0       4        0.0%
-BANK0               A0     29      81       5       80.6%
+BITBANK4           100      0       0      11        0.0%
+BANK4              100      0       0      12        0.0%
+BITBANK3           100      0       0       9        0.0%
+BANK3              100      0       0      10        0.0%
+BITBANK2           100      0       0       7        0.0%
+BANK2              100      0       0       8        0.0%
+BITBANK1           100      0       0       5        0.0%
+BANK1              100      0      94       6       57.8%
+BITBANK5            EF      0       0      15        0.0%
+BANK5               EF      0       0      13        0.0%
+BITBANK0            A0      0       0       3        0.0%
+BANK0               A0     29      81       4       80.6%
 BITCOMRAM           5F      0       0       0        0.0%
 COMRAM              5F      0       0       1        0.0%
+BITSFR_5             0      0       0     200        0.0%
+SFR_5                0      0       0     200        0.0%
+BITSFR_4             0      0       0     200        0.0%
+SFR_4                0      0       0     200        0.0%
+BITSFR_3             0      0       0     200        0.0%
+SFR_3                0      0       0     200        0.0%
+BITSFR_2             0      0       0     200        0.0%
+SFR_2                0      0       0     200        0.0%
+BITSFR_1             0      0       0     200        0.0%
+SFR_1                0      0       0     200        0.0%
 BITSFR               0      0       0     200        0.0%
 SFR                  0      0       0     200        0.0%
 STACK                0      0       0       2        0.0%
 NULL                 0      0       0       0        0.0%
-ABS                  0      0     115      15        0.0%
-DATA                 0      0     115       3        0.0%
+ABS                  0      0     115      14        0.0%
+DATA                 0      0     115      17        0.0%
 CODE                 0      0       0       0        0.0%
 
 
 Microchip Technology PIC18 Macro Assembler V2.10 build 88905656 
-Symbol Table                                                                                   Sun Dec 15 12:00:49 2019
+Symbol Table                                                                                   Sun Dec 15 12:00:59 2019
 
  __end_of_calculToucheCombien 114E                            l82 25B0                            l74 1EAC  
                           l85 252A                            l88 253A                            l97 1CA0  

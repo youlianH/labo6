@@ -6,7 +6,7 @@
   200008h - 2FFFFFh
   30000Eh - 30003Fh
   
- dist/Mini_board_config/production\labo6.production.hex ranges:
+ dist/Mini_board_config/debug\labo6.debug.hex ranges:
   0h - 3h
   600h - 2613h
   200000h - 200007h
@@ -23,7 +23,7 @@
   T = Trailing code
   & = Find & replace opcode
   X = Find & delete opcode
-  1 = dist/Mini_board_config/production\labo6.production.hex
+  1 = dist/Mini_board_config/debug\labo6.debug.hex
 00000000: 1111------------------------------------------------------------
 00000600: 1111111111111111111111111111111111111111111111111111111111111111
 00000640: 1111111111111111111111111111111111111111111111111111111111111111

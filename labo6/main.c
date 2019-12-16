@@ -1,7 +1,7 @@
  /*
- * @file main.c  
- * @author 
- * @date   
+ * @file main.c,Labo6  
+ * @author Youlan Houehounou
+ * @date 16 décembre 2019  
  * @brief  
  *
  * @version 1.0
@@ -25,9 +25,9 @@
 #define _XTAL_FREQ 1000000 //Constante utilisée par __delay_ms(x). Doit = fréq interne du uC
 #define DELAI_TMR0 0x0BDC 
 #define NB_LIGNE 4  //afficheur LCD 4x20
-#define NB_COL 20
+#define NB_COL 20 // Nombre de collone que contient l'afficheur 7 segments
 #define AXE_X 7  //canal analogique de l'axe x
-#define AXE_Y 6
+#define AXE_Y 6 // canal analogique de l'axe y
 #define PORT_SW PORTBbits.RB1 //sw de la manette
 #define TUILE 1 //caractère cgram d'une tuile
 #define MINE 2 //caractère cgram d'une mine
@@ -42,7 +42,6 @@ bool demine(char x, char y);
 void enleveTuilesAutour(char x, char y);
 bool gagne(int* pMines);
 void afficheTabVue(void);
- 
 
 /****************** VARIABLES GLOBALES ****************************************/
 char m_tabVue[NB_LIGNE][NB_COL+1]; //Tableau des caractères affichés au LCD
@@ -56,36 +55,31 @@ void main(void)
     lcd_init();
     initTabVue();
     lcd_curseurHome();
-    
+ /************************************** Variable locale du Main***************/
     int NBMines=12;
-    char x =1;
-    char y = 1;
+    char x =(NB_COL/2);
+    char y = (NB_LIGNE/2);
+ /*****************************************************************************/   
     lcd_putMessage("LAB6 Youlian Houehounou");
     rempliMines(NBMines);
     metToucheCombien();
     afficheTabVue();
-    
     while(1) //boucle principale
     {
-       deplace(&x,&y);
-        if (PORT_SW==true)
+        deplace(&x,&y);//Méthode qui permet de déplacer le cuseur sur l'ecran LCD
+        if (PORT_SW ==false)
         {
-            if((demine(x,y)==false)||(gagne(NBMines)==true))
+            if((demine(x,y)==false)||(gagne(&NBMines)==true))
             {
                 afficheTabVue();
+                while(PORT_SW==true);
+                initTabVue();
+                rempliMines(NBMines);
+                metToucheCombien();
+                afficheTabVue();
             }
-            while (PORT_SW==true);
-            initTabVue();
-            rempliMines(NBMines);
-            metToucheCombien();
-            afficheTabVue();
         }
         __delay_ms(100);
-        /*
-        rempliMines(20);
-        metToucheCombien();   
-       afficheTabVue();
-        */
     }
 }
 
@@ -97,9 +91,9 @@ void main(void)
 void initialisation(void)
 {
     TRISD = 0; //Tout le port D en sortie
-
-//    ANSELH = 0;  // RB0 à RB4 en mode digital. Sur 18F45K20 AN et PortB sont sur les memes broches
-//    TRISB = 0xFF; //tout le port B en entree
+    
+    ANSELH = 0;  // RB0 à RB4 en mode digital. Sur 18F45K20 AN et PortB sont sur les memes broches
+    TRISB = 0xFF; //tout le port B en entree
   
     ANSEL = 0;  // PORTA en mode digital. Sur 18F45K20 AN et PortA sont sur les memes broches
     TRISA = 0; //tout le port A en sortie
@@ -141,7 +135,7 @@ void initTabVue(void)
     int j=0;
     for ( i=0;i<NB_LIGNE;i++)
     {
-        for (j=0;j<(NB_COL+1);j++)
+        for (j=0;j<=(NB_COL);j++)
         {
             if(i<20)
             {
@@ -172,15 +166,15 @@ void rempliMines(int nb)
     char y =0;
     char nbMine =0;
     
-    for (int i=0;i<NB_LIGNE;i++)//La boucle mets les valeurs des lignes su tableau tabLcd à false.
+    for (int i=0;i<NB_LIGNE;i++)//La boucle mets le codes ASCII d'un espace dans chaque adresse de m_tabMines[][]
     {
-        for (int j=0;j<NB_COL;j++)//La boucle met les valeurs des colonnes du tableau tablcd à false.
+        for (int j=0;j<NB_COL;j++)
         {
             m_tabMines[i][j]=32;
         }
     }  
     
-    while (nbMine!=nb)
+    while (nbMine!=nb)//Cette boucle attiue une position alléatoire à chaque minue dans le tableau m_tabMines[][]
     {
         x = rand()%20;
         y = rand()%4;
@@ -216,11 +210,11 @@ void metToucheCombien(void)
                 mine = calculToucheCombien(i,j);
                 if (mine==0)
                 {
-                    m_tabMines[i][j]=32;
+                    m_tabMines[i][j]=32;//Cette commende attribue le code ASCII d'un espace au tableau m_tabMines[i][j] 
                 }
                 if (mine>0)
                 {
-                    m_tabMines[i][j]= (mine+48);
+                    m_tabMines[i][j]= (mine+48);//cette commande attibue la valeur ASCII du nombre de mine auquelle la case touche.
                 }
             }  
         }
@@ -357,7 +351,6 @@ char calculToucheCombien(int ligne, int colonne)
  */
 void deplace(char* x, char* y)
 {
-    lcd_gotoXY( *x,*y);
     if(getAnalog(AXE_X)<110)//Lorsque l'analogue est dirigé vers la droite la position du cursseur augmente de 1.
     {
        (*x)= (*x) +1;
@@ -376,21 +369,21 @@ void deplace(char* x, char* y)
     }
     if(getAnalog(AXE_Y)<110)
     {
-        (*y)= (*y) -1;
-        if (*y < 1)//Lorsque le cursseur dépasse le 1e segment du LCD il réapparaît sur le 4er segment.
+        (*y)= (*y) +1;
+        if ((*y )> 4)//Lorsque le cursseur dépasse 4eme 1e segment du LCD il réapparaît sur le 1er segment.
         {
-            *y=4;
+            (*y)=1;
         }
     }
-    else if(getAnalog(AXE_X)>200)
+    else if(getAnalog(AXE_Y)>200)
     {
-        (*y)=(*y)+1;
-        if (*y > 4)//Lorsque le cursseur dépasse le 20e segment du LCD il réapparaît sur le 1er segment.
+        (*y)=(*y) - 1;
+        if (*y < 1)//Lorsque le cursseur dépasse le 1 segment du LCD il réapparaît sur le 4eme segment.
         {
-            *y=1;
-        }   
+            (*y)=4;
+        }
     }
-    lcd_gotoXY(*x ,*y);
+    lcd_gotoXY(*x ,*y); 
 }
  
 /*
@@ -403,18 +396,25 @@ void deplace(char* x, char* y)
  */
 bool demine(char x, char y)
 {
+    x=x-1;//Position du curseur dans le tableau m_tabVue[y][x] et m_tabMines[y][x]
+    y=y-1;//Position du curseur dans tableau m_tabVue[y][x] et m_tabMines[y][x]
     bool mine= true;
-    
-    if (m_tabMines[y][x]== MINE)
+    if (m_tabMines[(y)][(x)]== MINE)
     {
-        mine=false;
+        mine=false;//Lorsqu'on selectionne avec l'annalogue une case qui contient de mine sur l'afficheur LCD.
     }
-    if (m_tabMines[y][x]!= MINE)
+    else if ((m_tabMines[(y)][(x)]!= MINE)&&(m_tabMines[(y)][(x)]==32))
     {
-        mine=true;
-        enleveTuilesAutour(x,y);
+        mine=true;//lorsqu'on selectionne, avec l'annalogue, une case qui contient un espace et qui ne contient pas de mine sur l'afficheur LCD.
+        enleveTuilesAutour((x),(y));//Cette methode dévoille les cases qui ne contienne pas de mine autoure de m_tabVu[y][x]
     }
-    return mine; 
+    else
+    {
+        mine=true;//Lorsqu'on selectionne, avec l'annalogue, une case qui contient une chiffre
+        m_tabVue[y][x]=m_tabMines[y][x];
+        lcd_ecritChar(m_tabVue[y][x]);//Cette commande affiche le chiffre sur l'afficheur LCD
+    }
+    return mine;    
 }
  
 /*
@@ -423,59 +423,40 @@ bool demine(char x, char y)
  * @param char x, char y Les positions X et y sur l'afficheur LCD.
  * @return vrai s'il y avait une mine, faux sinon
  */
-void enleveTuilesAutour(char x, char y)
+ void enleveTuilesAutour(char x, char y)
 {
-    int i=0;
-    int j=0; 
+    int i=-1; 
     int mine=0;
-    mine = calculToucheCombien(y,x);
-    if (mine==0)
+    
+    m_tabVue[y][x]=32;
+    for ( i=-1;i<=1;i++)
     {
-        m_tabVue[y][x]=32;
-    }
-    if (mine>0)
-    {
-        m_tabVue[y][x]= (mine+48);
-        for ( i=-1;i<=1;i++)
+        if((y==0)&&(i==-1))//Condition pour ne pas copier une case a l'externieur de m_tabMines[y+i][x+j] dans m_tabVue[y+i][x+j]
         {
-            for (j=-1;j<=1;j++)
+            i=0;
+        }
+        for(int j=-1;j<=1;j++)
+        { 
+            if((x==0)&&(j==-1))//Condition pour ne pas copier une case a l'externieur de m_tabMines[y+i][x+j] dans m_tabVue[y+i][x+j]
+            {   
+                j=0;
+            } 
+            m_tabVue[y+i][x+j]= m_tabMines[y+i][x+j];
+            lcd_gotoXY(x+1+j,y+i+1);
+            lcd_ecritChar(m_tabVue[y+i][x+j]);
+            if((x==19)&&(j==0))//Condition pour ne pas copier une case a l'externieur de m_tabMines[y+i][x+j] dans m_tabVue[y+i][x+j]
             {
-                if (m_tabMines[y+i][x+j]!=mine)
-                {
-                        strcpy (m_tabVue[y+i][x+j],m_tabMines[y+i][x+j]);
-                }
+                j=1;
             }
         }
-    }         
-     /*
-    if(((y<3)&&(y>0)&&(x>0)&&(x<20)))
-    {
-        for(j=-1;j<=1;j++)
+        if((y==3)&&(i==0))//Condition pour ne pas copier une case a l'externieur de m_tabMines[y+i][x+j] dans m_tabVue[y+i][x+j]
         {
-            for(i=-1;i<=1;i++)
-            {
-                if ((m_tabMines[y+(j)][x+(i)]!=MINE)&&(m_tabMines[y+(j)][x+(i)]!=32))
-                {
-                    strcpy (m_tabVue[y+j][x+i],m_tabMines[y+(j)][x+i]);
-                }
-            }
+            i=1;
         }
     }
-     if((y==0)&&(x==0))
-     {
-        if((m_tabMines[y][x+1]!=MINE)&&(m_tabMines[y][x+1]!=32))
-        {
-            strcpy (m_tabVue[y][x+1],m_tabMines[y][x+1]);
-        }
-        for(j=0;j<=1;j++)
-        {
-            if((m_tabMines[y+1][x+(j)]=!MINE)&&(m_tabMines[y+1][x+j]!=32))
-            {
-                strcpy (m_tabVue[y][x+j],m_tabMines[y][x+j]);
-            }
-        }
-     }*/
-}
+}       
+     
+
  
 /*
  * @brief Vérifie si gagné. On a gagné quand le nombre de tuiles non dévoilées
@@ -490,7 +471,7 @@ bool gagne(int* pMines)
     bool gagne= false;
     int i=0;
     int j=0;
-    for(i=0;i<NB_LIGNE;i++)
+    for(i=0;i<NB_LIGNE;i++)//Cette boucle permet de compter le nombre de Tuille restant dans le tableau m_tabVue[i][j]
     {
         for(j=0;j<NB_COL;j++)
         {
@@ -501,13 +482,15 @@ bool gagne(int* pMines)
         }    
     } 
     if (*pMines == nb_Tuile)
-    {
-        gagne=true;
+    {   
+        lcd_effaceAffichage(); 
+        (*pMines)=(*pMines) +1;//Cette commande agmente le nombre de mine que contiendra le tableau m_tabMines[][].
+        gagne=true;//Lorsque le nombre de mine dans le tableau m_tabMines[][] est égale au nombre de tuile non dévoillé dans m_tabVue.
     }
     return gagne;
 }
 /*
- * @brief
+ * @brief Affiche le contenue de de m_tabVue sur l'afficheur LCD
  * @param rien
  * @return rien
  */
@@ -517,6 +500,6 @@ void afficheTabVue(void)
     for(i=0;i<4;i++)//Cette commande affiche le contenu du tableau m_aliens[][] sur l'afficheur LCD.
     {
         lcd_gotoXY( 1, i+1);
-        lcd_putMessage(m_tabMines[i]);  
+        lcd_putMessage(m_tabVue[i]);//Cette commande affiche le contenue de m_tabVue sur l'afficheur LCD.
     }
 }
