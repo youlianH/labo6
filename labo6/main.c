@@ -2,7 +2,7 @@
  * @file main.c,Labo6  
  * @author Youlan Houehounou
  * @date 16 décembre 2019  
- * @brief  
+ * @brief  Ce programme est une version simplifier du jeu déminueur que l'on joue sur un afficheur LCD.
  *
  * @version 1.0
  * Environnement:
@@ -16,7 +16,7 @@
 #include <stdbool.h>  // pour l'utilisation du type bool
 #include <conio.h>
 #include <string.h> //pour strcmp 
-#include "Lcd4Lignes.h"
+#include "Lcd4Lignes.h"// pour LCD
 #include "serie.h" 
 #include <stdio.h>
 #include <stdlib.h>
@@ -56,9 +56,9 @@ void main(void)
     initTabVue();
     lcd_curseurHome();
  /************************************** Variable locale du Main***************/
-    int NBMines=12;
-    char x =(NB_COL/2);
-    char y = (NB_LIGNE/2);
+    int NBMines=12;//Nombre de mine que contiend le Jeu
+    char x =(NB_COL/2);// Position du cuseur sur la collonne de l'écran LCD
+    char y = (NB_LIGNE/2);// Position du cusrseur sur la ligne de l'écran LCD
  /*****************************************************************************/   
     lcd_putMessage("LAB6 Youlian Houehounou");
     rempliMines(NBMines);
@@ -91,18 +91,14 @@ void main(void)
 void initialisation(void)
 {
     TRISD = 0; //Tout le port D en sortie
-    
     ANSELH = 0;  // RB0 à RB4 en mode digital. Sur 18F45K20 AN et PortB sont sur les memes broches
     TRISB = 0xFF; //tout le port B en entree
-  
     ANSEL = 0;  // PORTA en mode digital. Sur 18F45K20 AN et PortA sont sur les memes broches
     TRISA = 0; //tout le port A en sortie
      //Configuration du port analogique
+    ADCON1 = 0; //Vref+ = VDD et Vref- = VSS
     ANSELbits.ANS7 = 1;  //A7 en mode analogique
- 
     ADCON0bits.ADON = 1; //Convertisseur AN à on
-	ADCON1 = 0; //Vref+ = VDD et Vref- = VSS
- 
     ADCON2bits.ADFM = 0; //Alignement à gauche des 10bits de la conversion (8 MSB dans ADRESH, 2 LSB à gauche dans ADRESL)
     ADCON2bits.ACQT = 0;//7; //20 TAD (on laisse le max de temps au Chold du convertisseur AN pour se charger)
     ADCON2bits.ADCS = 0;//6; //Fosc/64 (Fréquence pour la conversion la plus longue possible)
@@ -135,14 +131,13 @@ void initTabVue(void)
     int j=0;
     for ( i=0;i<NB_LIGNE;i++)
     {
-        for (j=0;j<=(NB_COL);j++)
+        for (j=0;j<=(NB_COL);j++)//Cette boucle attribue le code ASCII pour une tuile dans les case 0 à 19 du tableau m_tabVue[][].
         {
             if(i<20)
             {
                 m_tabVue[i][j]= TUILE;
             }
-            
-            if (j==20)
+            if (j==20)// La deniere case du tableau contiend la valeur '\0'
             {
                 m_tabVue[i][j]= '\0';
             }
@@ -238,7 +233,7 @@ char calculToucheCombien(int ligne, int colonne)
         {
             for(j=-1;j<=1;j++)
             {
-                if (m_tabMines[ligne+(i)][colonne+(j)]== MINE)
+                if (m_tabMines[ligne+(i)][colonne+j]== MINE)
                 {
                     nb_mine++;
                 } 
@@ -253,33 +248,12 @@ char calculToucheCombien(int ligne, int colonne)
         }
         for(j=0;j<=1;j++)
         {
-            if(m_tabMines[ligne+1][colonne+(j)]==MINE)
+            if(m_tabMines[ligne+1][colonne+j]==MINE)
             {
                 nb_mine++;
             }
         }
     }
-    if((ligne==0)&&(colonne<20)&&(colonne>0))
-    {
-        for(i=-1;i<=1;i++)
-        {
-            if(m_tabMines[ligne][colonne+(i)]==MINE)
-            {
-                nb_mine ++; 
-            }
-            i++;
-        }
-        for(i=1;i<=1;i++)
-        {
-            for(j=-1;j<=1;j++)
-            {
-                if(m_tabMines[ligne+(i)][colonne+(j)]==MINE)
-                {
-                    nb_mine ++; 
-                }
-            }
-        }
-    } 
     if((ligne==0)&&(colonne==20))
     {
         if(m_tabMines[ligne][colonne-1]==MINE)
@@ -294,6 +268,27 @@ char calculToucheCombien(int ligne, int colonne)
             }
         }
     }    
+    if((ligne==0)&&(colonne<20)&&(colonne>0))
+    {
+        for(i=-1;i<=1;i++)
+        {
+            if(m_tabMines[ligne][colonne+(i)]==MINE)
+            {
+                nb_mine ++; 
+            }
+            i++;
+        }
+        for(i=1;i<=1;i++)
+        {
+            for(j=-1;j<=1;j++)
+            {
+                if(m_tabMines[ligne+i][colonne+j]==MINE)
+                {
+                    nb_mine ++; 
+                }
+            }
+        }
+    } 
     if((ligne==3)&&(colonne==0))
     {
         if(m_tabMines[ligne-1][colonne]==MINE)
@@ -302,28 +297,10 @@ char calculToucheCombien(int ligne, int colonne)
         }
         for(i=-1;i<=0;i++)
         {
-            if(m_tabMines[ligne+(i)][colonne+1]==MINE)
+            if(m_tabMines[ligne+i][colonne+1]==MINE)
             {
                 nb_mine++;
             }
-        }
-    }
-    if((ligne==3)&&(colonne<20)&&(colonne>0))
-    {
-        for(j=-1;j<=1;j++)
-        {
-            if(m_tabMines[ligne-1][(colonne+j)]== MINE)
-            {
-                nb_mine++;
-            }
-        }
-        for(i=-1;i<=1;i++)
-        {
-            if(m_tabMines[ligne][(colonne+i)]==MINE)
-            {
-                nb_mine++;
-            }
-            i++;
         }
     }
     if((ligne==3)&&(colonne==20))
@@ -339,6 +316,24 @@ char calculToucheCombien(int ligne, int colonne)
         {
             nb_mine++;
         }   
+    }
+    if((ligne==3)&&(colonne<20)&&(colonne>0))
+    {
+        for(j=-1;j<=1;j++)
+        {
+            if(m_tabMines[ligne-1][colonne+j]== MINE)
+            {
+                nb_mine++;
+            }
+        }
+        for(i=-1;i<=1;i++)
+        {
+            if(m_tabMines[ligne][colonne+i]==MINE)
+            {
+                nb_mine++;
+            }
+            i++;
+        }
     }
     return nb_mine;
 }
@@ -425,7 +420,7 @@ bool demine(char x, char y)
  */
  void enleveTuilesAutour(char x, char y)
 {
-    int i=-1; 
+    int i=0; 
     int mine=0;
     
     m_tabVue[y][x]=32;
@@ -440,7 +435,7 @@ bool demine(char x, char y)
             if((x==0)&&(j==-1))//Condition pour ne pas copier une case a l'externieur de m_tabMines[y+i][x+j] dans m_tabVue[y+i][x+j]
             {   
                 j=0;
-            } 
+            }
             m_tabVue[y+i][x+j]= m_tabMines[y+i][x+j];
             lcd_gotoXY(x+1+j,y+i+1);
             lcd_ecritChar(m_tabVue[y+i][x+j]);
@@ -496,8 +491,7 @@ bool gagne(int* pMines)
  */
 void afficheTabVue(void)
 {
-    int i=0;
-    for(i=0;i<4;i++)//Cette commande affiche le contenu du tableau m_aliens[][] sur l'afficheur LCD.
+    for(int i=0;i<4;i++)//Cette commande affiche le contenu du tableau m_aliens[][] sur l'afficheur LCD.
     {
         lcd_gotoXY( 1, i+1);
         lcd_putMessage(m_tabVue[i]);//Cette commande affiche le contenue de m_tabVue sur l'afficheur LCD.
