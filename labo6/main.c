@@ -2,15 +2,18 @@
  * @file main.c,Labo6  
  * @author Youlan Houehounou
  * @date 16 décembre 2019  
- * @brief  Ce programme est une version simplifier du jeu déminueur que l'on joue sur un afficheur LCD.
- *
+ * @brief  Ce programme est une version simplifier du jeu déminueur que l'on joue sur un écran LCD à l'aide d'une 
+ * manette muni d'un analogue et d'un boutton sw. L'annalogue permet au joueur de se déplacer sur toute les lignes et 
+ * colones de l'écran LCD. Le bouttons sw permet au joueur de sélectionner une case et la dévoilé. Lorsqu'une case vide
+ * est dévoillé, les cases ne contenant pas de mine qui se trouve autour de celle-ci sont dévoillé. Le jeu commence avec
+ * 12 mines. Le joueur gagne lorque les nombre de tuile restant est égale au nombre de mines contenue dans le jeu.
+ * Lorsque le joeur gagne une partie,le nombre de mine augmente de 1.
  * @version 1.0
  * Environnement:
  *     Développement: MPLAB X IDE (version 5.05)
  *     Compilateur: XC8 (version 2.00)
  *     Matériel: Carte démo du Pickit3. PIC 18F45K20
   */
-
 /****************** Liste des INCLUDES ****************************************/
 #include <xc.h>
 #include <stdbool.h>  // pour l'utilisation du type bool
@@ -42,11 +45,9 @@ bool demine(char x, char y);
 void enleveTuilesAutour(char x, char y);
 bool gagne(int* pMines);
 void afficheTabVue(void);
-
 /****************** VARIABLES GLOBALES ****************************************/
 char m_tabVue[NB_LIGNE][NB_COL+1]; //Tableau des caractères affichés au LCD
 char m_tabMines[NB_LIGNE][NB_COL+1];//Tableau contenant les mines, les espaces et les chiffres
-
 /*               ***** PROGRAMME PRINCPAL *****                             */
 void main(void)
 {
@@ -113,8 +114,7 @@ char getAnalog(char canal)
     ADCON0bits.CHS = canal;
     __delay_us(1);  
     ADCON0bits.GO_DONE = 1;  //lance une conversion
-    while (ADCON0bits.GO_DONE == 1) //attend fin de la conversion
-        ;
+    while (ADCON0bits.GO_DONE == 1); //attend fin de la conversion
     return  ADRESH; //retourne seulement les 8 MSB. On laisse tomber les 2 LSB de ADRESL
 }
 
@@ -227,6 +227,7 @@ char calculToucheCombien(int ligne, int colonne)
     int nb_mine =0;
     int i=0;
     int j=0;
+    
     if ((ligne<3)&&(ligne>0)&&(colonne>0)&&(colonne<20))
     {
         for(i=-1;i<2;i++)

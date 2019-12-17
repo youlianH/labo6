@@ -5032,35 +5032,30 @@ _delay((unsigned long)((100)*(1000000/4000.0)));
 void initialisation(void)
 {
 TRISD = 0;
-
 ANSELH = 0;
 TRISB = 0xFF;
-
 ANSEL = 0;
 TRISA = 0;
 
-ANSELbits.ANS7 = 1;
-
-ADCON0bits.ADON = 1;
 ADCON1 = 0;
-
+ANSELbits.ANS7 = 1;
+ADCON0bits.ADON = 1;
 ADCON2bits.ADFM = 0;
 ADCON2bits.ACQT = 0;
 ADCON2bits.ADCS = 0;
 }
 
-# 115
+# 111
 char getAnalog(char canal)
 {
 ADCON0bits.CHS = canal;
 _delay((unsigned long)((1)*(1000000/4000000.0)));
 ADCON0bits.GO_DONE = 1;
-while (ADCON0bits.GO_DONE == 1)
-;
+while (ADCON0bits.GO_DONE == 1);
 return ADRESH;
 }
 
-# 132
+# 127
 void initTabVue(void)
 {
 int i=0;
@@ -5073,7 +5068,6 @@ if(i<20)
 {
 m_tabVue[i][j]= 1;
 }
-
 if (j==20)
 {
 m_tabVue[i][j]= '\0';
@@ -5083,7 +5077,7 @@ m_tabVue[i][j]= '\0';
 
 }
 
-# 161
+# 155
 void rempliMines(int nb)
 {
 int i=0;
@@ -5112,7 +5106,7 @@ nbMine = nbMine + 1;
 }
 }
 
-# 198
+# 192
 void metToucheCombien(void)
 {
 int i=0;
@@ -5139,7 +5133,7 @@ m_tabMines[i][j]= (mine+48);
 }
 }
 
-# 230
+# 224
 char calculToucheCombien(int ligne, int colonne)
 {
 int nb_mine =0;
@@ -5151,7 +5145,7 @@ for(i=-1;i<2;i++)
 {
 for(j=-1;j<=1;j++)
 {
-if (m_tabMines[ligne+(i)][colonne+(j)]== 2)
+if (m_tabMines[ligne+(i)][colonne+j]== 2)
 {
 nb_mine++;
 }
@@ -5166,7 +5160,21 @@ nb_mine++;
 }
 for(j=0;j<=1;j++)
 {
-if(m_tabMines[ligne+1][colonne+(j)]==2)
+if(m_tabMines[ligne+1][colonne+j]==2)
+{
+nb_mine++;
+}
+}
+}
+if((ligne==0)&&(colonne==20))
+{
+if(m_tabMines[ligne][colonne-1]==2)
+{
+nb_mine++;
+}
+for(i=-1;i<1;i++)
+{
+if(m_tabMines[ligne+1][colonne+i]==2)
 {
 nb_mine++;
 }
@@ -5186,24 +5194,10 @@ for(i=1;i<=1;i++)
 {
 for(j=-1;j<=1;j++)
 {
-if(m_tabMines[ligne+(i)][colonne+(j)]==2)
+if(m_tabMines[ligne+i][colonne+j]==2)
 {
 nb_mine ++;
 }
-}
-}
-}
-if((ligne==0)&&(colonne==20))
-{
-if(m_tabMines[ligne][colonne-1]==2)
-{
-nb_mine++;
-}
-for(i=-1;i<1;i++)
-{
-if(m_tabMines[ligne+1][colonne+i]==2)
-{
-nb_mine++;
 }
 }
 }
@@ -5215,28 +5209,10 @@ nb_mine++;
 }
 for(i=-1;i<=0;i++)
 {
-if(m_tabMines[ligne+(i)][colonne+1]==2)
+if(m_tabMines[ligne+i][colonne+1]==2)
 {
 nb_mine++;
 }
-}
-}
-if((ligne==3)&&(colonne<20)&&(colonne>0))
-{
-for(j=-1;j<=1;j++)
-{
-if(m_tabMines[ligne-1][(colonne+j)]== 2)
-{
-nb_mine++;
-}
-}
-for(i=-1;i<=1;i++)
-{
-if(m_tabMines[ligne][(colonne+i)]==2)
-{
-nb_mine++;
-}
-i++;
 }
 }
 if((ligne==3)&&(colonne==20))
@@ -5253,13 +5229,31 @@ if(m_tabMines[ligne][colonne-1]==2)
 nb_mine++;
 }
 }
+if((ligne==3)&&(colonne<20)&&(colonne>0))
+{
+for(j=-1;j<=1;j++)
+{
+if(m_tabMines[ligne-1][colonne+j]== 2)
+{
+nb_mine++;
+}
+}
+for(i=-1;i<=1;i++)
+{
+if(m_tabMines[ligne][colonne+i]==2)
+{
+nb_mine++;
+}
+i++;
+}
+}
 return nb_mine;
 }
 
-# 352
+# 346
 void deplace(char* x, char* y)
 {
-if(getAnalog(6)>210)
+if(getAnalog(6)>220)
 {
 (*x)= (*x) +1;
 if (*x > 20)
@@ -5294,7 +5288,7 @@ if (*y < 1)
 lcd_gotoXY(*x ,*y);
 }
 
-# 397
+# 391
 bool demine(char x, char y)
 {
 x=x-1;
@@ -5318,10 +5312,10 @@ lcd_ecritChar(m_tabVue[y][x]);
 return mine;
 }
 
-# 426
+# 420
 void enleveTuilesAutour(char x, char y)
 {
-int i=-1;
+int i=0;
 int mine=0;
 
 m_tabVue[y][x]=32;
@@ -5352,7 +5346,7 @@ i=1;
 }
 }
 
-# 468
+# 462
 bool gagne(int* pMines)
 {
 int nb_Tuile =0;
@@ -5378,11 +5372,10 @@ gagne=1;
 return gagne;
 }
 
-# 497
+# 491
 void afficheTabVue(void)
 {
-int i=0;
-for(i=0;i<4;i++)
+for(int i=0;i<4;i++)
 {
 lcd_gotoXY( 1, i+1);
 lcd_putMessage(m_tabVue[i]);

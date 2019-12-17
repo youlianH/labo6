@@ -61,6 +61,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _ANSEL `Vuc ~T0 @X0 0 e@3966 ]
 "2032
 [v _TRISA `Vuc ~T0 @X0 0 e@3986 ]
+"5124
+[v _ADCON1 `Vuc ~T0 @X0 0 e@4033 ]
 "452
 [s S19 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S19 . ANS0 ANS1 ANS2 ANS3 ANS4 ANS5 ANS6 ANS7 ]
@@ -98,8 +100,6 @@ Version 3.2 HI-TECH Software Intermediate Code
 [n S204 . . . . . . . . . ]
 "5219
 [v _ADCON0bits `VS204 ~T0 @X0 0 e@4034 ]
-"5124
-[v _ADCON1 `Vuc ~T0 @X0 0 e@4033 ]
 "5059
 [s S198 :3 `uc 1 :3 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S198 . ADCS ACQT . ADFM ]
@@ -3358,476 +3358,496 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;main.c: 93: TRISD = 0;
 "93
 [e = _TRISD -> -> 0 `i `uc ]
-[; ;main.c: 95: ANSELH = 0;
-"95
+[; ;main.c: 94: ANSELH = 0;
+"94
 [e = _ANSELH -> -> 0 `i `uc ]
-[; ;main.c: 96: TRISB = 0xFF;
-"96
+[; ;main.c: 95: TRISB = 0xFF;
+"95
 [e = _TRISB -> -> 255 `i `uc ]
-[; ;main.c: 98: ANSEL = 0;
-"98
+[; ;main.c: 96: ANSEL = 0;
+"96
 [e = _ANSEL -> -> 0 `i `uc ]
-[; ;main.c: 99: TRISA = 0;
-"99
+[; ;main.c: 97: TRISA = 0;
+"97
 [e = _TRISA -> -> 0 `i `uc ]
-[; ;main.c: 101: ANSELbits.ANS7 = 1;
-"101
-[e = . . _ANSELbits 0 7 -> -> 1 `i `uc ]
-[; ;main.c: 103: ADCON0bits.ADON = 1;
-"103
-[e = . . _ADCON0bits 1 0 -> -> 1 `i `uc ]
-[; ;main.c: 104: ADCON1 = 0;
-"104
+[; ;main.c: 99: ADCON1 = 0;
+"99
 [e = _ADCON1 -> -> 0 `i `uc ]
-[; ;main.c: 106: ADCON2bits.ADFM = 0;
-"106
+[; ;main.c: 100: ANSELbits.ANS7 = 1;
+"100
+[e = . . _ANSELbits 0 7 -> -> 1 `i `uc ]
+[; ;main.c: 101: ADCON0bits.ADON = 1;
+"101
+[e = . . _ADCON0bits 1 0 -> -> 1 `i `uc ]
+[; ;main.c: 102: ADCON2bits.ADFM = 0;
+"102
 [e = . . _ADCON2bits 0 3 -> -> 0 `i `uc ]
-[; ;main.c: 107: ADCON2bits.ACQT = 0;
-"107
+[; ;main.c: 103: ADCON2bits.ACQT = 0;
+"103
 [e = . . _ADCON2bits 0 1 -> -> 0 `i `uc ]
-[; ;main.c: 108: ADCON2bits.ADCS = 0;
-"108
+[; ;main.c: 104: ADCON2bits.ADCS = 0;
+"104
 [e = . . _ADCON2bits 0 0 -> -> 0 `i `uc ]
-[; ;main.c: 109: }
-"109
+[; ;main.c: 105: }
+"105
 [e :UE 311 ]
 }
 [v F2891 `(uc ~T0 @X0 1 tf1`uc ]
-"115
+"111
 [v _getAnalog `AF2891 ~T0 @X0 1 e ]
-"116
+"112
 {
-[; ;main.c: 115: char getAnalog(char canal)
-[; ;main.c: 116: {
+[; ;main.c: 111: char getAnalog(char canal)
+[; ;main.c: 112: {
 [e :U _getAnalog ]
-"115
+"111
 [v _canal `uc ~T0 @X0 1 r1 ]
-"116
+"112
 [f ]
-[; ;main.c: 117: ADCON0bits.CHS = canal;
-"117
+[; ;main.c: 113: ADCON0bits.CHS = canal;
+"113
 [e = . . _ADCON0bits 1 2 _canal ]
-[; ;main.c: 118: _delay((unsigned long)((1)*(1000000/4000000.0)));
-"118
+[; ;main.c: 114: _delay((unsigned long)((1)*(1000000/4000000.0)));
+"114
 [e ( __delay (1 -> * -> -> 1 `i `d / -> -> 1000000 `l `d .4000000.0 `ul ]
-[; ;main.c: 119: ADCON0bits.GO_DONE = 1;
-"119
+[; ;main.c: 115: ADCON0bits.GO_DONE = 1;
+"115
 [e = . . _ADCON0bits 5 1 -> -> 1 `i `uc ]
-[; ;main.c: 120: while (ADCON0bits.GO_DONE == 1)
-"120
+[; ;main.c: 116: while (ADCON0bits.GO_DONE == 1);
+"116
 [e $U 313  ]
 [e :U 314 ]
-[; ;main.c: 121: ;
-"121
 [e :U 313 ]
-"120
 [e $ == -> . . _ADCON0bits 5 1 `i -> 1 `i 314  ]
 [e :U 315 ]
-[; ;main.c: 122: return ADRESH;
-"122
+[; ;main.c: 117: return ADRESH;
+"117
 [e ) _ADRESH ]
 [e $UE 312  ]
-[; ;main.c: 123: }
-"123
+[; ;main.c: 118: }
+"118
 [e :UE 312 ]
 }
 [v F2894 `(v ~T0 @X0 1 tf ]
-"132
+"127
 [v _initTabVue `AF2894 ~T0 @X0 1 e ]
-"133
+"128
 {
-[; ;main.c: 132: void initTabVue(void)
-[; ;main.c: 133: {
+[; ;main.c: 127: void initTabVue(void)
+[; ;main.c: 128: {
 [e :U _initTabVue ]
 [f ]
-"134
+"129
 [v _i `i ~T0 @X0 1 a ]
-[; ;main.c: 134: int i=0;
+[; ;main.c: 129: int i=0;
 [e = _i -> 0 `i ]
-"135
+"130
 [v _j `i ~T0 @X0 1 a ]
-[; ;main.c: 135: int j=0;
+[; ;main.c: 130: int j=0;
 [e = _j -> 0 `i ]
-[; ;main.c: 136: for ( i=0;i<4;i++)
-"136
+[; ;main.c: 131: for ( i=0;i<4;i++)
+"131
 {
 [e = _i -> 0 `i ]
 [e $ < _i -> 4 `i 317  ]
 [e $U 318  ]
-"137
+"132
 [e :U 317 ]
-[; ;main.c: 137: {
+[; ;main.c: 132: {
 {
-[; ;main.c: 138: for (j=0;j<=(20);j++)
-"138
+[; ;main.c: 133: for (j=0;j<=(20);j++)
+"133
 {
 [e = _j -> 0 `i ]
 [e $ <= _j -> 20 `i 320  ]
 [e $U 321  ]
-"139
+"134
 [e :U 320 ]
-[; ;main.c: 139: {
+[; ;main.c: 134: {
 {
-[; ;main.c: 140: if(i<20)
-"140
+[; ;main.c: 135: if(i<20)
+"135
 [e $ ! < _i -> 20 `i 323  ]
-[; ;main.c: 141: {
-"141
+[; ;main.c: 136: {
+"136
 {
-[; ;main.c: 142: m_tabVue[i][j]= 1;
-"142
+[; ;main.c: 137: m_tabVue[i][j]= 1;
+"137
 [e = *U + &U *U + &U _m_tabVue * -> -> _i `ui `ux -> * -> # *U &U *U &U _m_tabVue `ui -> + -> 20 `i -> 1 `i `ui `ux * -> -> _j `ui `ux -> -> # *U &U *U + &U _m_tabVue * -> -> _i `ui `ux -> * -> # *U &U *U &U _m_tabVue `ui -> + -> 20 `i -> 1 `i `ui `ux `ui `ux -> -> 1 `i `uc ]
-"143
+"138
 }
 [e :U 323 ]
-[; ;main.c: 143: }
-[; ;main.c: 145: if (j==20)
-"145
+[; ;main.c: 138: }
+[; ;main.c: 139: if (j==20)
+"139
 [e $ ! == _j -> 20 `i 324  ]
-[; ;main.c: 146: {
-"146
+[; ;main.c: 140: {
+"140
 {
-[; ;main.c: 147: m_tabVue[i][j]= '\0';
-"147
+[; ;main.c: 141: m_tabVue[i][j]= '\0';
+"141
 [e = *U + &U *U + &U _m_tabVue * -> -> _i `ui `ux -> * -> # *U &U *U &U _m_tabVue `ui -> + -> 20 `i -> 1 `i `ui `ux * -> -> _j `ui `ux -> -> # *U &U *U + &U _m_tabVue * -> -> _i `ui `ux -> * -> # *U &U *U &U _m_tabVue `ui -> + -> 20 `i -> 1 `i `ui `ux `ui `ux -> -> 0 `ui `uc ]
-"148
+"142
 }
 [e :U 324 ]
-"149
+"143
 }
-"138
+"133
 [e ++ _j -> 1 `i ]
 [e $ <= _j -> 20 `i 320  ]
 [e :U 321 ]
-"149
+"143
 }
-"150
+"144
 }
-"136
+"131
 [e ++ _i -> 1 `i ]
 [e $ < _i -> 4 `i 317  ]
 [e :U 318 ]
-"150
+"144
 }
-[; ;main.c: 148: }
-[; ;main.c: 149: }
-[; ;main.c: 150: }
-[; ;main.c: 152: }
-"152
+[; ;main.c: 142: }
+[; ;main.c: 143: }
+[; ;main.c: 144: }
+[; ;main.c: 146: }
+"146
 [e :UE 316 ]
 }
 [v F2898 `(v ~T0 @X0 1 tf1`i ]
-"161
+"155
 [v _rempliMines `AF2898 ~T0 @X0 1 e ]
-"162
+"156
 {
-[; ;main.c: 161: void rempliMines(int nb)
-[; ;main.c: 162: {
+[; ;main.c: 155: void rempliMines(int nb)
+[; ;main.c: 156: {
 [e :U _rempliMines ]
-"161
+"155
 [v _nb `i ~T0 @X0 1 r1 ]
-"162
+"156
 [f ]
-"163
+"157
 [v _i `i ~T0 @X0 1 a ]
-[; ;main.c: 163: int i=0;
+[; ;main.c: 157: int i=0;
 [e = _i -> 0 `i ]
-"164
+"158
 [v _j `i ~T0 @X0 1 a ]
-[; ;main.c: 164: int j=0;
+[; ;main.c: 158: int j=0;
 [e = _j -> 0 `i ]
-"165
+"159
 [v _x `uc ~T0 @X0 1 a ]
-[; ;main.c: 165: char x =0;
+[; ;main.c: 159: char x =0;
 [e = _x -> -> 0 `i `uc ]
-"166
+"160
 [v _y `uc ~T0 @X0 1 a ]
-[; ;main.c: 166: char y =0;
+[; ;main.c: 160: char y =0;
 [e = _y -> -> 0 `i `uc ]
-"167
+"161
 [v _nbMine `uc ~T0 @X0 1 a ]
-[; ;main.c: 167: char nbMine =0;
+[; ;main.c: 161: char nbMine =0;
 [e = _nbMine -> -> 0 `i `uc ]
-[; ;main.c: 169: for (int i=0;i<4;i++)
-"169
+[; ;main.c: 163: for (int i=0;i<4;i++)
+"163
 {
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
 [e $ < _i -> 4 `i 326  ]
 [e $U 327  ]
-"170
+"164
 [e :U 326 ]
-[; ;main.c: 170: {
+[; ;main.c: 164: {
 {
-[; ;main.c: 171: for (int j=0;j<20;j++)
-"171
+[; ;main.c: 165: for (int j=0;j<20;j++)
+"165
 {
 [v _j `i ~T0 @X0 1 a ]
 [e = _j -> 0 `i ]
 [e $ < _j -> 20 `i 329  ]
 [e $U 330  ]
-"172
+"166
 [e :U 329 ]
-[; ;main.c: 172: {
+[; ;main.c: 166: {
 {
-[; ;main.c: 173: m_tabMines[i][j]=32;
-"173
+[; ;main.c: 167: m_tabMines[i][j]=32;
+"167
 [e = *U + &U *U + &U _m_tabMines * -> -> _i `ui `ux -> * -> # *U &U *U &U _m_tabMines `ui -> + -> 20 `i -> 1 `i `ui `ux * -> -> _j `ui `ux -> -> # *U &U *U + &U _m_tabMines * -> -> _i `ui `ux -> * -> # *U &U *U &U _m_tabMines `ui -> + -> 20 `i -> 1 `i `ui `ux `ui `ux -> -> 32 `i `uc ]
-"174
+"168
 }
-"171
+"165
 [e ++ _j -> 1 `i ]
 [e $ < _j -> 20 `i 329  ]
 [e :U 330 ]
-"174
-}
-"175
+"168
 }
 "169
+}
+"163
 [e ++ _i -> 1 `i ]
 [e $ < _i -> 4 `i 326  ]
 [e :U 327 ]
-"175
+"169
 }
-[; ;main.c: 174: }
-[; ;main.c: 175: }
-[; ;main.c: 177: while (nbMine!=nb)
-"177
+[; ;main.c: 168: }
+[; ;main.c: 169: }
+[; ;main.c: 171: while (nbMine!=nb)
+"171
 [e $U 332  ]
 [e :U 333 ]
-[; ;main.c: 178: {
-"178
+[; ;main.c: 172: {
+"172
 {
-[; ;main.c: 179: x = rand()%20;
-"179
+[; ;main.c: 173: x = rand()%20;
+"173
 [e = _x -> % ( _rand ..  -> 20 `i `uc ]
-[; ;main.c: 180: y = rand()%4;
-"180
+[; ;main.c: 174: y = rand()%4;
+"174
 [e = _y -> % ( _rand ..  -> 4 `i `uc ]
-[; ;main.c: 181: if (m_tabMines[y][x]==32)
-"181
+[; ;main.c: 175: if (m_tabMines[y][x]==32)
+"175
 [e $ ! == -> *U + &U *U + &U _m_tabMines * -> _y `ux -> * -> # *U &U *U &U _m_tabMines `ui -> + -> 20 `i -> 1 `i `ui `ux * -> _x `ux -> -> # *U &U *U + &U _m_tabMines * -> _y `ux -> * -> # *U &U *U &U _m_tabMines `ui -> + -> 20 `i -> 1 `i `ui `ux `ui `ux `i -> 32 `i 335  ]
-[; ;main.c: 182: {
-"182
+[; ;main.c: 176: {
+"176
 {
-[; ;main.c: 183: m_tabMines[y][x] = 2;
-"183
+[; ;main.c: 177: m_tabMines[y][x] = 2;
+"177
 [e = *U + &U *U + &U _m_tabMines * -> _y `ux -> * -> # *U &U *U &U _m_tabMines `ui -> + -> 20 `i -> 1 `i `ui `ux * -> _x `ux -> -> # *U &U *U + &U _m_tabMines * -> _y `ux -> * -> # *U &U *U &U _m_tabMines `ui -> + -> 20 `i -> 1 `i `ui `ux `ui `ux -> -> 2 `i `uc ]
-[; ;main.c: 184: nbMine = nbMine + 1;
-"184
+[; ;main.c: 178: nbMine = nbMine + 1;
+"178
 [e = _nbMine -> + -> _nbMine `i -> 1 `i `uc ]
-"185
+"179
 }
 [e :U 335 ]
-"186
+"180
 }
 [e :U 332 ]
-"177
+"171
 [e $ != -> _nbMine `i _nb 333  ]
 [e :U 334 ]
-[; ;main.c: 185: }
-[; ;main.c: 186: }
-[; ;main.c: 187: }
-"187
+[; ;main.c: 179: }
+[; ;main.c: 180: }
+[; ;main.c: 181: }
+"181
 [e :UE 325 ]
 }
 [v F2907 `(v ~T0 @X0 1 tf ]
-"198
+"192
 [v _metToucheCombien `AF2907 ~T0 @X0 1 e ]
-"199
+"193
 {
-[; ;main.c: 198: void metToucheCombien(void)
-[; ;main.c: 199: {
+[; ;main.c: 192: void metToucheCombien(void)
+[; ;main.c: 193: {
 [e :U _metToucheCombien ]
 [f ]
-"200
+"194
 [v _i `i ~T0 @X0 1 a ]
-[; ;main.c: 200: int i=0;
+[; ;main.c: 194: int i=0;
 [e = _i -> 0 `i ]
-"201
+"195
 [v _j `i ~T0 @X0 1 a ]
-[; ;main.c: 201: int j=0;
+[; ;main.c: 195: int j=0;
 [e = _j -> 0 `i ]
-"202
+"196
 [v _mine `i ~T0 @X0 1 a ]
-[; ;main.c: 202: int mine=0;
+[; ;main.c: 196: int mine=0;
 [e = _mine -> 0 `i ]
-[; ;main.c: 204: for ( i=0;i<4;i++)
-"204
+[; ;main.c: 198: for ( i=0;i<4;i++)
+"198
 {
 [e = _i -> 0 `i ]
 [e $ < _i -> 4 `i 337  ]
 [e $U 338  ]
-"205
+"199
 [e :U 337 ]
-[; ;main.c: 205: {
+[; ;main.c: 199: {
 {
-[; ;main.c: 206: for (j=0;j<20;j++)
-"206
+[; ;main.c: 200: for (j=0;j<20;j++)
+"200
 {
 [e = _j -> 0 `i ]
 [e $ < _j -> 20 `i 340  ]
 [e $U 341  ]
-"207
+"201
 [e :U 340 ]
-[; ;main.c: 207: {
+[; ;main.c: 201: {
 {
-[; ;main.c: 208: if(m_tabMines[i][j]!= 2)
-"208
+[; ;main.c: 202: if(m_tabMines[i][j]!= 2)
+"202
 [e $ ! != -> *U + &U *U + &U _m_tabMines * -> -> _i `ui `ux -> * -> # *U &U *U &U _m_tabMines `ui -> + -> 20 `i -> 1 `i `ui `ux * -> -> _j `ui `ux -> -> # *U &U *U + &U _m_tabMines * -> -> _i `ui `ux -> * -> # *U &U *U &U _m_tabMines `ui -> + -> 20 `i -> 1 `i `ui `ux `ui `ux `i -> 2 `i 343  ]
-[; ;main.c: 209: {
-"209
+[; ;main.c: 203: {
+"203
 {
-[; ;main.c: 210: mine = calculToucheCombien(i,j);
-"210
+[; ;main.c: 204: mine = calculToucheCombien(i,j);
+"204
 [e = _mine -> ( _calculToucheCombien (2 , _i _j `i ]
-[; ;main.c: 211: if (mine==0)
-"211
+[; ;main.c: 205: if (mine==0)
+"205
 [e $ ! == _mine -> 0 `i 344  ]
-[; ;main.c: 212: {
-"212
+[; ;main.c: 206: {
+"206
 {
-[; ;main.c: 213: m_tabMines[i][j]=32;
-"213
+[; ;main.c: 207: m_tabMines[i][j]=32;
+"207
 [e = *U + &U *U + &U _m_tabMines * -> -> _i `ui `ux -> * -> # *U &U *U &U _m_tabMines `ui -> + -> 20 `i -> 1 `i `ui `ux * -> -> _j `ui `ux -> -> # *U &U *U + &U _m_tabMines * -> -> _i `ui `ux -> * -> # *U &U *U &U _m_tabMines `ui -> + -> 20 `i -> 1 `i `ui `ux `ui `ux -> -> 32 `i `uc ]
-"214
+"208
 }
 [e :U 344 ]
-[; ;main.c: 214: }
-[; ;main.c: 215: if (mine>0)
-"215
+[; ;main.c: 208: }
+[; ;main.c: 209: if (mine>0)
+"209
 [e $ ! > _mine -> 0 `i 345  ]
-[; ;main.c: 216: {
-"216
+[; ;main.c: 210: {
+"210
 {
-[; ;main.c: 217: m_tabMines[i][j]= (mine+48);
-"217
+[; ;main.c: 211: m_tabMines[i][j]= (mine+48);
+"211
 [e = *U + &U *U + &U _m_tabMines * -> -> _i `ui `ux -> * -> # *U &U *U &U _m_tabMines `ui -> + -> 20 `i -> 1 `i `ui `ux * -> -> _j `ui `ux -> -> # *U &U *U + &U _m_tabMines * -> -> _i `ui `ux -> * -> # *U &U *U &U _m_tabMines `ui -> + -> 20 `i -> 1 `i `ui `ux `ui `ux -> + _mine -> 48 `i `uc ]
-"218
+"212
 }
 [e :U 345 ]
-"219
+"213
 }
 [e :U 343 ]
-"220
+"214
 }
-"206
+"200
 [e ++ _j -> 1 `i ]
 [e $ < _j -> 20 `i 340  ]
 [e :U 341 ]
-"220
+"214
 }
-"221
+"215
 }
-"204
+"198
 [e ++ _i -> 1 `i ]
 [e $ < _i -> 4 `i 337  ]
 [e :U 338 ]
-"221
+"215
 }
-[; ;main.c: 218: }
-[; ;main.c: 219: }
-[; ;main.c: 220: }
-[; ;main.c: 221: }
-[; ;main.c: 222: }
-"222
+[; ;main.c: 212: }
+[; ;main.c: 213: }
+[; ;main.c: 214: }
+[; ;main.c: 215: }
+[; ;main.c: 216: }
+"216
 [e :UE 336 ]
 }
 [v F2913 `(uc ~T0 @X0 1 tf2`i`i ]
-"230
+"224
 [v _calculToucheCombien `AF2913 ~T0 @X0 1 e ]
-"231
+"225
 {
-[; ;main.c: 230: char calculToucheCombien(int ligne, int colonne)
-[; ;main.c: 231: {
+[; ;main.c: 224: char calculToucheCombien(int ligne, int colonne)
+[; ;main.c: 225: {
 [e :U _calculToucheCombien ]
-"230
+"224
 [v _ligne `i ~T0 @X0 1 r1 ]
 [v _colonne `i ~T0 @X0 1 r2 ]
-"231
+"225
 [f ]
-"232
+"226
 [v _nb_mine `i ~T0 @X0 1 a ]
-[; ;main.c: 232: int nb_mine =0;
+[; ;main.c: 226: int nb_mine =0;
 [e = _nb_mine -> 0 `i ]
-"233
+"227
 [v _i `i ~T0 @X0 1 a ]
-[; ;main.c: 233: int i=0;
+[; ;main.c: 227: int i=0;
 [e = _i -> 0 `i ]
-"234
+"228
 [v _j `i ~T0 @X0 1 a ]
-[; ;main.c: 234: int j=0;
+[; ;main.c: 228: int j=0;
 [e = _j -> 0 `i ]
-[; ;main.c: 235: if ((ligne<3)&&(ligne>0)&&(colonne>0)&&(colonne<20))
-"235
+[; ;main.c: 229: if ((ligne<3)&&(ligne>0)&&(colonne>0)&&(colonne<20))
+"229
 [e $ ! && && && < _ligne -> 3 `i > _ligne -> 0 `i > _colonne -> 0 `i < _colonne -> 20 `i 347  ]
-[; ;main.c: 236: {
-"236
+[; ;main.c: 230: {
+"230
 {
-[; ;main.c: 237: for(i=-1;i<2;i++)
-"237
+[; ;main.c: 231: for(i=-1;i<2;i++)
+"231
 {
 [e = _i -U -> 1 `i ]
 [e $ < _i -> 2 `i 348  ]
 [e $U 349  ]
-"238
+"232
 [e :U 348 ]
-[; ;main.c: 238: {
+[; ;main.c: 232: {
 {
-[; ;main.c: 239: for(j=-1;j<=1;j++)
-"239
+[; ;main.c: 233: for(j=-1;j<=1;j++)
+"233
 {
 [e = _j -U -> 1 `i ]
 [e $ <= _j -> 1 `i 351  ]
 [e $U 352  ]
-"240
+"234
 [e :U 351 ]
-[; ;main.c: 240: {
+[; ;main.c: 234: {
 {
-[; ;main.c: 241: if (m_tabMines[ligne+(i)][colonne+(j)]== 2)
-"241
+[; ;main.c: 235: if (m_tabMines[ligne+(i)][colonne+j]== 2)
+"235
 [e $ ! == -> *U + &U *U + &U _m_tabMines * -> -> + _ligne _i `ui `ux -> * -> # *U &U *U &U _m_tabMines `ui -> + -> 20 `i -> 1 `i `ui `ux * -> -> + _colonne _j `ui `ux -> -> # *U &U *U + &U _m_tabMines * -> -> + _ligne _i `ui `ux -> * -> # *U &U *U &U _m_tabMines `ui -> + -> 20 `i -> 1 `i `ui `ux `ui `ux `i -> 2 `i 354  ]
-[; ;main.c: 242: {
-"242
+[; ;main.c: 236: {
+"236
 {
-[; ;main.c: 243: nb_mine++;
-"243
+[; ;main.c: 237: nb_mine++;
+"237
 [e ++ _nb_mine -> 1 `i ]
-"244
+"238
 }
 [e :U 354 ]
-"245
-}
 "239
+}
+"233
 [e ++ _j -> 1 `i ]
 [e $ <= _j -> 1 `i 351  ]
 [e :U 352 ]
-"245
+"239
 }
-"246
+"240
 }
-"237
+"231
 [e ++ _i -> 1 `i ]
 [e $ < _i -> 2 `i 348  ]
 [e :U 349 ]
-"246
+"240
 }
-"247
+"241
 }
 [e :U 347 ]
-[; ;main.c: 244: }
-[; ;main.c: 245: }
-[; ;main.c: 246: }
-[; ;main.c: 247: }
-[; ;main.c: 248: if((ligne==0)&&(colonne==0))
-"248
+[; ;main.c: 238: }
+[; ;main.c: 239: }
+[; ;main.c: 240: }
+[; ;main.c: 241: }
+[; ;main.c: 242: if((ligne==0)&&(colonne==0))
+"242
 [e $ ! && == _ligne -> 0 `i == _colonne -> 0 `i 355  ]
-[; ;main.c: 249: {
-"249
+[; ;main.c: 243: {
+"243
 {
-[; ;main.c: 250: if(m_tabMines[ligne][colonne+1]==2)
-"250
+[; ;main.c: 244: if(m_tabMines[ligne][colonne+1]==2)
+"244
 [e $ ! == -> *U + &U *U + &U _m_tabMines * -> -> _ligne `ui `ux -> * -> # *U &U *U &U _m_tabMines `ui -> + -> 20 `i -> 1 `i `ui `ux * -> -> + _colonne -> 1 `i `ui `ux -> -> # *U &U *U + &U _m_tabMines * -> -> _ligne `ui `ux -> * -> # *U &U *U &U _m_tabMines `ui -> + -> 20 `i -> 1 `i `ui `ux `ui `ux `i -> 2 `i 356  ]
+[; ;main.c: 245: {
+"245
+{
+[; ;main.c: 246: nb_mine++;
+"246
+[e ++ _nb_mine -> 1 `i ]
+"247
+}
+[e :U 356 ]
+[; ;main.c: 247: }
+[; ;main.c: 248: for(j=0;j<=1;j++)
+"248
+{
+[e = _j -> 0 `i ]
+[e $ <= _j -> 1 `i 357  ]
+[e $U 358  ]
+"249
+[e :U 357 ]
+[; ;main.c: 249: {
+{
+[; ;main.c: 250: if(m_tabMines[ligne+1][colonne+j]==2)
+"250
+[e $ ! == -> *U + &U *U + &U _m_tabMines * -> -> + _ligne -> 1 `i `ui `ux -> * -> # *U &U *U &U _m_tabMines `ui -> + -> 20 `i -> 1 `i `ui `ux * -> -> + _colonne _j `ui `ux -> -> # *U &U *U + &U _m_tabMines * -> -> + _ligne -> 1 `i `ui `ux -> * -> # *U &U *U &U _m_tabMines `ui -> + -> 20 `i -> 1 `i `ui `ux `ui `ux `i -> 2 `i 360  ]
 [; ;main.c: 251: {
 "251
 {
@@ -3836,204 +3856,204 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ++ _nb_mine -> 1 `i ]
 "253
 }
-[e :U 356 ]
-[; ;main.c: 253: }
-[; ;main.c: 254: for(j=0;j<=1;j++)
-"254
-{
-[e = _j -> 0 `i ]
-[e $ <= _j -> 1 `i 357  ]
-[e $U 358  ]
-"255
-[e :U 357 ]
-[; ;main.c: 255: {
-{
-[; ;main.c: 256: if(m_tabMines[ligne+1][colonne+(j)]==2)
-"256
-[e $ ! == -> *U + &U *U + &U _m_tabMines * -> -> + _ligne -> 1 `i `ui `ux -> * -> # *U &U *U &U _m_tabMines `ui -> + -> 20 `i -> 1 `i `ui `ux * -> -> + _colonne _j `ui `ux -> -> # *U &U *U + &U _m_tabMines * -> -> + _ligne -> 1 `i `ui `ux -> * -> # *U &U *U &U _m_tabMines `ui -> + -> 20 `i -> 1 `i `ui `ux `ui `ux `i -> 2 `i 360  ]
-[; ;main.c: 257: {
-"257
-{
-[; ;main.c: 258: nb_mine++;
-"258
-[e ++ _nb_mine -> 1 `i ]
-"259
-}
 [e :U 360 ]
-"260
-}
 "254
+}
+"248
 [e ++ _j -> 1 `i ]
 [e $ <= _j -> 1 `i 357  ]
 [e :U 358 ]
-"260
+"254
 }
-"261
+"255
 }
 [e :U 355 ]
-[; ;main.c: 259: }
-[; ;main.c: 260: }
-[; ;main.c: 261: }
-[; ;main.c: 262: if((ligne==0)&&(colonne<20)&&(colonne>0))
-"262
-[e $ ! && && == _ligne -> 0 `i < _colonne -> 20 `i > _colonne -> 0 `i 361  ]
-[; ;main.c: 263: {
-"263
+[; ;main.c: 253: }
+[; ;main.c: 254: }
+[; ;main.c: 255: }
+[; ;main.c: 256: if((ligne==0)&&(colonne==20))
+"256
+[e $ ! && == _ligne -> 0 `i == _colonne -> 20 `i 361  ]
+[; ;main.c: 257: {
+"257
 {
-[; ;main.c: 264: for(i=-1;i<=1;i++)
-"264
+[; ;main.c: 258: if(m_tabMines[ligne][colonne-1]==2)
+"258
+[e $ ! == -> *U + &U *U + &U _m_tabMines * -> -> _ligne `ui `ux -> * -> # *U &U *U &U _m_tabMines `ui -> + -> 20 `i -> 1 `i `ui `ux * -> -> - _colonne -> 1 `i `ui `ux -> -> # *U &U *U + &U _m_tabMines * -> -> _ligne `ui `ux -> * -> # *U &U *U &U _m_tabMines `ui -> + -> 20 `i -> 1 `i `ui `ux `ui `ux `i -> 2 `i 362  ]
+[; ;main.c: 259: {
+"259
+{
+[; ;main.c: 260: nb_mine++;
+"260
+[e ++ _nb_mine -> 1 `i ]
+"261
+}
+[e :U 362 ]
+[; ;main.c: 261: }
+[; ;main.c: 262: for(i=-1;i<1;i++)
+"262
 {
 [e = _i -U -> 1 `i ]
-[e $ <= _i -> 1 `i 362  ]
-[e $U 363  ]
-"265
-[e :U 362 ]
+[e $ < _i -> 1 `i 363  ]
+[e $U 364  ]
+"263
+[e :U 363 ]
+[; ;main.c: 263: {
+{
+[; ;main.c: 264: if(m_tabMines[ligne+1][colonne+i]==2)
+"264
+[e $ ! == -> *U + &U *U + &U _m_tabMines * -> -> + _ligne -> 1 `i `ui `ux -> * -> # *U &U *U &U _m_tabMines `ui -> + -> 20 `i -> 1 `i `ui `ux * -> -> + _colonne _i `ui `ux -> -> # *U &U *U + &U _m_tabMines * -> -> + _ligne -> 1 `i `ui `ux -> * -> # *U &U *U &U _m_tabMines `ui -> + -> 20 `i -> 1 `i `ui `ux `ui `ux `i -> 2 `i 366  ]
 [; ;main.c: 265: {
+"265
 {
-[; ;main.c: 266: if(m_tabMines[ligne][colonne+(i)]==2)
+[; ;main.c: 266: nb_mine++;
 "266
-[e $ ! == -> *U + &U *U + &U _m_tabMines * -> -> _ligne `ui `ux -> * -> # *U &U *U &U _m_tabMines `ui -> + -> 20 `i -> 1 `i `ui `ux * -> -> + _colonne _i `ui `ux -> -> # *U &U *U + &U _m_tabMines * -> -> _ligne `ui `ux -> * -> # *U &U *U &U _m_tabMines `ui -> + -> 20 `i -> 1 `i `ui `ux `ui `ux `i -> 2 `i 365  ]
-[; ;main.c: 267: {
-"267
-{
-[; ;main.c: 268: nb_mine ++;
-"268
 [e ++ _nb_mine -> 1 `i ]
+"267
+}
+[e :U 366 ]
+"268
+}
+"262
+[e ++ _i -> 1 `i ]
+[e $ < _i -> 1 `i 363  ]
+[e :U 364 ]
+"268
+}
 "269
 }
-[e :U 365 ]
-[; ;main.c: 269: }
-[; ;main.c: 270: i++;
-"270
-[e ++ _i -> 1 `i ]
-"271
-}
-"264
-[e ++ _i -> 1 `i ]
-[e $ <= _i -> 1 `i 362  ]
-[e :U 363 ]
-"271
-}
-[; ;main.c: 271: }
-[; ;main.c: 272: for(i=1;i<=1;i++)
-"272
-{
-[e = _i -> 1 `i ]
-[e $ <= _i -> 1 `i 366  ]
-[e $U 367  ]
-"273
-[e :U 366 ]
-[; ;main.c: 273: {
-{
-[; ;main.c: 274: for(j=-1;j<=1;j++)
-"274
-{
-[e = _j -U -> 1 `i ]
-[e $ <= _j -> 1 `i 369  ]
-[e $U 370  ]
-"275
-[e :U 369 ]
-[; ;main.c: 275: {
-{
-[; ;main.c: 276: if(m_tabMines[ligne+(i)][colonne+(j)]==2)
-"276
-[e $ ! == -> *U + &U *U + &U _m_tabMines * -> -> + _ligne _i `ui `ux -> * -> # *U &U *U &U _m_tabMines `ui -> + -> 20 `i -> 1 `i `ui `ux * -> -> + _colonne _j `ui `ux -> -> # *U &U *U + &U _m_tabMines * -> -> + _ligne _i `ui `ux -> * -> # *U &U *U &U _m_tabMines `ui -> + -> 20 `i -> 1 `i `ui `ux `ui `ux `i -> 2 `i 372  ]
-[; ;main.c: 277: {
-"277
-{
-[; ;main.c: 278: nb_mine ++;
-"278
-[e ++ _nb_mine -> 1 `i ]
-"279
-}
-[e :U 372 ]
-"280
-}
-"274
-[e ++ _j -> 1 `i ]
-[e $ <= _j -> 1 `i 369  ]
-[e :U 370 ]
-"280
-}
-"281
-}
-"272
-[e ++ _i -> 1 `i ]
-[e $ <= _i -> 1 `i 366  ]
-[e :U 367 ]
-"281
-}
-"282
-}
 [e :U 361 ]
-[; ;main.c: 279: }
-[; ;main.c: 280: }
-[; ;main.c: 281: }
-[; ;main.c: 282: }
-[; ;main.c: 283: if((ligne==0)&&(colonne==20))
-"283
-[e $ ! && == _ligne -> 0 `i == _colonne -> 20 `i 373  ]
-[; ;main.c: 284: {
-"284
+[; ;main.c: 267: }
+[; ;main.c: 268: }
+[; ;main.c: 269: }
+[; ;main.c: 270: if((ligne==0)&&(colonne<20)&&(colonne>0))
+"270
+[e $ ! && && == _ligne -> 0 `i < _colonne -> 20 `i > _colonne -> 0 `i 367  ]
+[; ;main.c: 271: {
+"271
 {
-[; ;main.c: 285: if(m_tabMines[ligne][colonne-1]==2)
-"285
-[e $ ! == -> *U + &U *U + &U _m_tabMines * -> -> _ligne `ui `ux -> * -> # *U &U *U &U _m_tabMines `ui -> + -> 20 `i -> 1 `i `ui `ux * -> -> - _colonne -> 1 `i `ui `ux -> -> # *U &U *U + &U _m_tabMines * -> -> _ligne `ui `ux -> * -> # *U &U *U &U _m_tabMines `ui -> + -> 20 `i -> 1 `i `ui `ux `ui `ux `i -> 2 `i 374  ]
-[; ;main.c: 286: {
-"286
-{
-[; ;main.c: 287: nb_mine++;
-"287
-[e ++ _nb_mine -> 1 `i ]
-"288
-}
-[e :U 374 ]
-[; ;main.c: 288: }
-[; ;main.c: 289: for(i=-1;i<1;i++)
-"289
+[; ;main.c: 272: for(i=-1;i<=1;i++)
+"272
 {
 [e = _i -U -> 1 `i ]
-[e $ < _i -> 1 `i 375  ]
-[e $U 376  ]
-"290
-[e :U 375 ]
-[; ;main.c: 290: {
+[e $ <= _i -> 1 `i 368  ]
+[e $U 369  ]
+"273
+[e :U 368 ]
+[; ;main.c: 273: {
 {
-[; ;main.c: 291: if(m_tabMines[ligne+1][colonne+i]==2)
+[; ;main.c: 274: if(m_tabMines[ligne][colonne+(i)]==2)
+"274
+[e $ ! == -> *U + &U *U + &U _m_tabMines * -> -> _ligne `ui `ux -> * -> # *U &U *U &U _m_tabMines `ui -> + -> 20 `i -> 1 `i `ui `ux * -> -> + _colonne _i `ui `ux -> -> # *U &U *U + &U _m_tabMines * -> -> _ligne `ui `ux -> * -> # *U &U *U &U _m_tabMines `ui -> + -> 20 `i -> 1 `i `ui `ux `ui `ux `i -> 2 `i 371  ]
+[; ;main.c: 275: {
+"275
+{
+[; ;main.c: 276: nb_mine ++;
+"276
+[e ++ _nb_mine -> 1 `i ]
+"277
+}
+[e :U 371 ]
+[; ;main.c: 277: }
+[; ;main.c: 278: i++;
+"278
+[e ++ _i -> 1 `i ]
+"279
+}
+"272
+[e ++ _i -> 1 `i ]
+[e $ <= _i -> 1 `i 368  ]
+[e :U 369 ]
+"279
+}
+[; ;main.c: 279: }
+[; ;main.c: 280: for(i=1;i<=1;i++)
+"280
+{
+[e = _i -> 1 `i ]
+[e $ <= _i -> 1 `i 372  ]
+[e $U 373  ]
+"281
+[e :U 372 ]
+[; ;main.c: 281: {
+{
+[; ;main.c: 282: for(j=-1;j<=1;j++)
+"282
+{
+[e = _j -U -> 1 `i ]
+[e $ <= _j -> 1 `i 375  ]
+[e $U 376  ]
+"283
+[e :U 375 ]
+[; ;main.c: 283: {
+{
+[; ;main.c: 284: if(m_tabMines[ligne+i][colonne+j]==2)
+"284
+[e $ ! == -> *U + &U *U + &U _m_tabMines * -> -> + _ligne _i `ui `ux -> * -> # *U &U *U &U _m_tabMines `ui -> + -> 20 `i -> 1 `i `ui `ux * -> -> + _colonne _j `ui `ux -> -> # *U &U *U + &U _m_tabMines * -> -> + _ligne _i `ui `ux -> * -> # *U &U *U &U _m_tabMines `ui -> + -> 20 `i -> 1 `i `ui `ux `ui `ux `i -> 2 `i 378  ]
+[; ;main.c: 285: {
+"285
+{
+[; ;main.c: 286: nb_mine ++;
+"286
+[e ++ _nb_mine -> 1 `i ]
+"287
+}
+[e :U 378 ]
+"288
+}
+"282
+[e ++ _j -> 1 `i ]
+[e $ <= _j -> 1 `i 375  ]
+[e :U 376 ]
+"288
+}
+"289
+}
+"280
+[e ++ _i -> 1 `i ]
+[e $ <= _i -> 1 `i 372  ]
+[e :U 373 ]
+"289
+}
+"290
+}
+[e :U 367 ]
+[; ;main.c: 287: }
+[; ;main.c: 288: }
+[; ;main.c: 289: }
+[; ;main.c: 290: }
+[; ;main.c: 291: if((ligne==3)&&(colonne==0))
 "291
-[e $ ! == -> *U + &U *U + &U _m_tabMines * -> -> + _ligne -> 1 `i `ui `ux -> * -> # *U &U *U &U _m_tabMines `ui -> + -> 20 `i -> 1 `i `ui `ux * -> -> + _colonne _i `ui `ux -> -> # *U &U *U + &U _m_tabMines * -> -> + _ligne -> 1 `i `ui `ux -> * -> # *U &U *U &U _m_tabMines `ui -> + -> 20 `i -> 1 `i `ui `ux `ui `ux `i -> 2 `i 378  ]
+[e $ ! && == _ligne -> 3 `i == _colonne -> 0 `i 379  ]
 [; ;main.c: 292: {
 "292
 {
-[; ;main.c: 293: nb_mine++;
+[; ;main.c: 293: if(m_tabMines[ligne-1][colonne]==2)
 "293
-[e ++ _nb_mine -> 1 `i ]
+[e $ ! == -> *U + &U *U + &U _m_tabMines * -> -> - _ligne -> 1 `i `ui `ux -> * -> # *U &U *U &U _m_tabMines `ui -> + -> 20 `i -> 1 `i `ui `ux * -> -> _colonne `ui `ux -> -> # *U &U *U + &U _m_tabMines * -> -> - _ligne -> 1 `i `ui `ux -> * -> # *U &U *U &U _m_tabMines `ui -> + -> 20 `i -> 1 `i `ui `ux `ui `ux `i -> 2 `i 380  ]
+[; ;main.c: 294: {
 "294
-}
-[e :U 378 ]
+{
+[; ;main.c: 295: nb_mine++;
 "295
-}
-"289
-[e ++ _i -> 1 `i ]
-[e $ < _i -> 1 `i 375  ]
-[e :U 376 ]
-"295
-}
+[e ++ _nb_mine -> 1 `i ]
 "296
 }
-[e :U 373 ]
-[; ;main.c: 294: }
-[; ;main.c: 295: }
+[e :U 380 ]
 [; ;main.c: 296: }
-[; ;main.c: 297: if((ligne==3)&&(colonne==0))
+[; ;main.c: 297: for(i=-1;i<=0;i++)
 "297
-[e $ ! && == _ligne -> 3 `i == _colonne -> 0 `i 379  ]
-[; ;main.c: 298: {
-"298
 {
-[; ;main.c: 299: if(m_tabMines[ligne-1][colonne]==2)
+[e = _i -U -> 1 `i ]
+[e $ <= _i -> 0 `i 381  ]
+[e $U 382  ]
+"298
+[e :U 381 ]
+[; ;main.c: 298: {
+{
+[; ;main.c: 299: if(m_tabMines[ligne+i][colonne+1]==2)
 "299
-[e $ ! == -> *U + &U *U + &U _m_tabMines * -> -> - _ligne -> 1 `i `ui `ux -> * -> # *U &U *U &U _m_tabMines `ui -> + -> 20 `i -> 1 `i `ui `ux * -> -> _colonne `ui `ux -> -> # *U &U *U + &U _m_tabMines * -> -> - _ligne -> 1 `i `ui `ux -> * -> # *U &U *U &U _m_tabMines `ui -> + -> 20 `i -> 1 `i `ui `ux `ui `ux `i -> 2 `i 380  ]
+[e $ ! == -> *U + &U *U + &U _m_tabMines * -> -> + _ligne _i `ui `ux -> * -> # *U &U *U &U _m_tabMines `ui -> + -> 20 `i -> 1 `i `ui `ux * -> -> + _colonne -> 1 `i `ui `ux -> -> # *U &U *U + &U _m_tabMines * -> -> + _ligne _i `ui `ux -> * -> # *U &U *U &U _m_tabMines `ui -> + -> 20 `i -> 1 `i `ui `ux `ui `ux `i -> 2 `i 384  ]
 [; ;main.c: 300: {
 "300
 {
@@ -4042,667 +4062,641 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ++ _nb_mine -> 1 `i ]
 "302
 }
-[e :U 380 ]
-[; ;main.c: 302: }
-[; ;main.c: 303: for(i=-1;i<=0;i++)
-"303
-{
-[e = _i -U -> 1 `i ]
-[e $ <= _i -> 0 `i 381  ]
-[e $U 382  ]
-"304
-[e :U 381 ]
-[; ;main.c: 304: {
-{
-[; ;main.c: 305: if(m_tabMines[ligne+(i)][colonne+1]==2)
-"305
-[e $ ! == -> *U + &U *U + &U _m_tabMines * -> -> + _ligne _i `ui `ux -> * -> # *U &U *U &U _m_tabMines `ui -> + -> 20 `i -> 1 `i `ui `ux * -> -> + _colonne -> 1 `i `ui `ux -> -> # *U &U *U + &U _m_tabMines * -> -> + _ligne _i `ui `ux -> * -> # *U &U *U &U _m_tabMines `ui -> + -> 20 `i -> 1 `i `ui `ux `ui `ux `i -> 2 `i 384  ]
-[; ;main.c: 306: {
-"306
-{
-[; ;main.c: 307: nb_mine++;
-"307
-[e ++ _nb_mine -> 1 `i ]
-"308
-}
 [e :U 384 ]
-"309
-}
 "303
+}
+"297
 [e ++ _i -> 1 `i ]
 [e $ <= _i -> 0 `i 381  ]
 [e :U 382 ]
-"309
+"303
 }
-"310
+"304
 }
 [e :U 379 ]
-[; ;main.c: 308: }
-[; ;main.c: 309: }
-[; ;main.c: 310: }
-[; ;main.c: 311: if((ligne==3)&&(colonne<20)&&(colonne>0))
-"311
-[e $ ! && && == _ligne -> 3 `i < _colonne -> 20 `i > _colonne -> 0 `i 385  ]
-[; ;main.c: 312: {
-"312
+[; ;main.c: 302: }
+[; ;main.c: 303: }
+[; ;main.c: 304: }
+[; ;main.c: 305: if((ligne==3)&&(colonne==20))
+"305
+[e $ ! && == _ligne -> 3 `i == _colonne -> 20 `i 385  ]
+[; ;main.c: 306: {
+"306
 {
-[; ;main.c: 313: for(j=-1;j<=1;j++)
-"313
+[; ;main.c: 307: for(i=-1;i<1;i++)
+"307
 {
-[e = _j -U -> 1 `i ]
-[e $ <= _j -> 1 `i 386  ]
+[e = _i -U -> 1 `i ]
+[e $ < _i -> 1 `i 386  ]
 [e $U 387  ]
-"314
+"308
 [e :U 386 ]
-[; ;main.c: 314: {
+[; ;main.c: 308: {
 {
-[; ;main.c: 315: if(m_tabMines[ligne-1][(colonne+j)]== 2)
-"315
-[e $ ! == -> *U + &U *U + &U _m_tabMines * -> -> - _ligne -> 1 `i `ui `ux -> * -> # *U &U *U &U _m_tabMines `ui -> + -> 20 `i -> 1 `i `ui `ux * -> -> + _colonne _j `ui `ux -> -> # *U &U *U + &U _m_tabMines * -> -> - _ligne -> 1 `i `ui `ux -> * -> # *U &U *U &U _m_tabMines `ui -> + -> 20 `i -> 1 `i `ui `ux `ui `ux `i -> 2 `i 389  ]
-[; ;main.c: 316: {
-"316
+[; ;main.c: 309: if(m_tabMines[ligne-1][colonne+i]== 2)
+"309
+[e $ ! == -> *U + &U *U + &U _m_tabMines * -> -> - _ligne -> 1 `i `ui `ux -> * -> # *U &U *U &U _m_tabMines `ui -> + -> 20 `i -> 1 `i `ui `ux * -> -> + _colonne _i `ui `ux -> -> # *U &U *U + &U _m_tabMines * -> -> - _ligne -> 1 `i `ui `ux -> * -> # *U &U *U &U _m_tabMines `ui -> + -> 20 `i -> 1 `i `ui `ux `ui `ux `i -> 2 `i 389  ]
+[; ;main.c: 310: {
+"310
 {
-[; ;main.c: 317: nb_mine++;
-"317
+[; ;main.c: 311: nb_mine++;
+"311
 [e ++ _nb_mine -> 1 `i ]
-"318
+"312
 }
 [e :U 389 ]
-"319
-}
 "313
-[e ++ _j -> 1 `i ]
-[e $ <= _j -> 1 `i 386  ]
+}
+"307
+[e ++ _i -> 1 `i ]
+[e $ < _i -> 1 `i 386  ]
 [e :U 387 ]
-"319
+"313
 }
-[; ;main.c: 318: }
-[; ;main.c: 319: }
-[; ;main.c: 320: for(i=-1;i<=1;i++)
-"320
+[; ;main.c: 312: }
+[; ;main.c: 313: }
+[; ;main.c: 314: if(m_tabMines[ligne][colonne-1]==2)
+"314
+[e $ ! == -> *U + &U *U + &U _m_tabMines * -> -> _ligne `ui `ux -> * -> # *U &U *U &U _m_tabMines `ui -> + -> 20 `i -> 1 `i `ui `ux * -> -> - _colonne -> 1 `i `ui `ux -> -> # *U &U *U + &U _m_tabMines * -> -> _ligne `ui `ux -> * -> # *U &U *U &U _m_tabMines `ui -> + -> 20 `i -> 1 `i `ui `ux `ui `ux `i -> 2 `i 390  ]
+[; ;main.c: 315: {
+"315
 {
-[e = _i -U -> 1 `i ]
-[e $ <= _i -> 1 `i 390  ]
-[e $U 391  ]
-"321
-[e :U 390 ]
-[; ;main.c: 321: {
-{
-[; ;main.c: 322: if(m_tabMines[ligne][(colonne+i)]==2)
-"322
-[e $ ! == -> *U + &U *U + &U _m_tabMines * -> -> _ligne `ui `ux -> * -> # *U &U *U &U _m_tabMines `ui -> + -> 20 `i -> 1 `i `ui `ux * -> -> + _colonne _i `ui `ux -> -> # *U &U *U + &U _m_tabMines * -> -> _ligne `ui `ux -> * -> # *U &U *U &U _m_tabMines `ui -> + -> 20 `i -> 1 `i `ui `ux `ui `ux `i -> 2 `i 393  ]
-[; ;main.c: 323: {
-"323
-{
-[; ;main.c: 324: nb_mine++;
-"324
+[; ;main.c: 316: nb_mine++;
+"316
 [e ++ _nb_mine -> 1 `i ]
-"325
+"317
 }
-[e :U 393 ]
-[; ;main.c: 325: }
-[; ;main.c: 326: i++;
-"326
-[e ++ _i -> 1 `i ]
-"327
-}
-"320
-[e ++ _i -> 1 `i ]
-[e $ <= _i -> 1 `i 390  ]
-[e :U 391 ]
-"327
-}
-"328
+[e :U 390 ]
+"318
 }
 [e :U 385 ]
-[; ;main.c: 327: }
-[; ;main.c: 328: }
-[; ;main.c: 329: if((ligne==3)&&(colonne==20))
-"329
-[e $ ! && == _ligne -> 3 `i == _colonne -> 20 `i 394  ]
-[; ;main.c: 330: {
-"330
+[; ;main.c: 317: }
+[; ;main.c: 318: }
+[; ;main.c: 319: if((ligne==3)&&(colonne<20)&&(colonne>0))
+"319
+[e $ ! && && == _ligne -> 3 `i < _colonne -> 20 `i > _colonne -> 0 `i 391  ]
+[; ;main.c: 320: {
+"320
 {
-[; ;main.c: 331: for(i=-1;i<1;i++)
-"331
+[; ;main.c: 321: for(j=-1;j<=1;j++)
+"321
+{
+[e = _j -U -> 1 `i ]
+[e $ <= _j -> 1 `i 392  ]
+[e $U 393  ]
+"322
+[e :U 392 ]
+[; ;main.c: 322: {
+{
+[; ;main.c: 323: if(m_tabMines[ligne-1][colonne+j]== 2)
+"323
+[e $ ! == -> *U + &U *U + &U _m_tabMines * -> -> - _ligne -> 1 `i `ui `ux -> * -> # *U &U *U &U _m_tabMines `ui -> + -> 20 `i -> 1 `i `ui `ux * -> -> + _colonne _j `ui `ux -> -> # *U &U *U + &U _m_tabMines * -> -> - _ligne -> 1 `i `ui `ux -> * -> # *U &U *U &U _m_tabMines `ui -> + -> 20 `i -> 1 `i `ui `ux `ui `ux `i -> 2 `i 395  ]
+[; ;main.c: 324: {
+"324
+{
+[; ;main.c: 325: nb_mine++;
+"325
+[e ++ _nb_mine -> 1 `i ]
+"326
+}
+[e :U 395 ]
+"327
+}
+"321
+[e ++ _j -> 1 `i ]
+[e $ <= _j -> 1 `i 392  ]
+[e :U 393 ]
+"327
+}
+[; ;main.c: 326: }
+[; ;main.c: 327: }
+[; ;main.c: 328: for(i=-1;i<=1;i++)
+"328
 {
 [e = _i -U -> 1 `i ]
-[e $ < _i -> 1 `i 395  ]
-[e $U 396  ]
-"332
-[e :U 395 ]
-[; ;main.c: 332: {
-{
-[; ;main.c: 333: if(m_tabMines[ligne-1][colonne+i]== 2)
-"333
-[e $ ! == -> *U + &U *U + &U _m_tabMines * -> -> - _ligne -> 1 `i `ui `ux -> * -> # *U &U *U &U _m_tabMines `ui -> + -> 20 `i -> 1 `i `ui `ux * -> -> + _colonne _i `ui `ux -> -> # *U &U *U + &U _m_tabMines * -> -> - _ligne -> 1 `i `ui `ux -> * -> # *U &U *U &U _m_tabMines `ui -> + -> 20 `i -> 1 `i `ui `ux `ui `ux `i -> 2 `i 398  ]
-[; ;main.c: 334: {
-"334
-{
-[; ;main.c: 335: nb_mine++;
-"335
-[e ++ _nb_mine -> 1 `i ]
-"336
-}
-[e :U 398 ]
-"337
-}
-"331
-[e ++ _i -> 1 `i ]
-[e $ < _i -> 1 `i 395  ]
+[e $ <= _i -> 1 `i 396  ]
+[e $U 397  ]
+"329
 [e :U 396 ]
-"337
-}
-[; ;main.c: 336: }
-[; ;main.c: 337: }
-[; ;main.c: 338: if(m_tabMines[ligne][colonne-1]==2)
-"338
-[e $ ! == -> *U + &U *U + &U _m_tabMines * -> -> _ligne `ui `ux -> * -> # *U &U *U &U _m_tabMines `ui -> + -> 20 `i -> 1 `i `ui `ux * -> -> - _colonne -> 1 `i `ui `ux -> -> # *U &U *U + &U _m_tabMines * -> -> _ligne `ui `ux -> * -> # *U &U *U &U _m_tabMines `ui -> + -> 20 `i -> 1 `i `ui `ux `ui `ux `i -> 2 `i 399  ]
-[; ;main.c: 339: {
-"339
+[; ;main.c: 329: {
 {
-[; ;main.c: 340: nb_mine++;
-"340
+[; ;main.c: 330: if(m_tabMines[ligne][colonne+i]==2)
+"330
+[e $ ! == -> *U + &U *U + &U _m_tabMines * -> -> _ligne `ui `ux -> * -> # *U &U *U &U _m_tabMines `ui -> + -> 20 `i -> 1 `i `ui `ux * -> -> + _colonne _i `ui `ux -> -> # *U &U *U + &U _m_tabMines * -> -> _ligne `ui `ux -> * -> # *U &U *U &U _m_tabMines `ui -> + -> 20 `i -> 1 `i `ui `ux `ui `ux `i -> 2 `i 399  ]
+[; ;main.c: 331: {
+"331
+{
+[; ;main.c: 332: nb_mine++;
+"332
 [e ++ _nb_mine -> 1 `i ]
-"341
+"333
 }
 [e :U 399 ]
-"342
+[; ;main.c: 333: }
+[; ;main.c: 334: i++;
+"334
+[e ++ _i -> 1 `i ]
+"335
 }
-[e :U 394 ]
-[; ;main.c: 341: }
-[; ;main.c: 342: }
-[; ;main.c: 343: return nb_mine;
-"343
+"328
+[e ++ _i -> 1 `i ]
+[e $ <= _i -> 1 `i 396  ]
+[e :U 397 ]
+"335
+}
+"336
+}
+[e :U 391 ]
+[; ;main.c: 335: }
+[; ;main.c: 336: }
+[; ;main.c: 337: return nb_mine;
+"337
 [e ) -> _nb_mine `uc ]
 [e $UE 346  ]
-[; ;main.c: 344: }
-"344
+[; ;main.c: 338: }
+"338
 [e :UE 346 ]
 }
 [v F2919 `(v ~T0 @X0 1 tf2`*uc`*uc ]
-"352
+"346
 [v _deplace `AF2919 ~T0 @X0 1 e ]
-"353
+"347
 {
-[; ;main.c: 352: void deplace(char* x, char* y)
-[; ;main.c: 353: {
+[; ;main.c: 346: void deplace(char* x, char* y)
+[; ;main.c: 347: {
 [e :U _deplace ]
-"352
+"346
 [v _x `*uc ~T0 @X0 1 r1 ]
 [v _y `*uc ~T0 @X0 1 r2 ]
-"353
+"347
 [f ]
-[; ;main.c: 354: if(getAnalog(6)>210)
-"354
-[e $ ! > -> ( _getAnalog (1 -> -> 6 `i `uc `i -> 210 `i 401  ]
-[; ;main.c: 355: {
-"355
+[; ;main.c: 348: if(getAnalog(6)>220)
+"348
+[e $ ! > -> ( _getAnalog (1 -> -> 6 `i `uc `i -> 220 `i 401  ]
+[; ;main.c: 349: {
+"349
 {
-[; ;main.c: 356: (*x)= (*x) +1;
-"356
+[; ;main.c: 350: (*x)= (*x) +1;
+"350
 [e = *U _x -> + -> *U _x `i -> 1 `i `uc ]
-[; ;main.c: 357: if (*x > 20)
-"357
+[; ;main.c: 351: if (*x > 20)
+"351
 [e $ ! > -> *U _x `i -> 20 `i 402  ]
-[; ;main.c: 358: {
-"358
+[; ;main.c: 352: {
+"352
 {
-[; ;main.c: 359: *x=1;
-"359
+[; ;main.c: 353: *x=1;
+"353
 [e = *U _x -> -> 1 `i `uc ]
-"360
+"354
 }
 [e :U 402 ]
-"361
+"355
 }
-[; ;main.c: 360: }
-[; ;main.c: 361: }
+[; ;main.c: 354: }
+[; ;main.c: 355: }
 [e $U 403  ]
-"362
+"356
 [e :U 401 ]
-[; ;main.c: 362: else if(getAnalog(6)<110)
+[; ;main.c: 356: else if(getAnalog(6)<110)
 [e $ ! < -> ( _getAnalog (1 -> -> 6 `i `uc `i -> 110 `i 404  ]
-[; ;main.c: 363: {
-"363
+[; ;main.c: 357: {
+"357
 {
-[; ;main.c: 364: (*x)=(*x)-1;
-"364
+[; ;main.c: 358: (*x)=(*x)-1;
+"358
 [e = *U _x -> - -> *U _x `i -> 1 `i `uc ]
-[; ;main.c: 365: if((*x)<1)
-"365
+[; ;main.c: 359: if((*x)<1)
+"359
 [e $ ! < -> *U _x `i -> 1 `i 405  ]
-[; ;main.c: 366: {
-"366
+[; ;main.c: 360: {
+"360
 {
-[; ;main.c: 367: (*x)=20;
-"367
+[; ;main.c: 361: (*x)=20;
+"361
 [e = *U _x -> -> 20 `i `uc ]
-"368
+"362
 }
 [e :U 405 ]
-"369
+"363
 }
 [e :U 404 ]
-"370
+"364
 [e :U 403 ]
-[; ;main.c: 368: }
-[; ;main.c: 369: }
-[; ;main.c: 370: if(getAnalog(7)<110)
+[; ;main.c: 362: }
+[; ;main.c: 363: }
+[; ;main.c: 364: if(getAnalog(7)<110)
 [e $ ! < -> ( _getAnalog (1 -> -> 7 `i `uc `i -> 110 `i 406  ]
-[; ;main.c: 371: {
-"371
+[; ;main.c: 365: {
+"365
 {
-[; ;main.c: 372: (*y)= (*y) +1;
-"372
+[; ;main.c: 366: (*y)= (*y) +1;
+"366
 [e = *U _y -> + -> *U _y `i -> 1 `i `uc ]
-[; ;main.c: 373: if ((*y )> 4)
-"373
+[; ;main.c: 367: if ((*y )> 4)
+"367
 [e $ ! > -> *U _y `i -> 4 `i 407  ]
-[; ;main.c: 374: {
-"374
+[; ;main.c: 368: {
+"368
 {
-[; ;main.c: 375: (*y)=1;
-"375
+[; ;main.c: 369: (*y)=1;
+"369
 [e = *U _y -> -> 1 `i `uc ]
-"376
+"370
 }
 [e :U 407 ]
-"377
+"371
 }
-[; ;main.c: 376: }
-[; ;main.c: 377: }
+[; ;main.c: 370: }
+[; ;main.c: 371: }
 [e $U 408  ]
-"378
+"372
 [e :U 406 ]
-[; ;main.c: 378: else if(getAnalog(7)>200)
+[; ;main.c: 372: else if(getAnalog(7)>200)
 [e $ ! > -> ( _getAnalog (1 -> -> 7 `i `uc `i -> 200 `i 409  ]
-[; ;main.c: 379: {
-"379
+[; ;main.c: 373: {
+"373
 {
-[; ;main.c: 380: (*y)=(*y) - 1;
-"380
+[; ;main.c: 374: (*y)=(*y) - 1;
+"374
 [e = *U _y -> - -> *U _y `i -> 1 `i `uc ]
-[; ;main.c: 381: if (*y < 1)
-"381
+[; ;main.c: 375: if (*y < 1)
+"375
 [e $ ! < -> *U _y `i -> 1 `i 410  ]
-[; ;main.c: 382: {
-"382
+[; ;main.c: 376: {
+"376
 {
-[; ;main.c: 383: (*y)=4;
-"383
+[; ;main.c: 377: (*y)=4;
+"377
 [e = *U _y -> -> 4 `i `uc ]
-"384
+"378
 }
 [e :U 410 ]
-"385
+"379
 }
 [e :U 409 ]
-"386
+"380
 [e :U 408 ]
-[; ;main.c: 384: }
-[; ;main.c: 385: }
-[; ;main.c: 386: lcd_gotoXY(*x ,*y);
+[; ;main.c: 378: }
+[; ;main.c: 379: }
+[; ;main.c: 380: lcd_gotoXY(*x ,*y);
 [e ( _lcd_gotoXY (2 , *U _x *U _y ]
-[; ;main.c: 387: }
-"387
+[; ;main.c: 381: }
+"381
 [e :UE 400 ]
 }
 [v F2922 `(uc ~T0 @X0 1 tf2`uc`uc ]
-"397
+"391
 [v _demine `AF2922 ~T0 @X0 1 e ]
-"398
+"392
 {
-[; ;main.c: 397: bool demine(char x, char y)
-[; ;main.c: 398: {
+[; ;main.c: 391: bool demine(char x, char y)
+[; ;main.c: 392: {
 [e :U _demine ]
-"397
+"391
 [v _x `uc ~T0 @X0 1 r1 ]
 [v _y `uc ~T0 @X0 1 r2 ]
-"398
+"392
 [f ]
-[; ;main.c: 399: x=x-1;
-"399
+[; ;main.c: 393: x=x-1;
+"393
 [e = _x -> - -> _x `i -> 1 `i `uc ]
-[; ;main.c: 400: y=y-1;
-"400
+[; ;main.c: 394: y=y-1;
+"394
 [e = _y -> - -> _y `i -> 1 `i `uc ]
-"401
+"395
 [v _mine `uc ~T0 @X0 1 a ]
-[; ;main.c: 401: bool mine= 1;
+[; ;main.c: 395: bool mine= 1;
 [e = _mine -> -> 1 `i `uc ]
-[; ;main.c: 402: if (m_tabMines[(y)][(x)]== 2)
-"402
+[; ;main.c: 396: if (m_tabMines[(y)][(x)]== 2)
+"396
 [e $ ! == -> *U + &U *U + &U _m_tabMines * -> _y `ux -> * -> # *U &U *U &U _m_tabMines `ui -> + -> 20 `i -> 1 `i `ui `ux * -> _x `ux -> -> # *U &U *U + &U _m_tabMines * -> _y `ux -> * -> # *U &U *U &U _m_tabMines `ui -> + -> 20 `i -> 1 `i `ui `ux `ui `ux `i -> 2 `i 412  ]
-[; ;main.c: 403: {
-"403
+[; ;main.c: 397: {
+"397
 {
-[; ;main.c: 404: mine=0;
-"404
+[; ;main.c: 398: mine=0;
+"398
 [e = _mine -> -> 0 `i `uc ]
-"405
+"399
 }
-[; ;main.c: 405: }
+[; ;main.c: 399: }
 [e $U 413  ]
-"406
+"400
 [e :U 412 ]
-[; ;main.c: 406: else if ((m_tabMines[(y)][(x)]!= 2)&&(m_tabMines[(y)][(x)]==32))
+[; ;main.c: 400: else if ((m_tabMines[(y)][(x)]!= 2)&&(m_tabMines[(y)][(x)]==32))
 [e $ ! && != -> *U + &U *U + &U _m_tabMines * -> _y `ux -> * -> # *U &U *U &U _m_tabMines `ui -> + -> 20 `i -> 1 `i `ui `ux * -> _x `ux -> -> # *U &U *U + &U _m_tabMines * -> _y `ux -> * -> # *U &U *U &U _m_tabMines `ui -> + -> 20 `i -> 1 `i `ui `ux `ui `ux `i -> 2 `i == -> *U + &U *U + &U _m_tabMines * -> _y `ux -> * -> # *U &U *U &U _m_tabMines `ui -> + -> 20 `i -> 1 `i `ui `ux * -> _x `ux -> -> # *U &U *U + &U _m_tabMines * -> _y `ux -> * -> # *U &U *U &U _m_tabMines `ui -> + -> 20 `i -> 1 `i `ui `ux `ui `ux `i -> 32 `i 414  ]
-[; ;main.c: 407: {
-"407
+[; ;main.c: 401: {
+"401
 {
-[; ;main.c: 408: mine=1;
-"408
+[; ;main.c: 402: mine=1;
+"402
 [e = _mine -> -> 1 `i `uc ]
-[; ;main.c: 409: enleveTuilesAutour((x),(y));
-"409
+[; ;main.c: 403: enleveTuilesAutour((x),(y));
+"403
 [e ( _enleveTuilesAutour (2 , _x _y ]
-"410
+"404
 }
-[; ;main.c: 410: }
+[; ;main.c: 404: }
 [e $U 415  ]
-"411
+"405
 [e :U 414 ]
-[; ;main.c: 411: else
-[; ;main.c: 412: {
-"412
+[; ;main.c: 405: else
+[; ;main.c: 406: {
+"406
 {
-[; ;main.c: 413: mine=1;
-"413
+[; ;main.c: 407: mine=1;
+"407
 [e = _mine -> -> 1 `i `uc ]
-[; ;main.c: 414: m_tabVue[y][x]=m_tabMines[y][x];
-"414
+[; ;main.c: 408: m_tabVue[y][x]=m_tabMines[y][x];
+"408
 [e = *U + &U *U + &U _m_tabVue * -> _y `ux -> * -> # *U &U *U &U _m_tabVue `ui -> + -> 20 `i -> 1 `i `ui `ux * -> _x `ux -> -> # *U &U *U + &U _m_tabVue * -> _y `ux -> * -> # *U &U *U &U _m_tabVue `ui -> + -> 20 `i -> 1 `i `ui `ux `ui `ux *U + &U *U + &U _m_tabMines * -> _y `ux -> * -> # *U &U *U &U _m_tabMines `ui -> + -> 20 `i -> 1 `i `ui `ux * -> _x `ux -> -> # *U &U *U + &U _m_tabMines * -> _y `ux -> * -> # *U &U *U &U _m_tabMines `ui -> + -> 20 `i -> 1 `i `ui `ux `ui `ux ]
-[; ;main.c: 415: lcd_ecritChar(m_tabVue[y][x]);
-"415
+[; ;main.c: 409: lcd_ecritChar(m_tabVue[y][x]);
+"409
 [e ( _lcd_ecritChar (1 *U + &U *U + &U _m_tabVue * -> _y `ux -> * -> # *U &U *U &U _m_tabVue `ui -> + -> 20 `i -> 1 `i `ui `ux * -> _x `ux -> -> # *U &U *U + &U _m_tabVue * -> _y `ux -> * -> # *U &U *U &U _m_tabVue `ui -> + -> 20 `i -> 1 `i `ui `ux `ui `ux ]
-"416
+"410
 }
 [e :U 415 ]
 [e :U 413 ]
-[; ;main.c: 416: }
-[; ;main.c: 417: return mine;
-"417
+[; ;main.c: 410: }
+[; ;main.c: 411: return mine;
+"411
 [e ) _mine ]
 [e $UE 411  ]
-[; ;main.c: 418: }
-"418
+[; ;main.c: 412: }
+"412
 [e :UE 411 ]
 }
 [v F2926 `(v ~T0 @X0 1 tf2`uc`uc ]
-"426
+"420
 [v _enleveTuilesAutour `AF2926 ~T0 @X0 1 e ]
-"427
+"421
 {
-[; ;main.c: 426: void enleveTuilesAutour(char x, char y)
-[; ;main.c: 427: {
+[; ;main.c: 420: void enleveTuilesAutour(char x, char y)
+[; ;main.c: 421: {
 [e :U _enleveTuilesAutour ]
-"426
+"420
 [v _x `uc ~T0 @X0 1 r1 ]
 [v _y `uc ~T0 @X0 1 r2 ]
-"427
+"421
 [f ]
-"428
+"422
 [v _i `i ~T0 @X0 1 a ]
-[; ;main.c: 428: int i=-1;
-[e = _i -U -> 1 `i ]
-"429
+[; ;main.c: 422: int i=0;
+[e = _i -> 0 `i ]
+"423
 [v _mine `i ~T0 @X0 1 a ]
-[; ;main.c: 429: int mine=0;
+[; ;main.c: 423: int mine=0;
 [e = _mine -> 0 `i ]
-[; ;main.c: 431: m_tabVue[y][x]=32;
-"431
+[; ;main.c: 425: m_tabVue[y][x]=32;
+"425
 [e = *U + &U *U + &U _m_tabVue * -> _y `ux -> * -> # *U &U *U &U _m_tabVue `ui -> + -> 20 `i -> 1 `i `ui `ux * -> _x `ux -> -> # *U &U *U + &U _m_tabVue * -> _y `ux -> * -> # *U &U *U &U _m_tabVue `ui -> + -> 20 `i -> 1 `i `ui `ux `ui `ux -> -> 32 `i `uc ]
-[; ;main.c: 432: for ( i=-1;i<=1;i++)
-"432
+[; ;main.c: 426: for ( i=-1;i<=1;i++)
+"426
 {
 [e = _i -U -> 1 `i ]
 [e $ <= _i -> 1 `i 417  ]
 [e $U 418  ]
-"433
+"427
 [e :U 417 ]
-[; ;main.c: 433: {
+[; ;main.c: 427: {
 {
-[; ;main.c: 434: if((y==0)&&(i==-1))
-"434
+[; ;main.c: 428: if((y==0)&&(i==-1))
+"428
 [e $ ! && == -> _y `i -> 0 `i == _i -U -> 1 `i 420  ]
-[; ;main.c: 435: {
-"435
+[; ;main.c: 429: {
+"429
 {
-[; ;main.c: 436: i=0;
-"436
+[; ;main.c: 430: i=0;
+"430
 [e = _i -> 0 `i ]
-"437
+"431
 }
 [e :U 420 ]
-[; ;main.c: 437: }
-[; ;main.c: 438: for(int j=-1;j<=1;j++)
-"438
+[; ;main.c: 431: }
+[; ;main.c: 432: for(int j=-1;j<=1;j++)
+"432
 {
 [v _j `i ~T0 @X0 1 a ]
 [e = _j -U -> 1 `i ]
 [e $ <= _j -> 1 `i 421  ]
 [e $U 422  ]
-"439
+"433
 [e :U 421 ]
-[; ;main.c: 439: {
+[; ;main.c: 433: {
 {
-[; ;main.c: 440: if((x==0)&&(j==-1))
-"440
+[; ;main.c: 434: if((x==0)&&(j==-1))
+"434
 [e $ ! && == -> _x `i -> 0 `i == _j -U -> 1 `i 424  ]
-[; ;main.c: 441: {
-"441
+[; ;main.c: 435: {
+"435
 {
-[; ;main.c: 442: j=0;
-"442
+[; ;main.c: 436: j=0;
+"436
 [e = _j -> 0 `i ]
-"443
+"437
 }
 [e :U 424 ]
-[; ;main.c: 443: }
-[; ;main.c: 444: m_tabVue[y+i][x+j]= m_tabMines[y+i][x+j];
-"444
+[; ;main.c: 437: }
+[; ;main.c: 438: m_tabVue[y+i][x+j]= m_tabMines[y+i][x+j];
+"438
 [e = *U + &U *U + &U _m_tabVue * -> -> + -> _y `i _i `ui `ux -> * -> # *U &U *U &U _m_tabVue `ui -> + -> 20 `i -> 1 `i `ui `ux * -> -> + -> _x `i _j `ui `ux -> -> # *U &U *U + &U _m_tabVue * -> -> + -> _y `i _i `ui `ux -> * -> # *U &U *U &U _m_tabVue `ui -> + -> 20 `i -> 1 `i `ui `ux `ui `ux *U + &U *U + &U _m_tabMines * -> -> + -> _y `i _i `ui `ux -> * -> # *U &U *U &U _m_tabMines `ui -> + -> 20 `i -> 1 `i `ui `ux * -> -> + -> _x `i _j `ui `ux -> -> # *U &U *U + &U _m_tabMines * -> -> + -> _y `i _i `ui `ux -> * -> # *U &U *U &U _m_tabMines `ui -> + -> 20 `i -> 1 `i `ui `ux `ui `ux ]
-[; ;main.c: 445: lcd_gotoXY(x+1+j,y+i+1);
-"445
+[; ;main.c: 439: lcd_gotoXY(x+1+j,y+i+1);
+"439
 [e ( _lcd_gotoXY (2 , -> + + -> _x `i -> 1 `i _j `uc -> + + -> _y `i _i -> 1 `i `uc ]
-[; ;main.c: 446: lcd_ecritChar(m_tabVue[y+i][x+j]);
-"446
+[; ;main.c: 440: lcd_ecritChar(m_tabVue[y+i][x+j]);
+"440
 [e ( _lcd_ecritChar (1 *U + &U *U + &U _m_tabVue * -> -> + -> _y `i _i `ui `ux -> * -> # *U &U *U &U _m_tabVue `ui -> + -> 20 `i -> 1 `i `ui `ux * -> -> + -> _x `i _j `ui `ux -> -> # *U &U *U + &U _m_tabVue * -> -> + -> _y `i _i `ui `ux -> * -> # *U &U *U &U _m_tabVue `ui -> + -> 20 `i -> 1 `i `ui `ux `ui `ux ]
-[; ;main.c: 447: if((x==19)&&(j==0))
-"447
+[; ;main.c: 441: if((x==19)&&(j==0))
+"441
 [e $ ! && == -> _x `i -> 19 `i == _j -> 0 `i 425  ]
-[; ;main.c: 448: {
-"448
+[; ;main.c: 442: {
+"442
 {
-[; ;main.c: 449: j=1;
-"449
+[; ;main.c: 443: j=1;
+"443
 [e = _j -> 1 `i ]
-"450
+"444
 }
 [e :U 425 ]
-"451
+"445
 }
-"438
+"432
 [e ++ _j -> 1 `i ]
 [e $ <= _j -> 1 `i 421  ]
 [e :U 422 ]
-"451
+"445
 }
-[; ;main.c: 450: }
-[; ;main.c: 451: }
-[; ;main.c: 452: if((y==3)&&(i==0))
-"452
+[; ;main.c: 444: }
+[; ;main.c: 445: }
+[; ;main.c: 446: if((y==3)&&(i==0))
+"446
 [e $ ! && == -> _y `i -> 3 `i == _i -> 0 `i 426  ]
-[; ;main.c: 453: {
-"453
+[; ;main.c: 447: {
+"447
 {
-[; ;main.c: 454: i=1;
-"454
+[; ;main.c: 448: i=1;
+"448
 [e = _i -> 1 `i ]
-"455
+"449
 }
 [e :U 426 ]
-"456
+"450
 }
-"432
+"426
 [e ++ _i -> 1 `i ]
 [e $ <= _i -> 1 `i 417  ]
 [e :U 418 ]
-"456
+"450
 }
-[; ;main.c: 455: }
-[; ;main.c: 456: }
-[; ;main.c: 457: }
-"457
+[; ;main.c: 449: }
+[; ;main.c: 450: }
+[; ;main.c: 451: }
+"451
 [e :UE 416 ]
 }
 [v F2931 `(uc ~T0 @X0 1 tf1`*i ]
-"468
+"462
 [v _gagne `AF2931 ~T0 @X0 1 e ]
-"469
+"463
 {
-[; ;main.c: 468: bool gagne(int* pMines)
-[; ;main.c: 469: {
+[; ;main.c: 462: bool gagne(int* pMines)
+[; ;main.c: 463: {
 [e :U _gagne ]
-"468
+"462
 [v _pMines `*i ~T0 @X0 1 r1 ]
-"469
+"463
 [f ]
-"470
+"464
 [v _nb_Tuile `i ~T0 @X0 1 a ]
-[; ;main.c: 470: int nb_Tuile =0;
+[; ;main.c: 464: int nb_Tuile =0;
 [e = _nb_Tuile -> 0 `i ]
 [v _gagne `uc ~T0 @X0 1 a ]
-[; ;main.c: 471: bool gagne= 0;
-"471
+[; ;main.c: 465: bool gagne= 0;
+"465
 [e = _gagne -> -> 0 `i `uc ]
-"472
+"466
 [v _i `i ~T0 @X0 1 a ]
-[; ;main.c: 472: int i=0;
+[; ;main.c: 466: int i=0;
 [e = _i -> 0 `i ]
-"473
+"467
 [v _j `i ~T0 @X0 1 a ]
-[; ;main.c: 473: int j=0;
+[; ;main.c: 467: int j=0;
 [e = _j -> 0 `i ]
-[; ;main.c: 474: for(i=0;i<4;i++)
-"474
+[; ;main.c: 468: for(i=0;i<4;i++)
+"468
 {
 [e = _i -> 0 `i ]
 [e $ < _i -> 4 `i 428  ]
 [e $U 429  ]
-"475
+"469
 [e :U 428 ]
-[; ;main.c: 475: {
+[; ;main.c: 469: {
 {
-[; ;main.c: 476: for(j=0;j<20;j++)
-"476
+[; ;main.c: 470: for(j=0;j<20;j++)
+"470
 {
 [e = _j -> 0 `i ]
 [e $ < _j -> 20 `i 431  ]
 [e $U 432  ]
-"477
+"471
 [e :U 431 ]
-[; ;main.c: 477: {
+[; ;main.c: 471: {
 {
-[; ;main.c: 478: if(m_tabVue[i][j]==1)
-"478
+[; ;main.c: 472: if(m_tabVue[i][j]==1)
+"472
 [e $ ! == -> *U + &U *U + &U _m_tabVue * -> -> _i `ui `ux -> * -> # *U &U *U &U _m_tabVue `ui -> + -> 20 `i -> 1 `i `ui `ux * -> -> _j `ui `ux -> -> # *U &U *U + &U _m_tabVue * -> -> _i `ui `ux -> * -> # *U &U *U &U _m_tabVue `ui -> + -> 20 `i -> 1 `i `ui `ux `ui `ux `i -> 1 `i 434  ]
-[; ;main.c: 479: {
-"479
+[; ;main.c: 473: {
+"473
 {
-[; ;main.c: 480: nb_Tuile++;
-"480
+[; ;main.c: 474: nb_Tuile++;
+"474
 [e ++ _nb_Tuile -> 1 `i ]
-"481
+"475
 }
 [e :U 434 ]
-"482
-}
 "476
+}
+"470
 [e ++ _j -> 1 `i ]
 [e $ < _j -> 20 `i 431  ]
 [e :U 432 ]
-"482
+"476
 }
-"483
+"477
 }
-"474
+"468
 [e ++ _i -> 1 `i ]
 [e $ < _i -> 4 `i 428  ]
 [e :U 429 ]
+"477
+}
+[; ;main.c: 475: }
+[; ;main.c: 476: }
+[; ;main.c: 477: }
+[; ;main.c: 478: if (*pMines == nb_Tuile)
+"478
+[e $ ! == *U _pMines _nb_Tuile 435  ]
+[; ;main.c: 479: {
+"479
+{
+[; ;main.c: 480: lcd_effaceAffichage();
+"480
+[e ( _lcd_effaceAffichage ..  ]
+[; ;main.c: 481: (*pMines)=(*pMines) +1;
+"481
+[e = *U _pMines + *U _pMines -> 1 `i ]
+[; ;main.c: 482: gagne=1;
+"482
+[e = _gagne -> -> 1 `i `uc ]
 "483
 }
-[; ;main.c: 481: }
-[; ;main.c: 482: }
-[; ;main.c: 483: }
-[; ;main.c: 484: if (*pMines == nb_Tuile)
-"484
-[e $ ! == *U _pMines _nb_Tuile 435  ]
-[; ;main.c: 485: {
-"485
-{
-[; ;main.c: 486: lcd_effaceAffichage();
-"486
-[e ( _lcd_effaceAffichage ..  ]
-[; ;main.c: 487: (*pMines)=(*pMines) +1;
-"487
-[e = *U _pMines + *U _pMines -> 1 `i ]
-[; ;main.c: 488: gagne=1;
-"488
-[e = _gagne -> -> 1 `i `uc ]
-"489
-}
 [e :U 435 ]
-[; ;main.c: 489: }
-[; ;main.c: 490: return gagne;
-"490
+[; ;main.c: 483: }
+[; ;main.c: 484: return gagne;
+"484
 [e ) _gagne ]
 [e $UE 427  ]
-[; ;main.c: 491: }
-"491
+[; ;main.c: 485: }
+"485
 [e :UE 427 ]
 }
 [v F2937 `(v ~T0 @X0 1 tf ]
-"497
+"491
 [v _afficheTabVue `AF2937 ~T0 @X0 1 e ]
-"498
+"492
 {
-[; ;main.c: 497: void afficheTabVue(void)
-[; ;main.c: 498: {
+[; ;main.c: 491: void afficheTabVue(void)
+[; ;main.c: 492: {
 [e :U _afficheTabVue ]
 [f ]
-"499
-[v _i `i ~T0 @X0 1 a ]
-[; ;main.c: 499: int i=0;
-[e = _i -> 0 `i ]
-[; ;main.c: 500: for(i=0;i<4;i++)
-"500
+[; ;main.c: 493: for(int i=0;i<4;i++)
+"493
 {
+[v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
 [e $ < _i -> 4 `i 437  ]
 [e $U 438  ]
-"501
+"494
 [e :U 437 ]
-[; ;main.c: 501: {
+[; ;main.c: 494: {
 {
-[; ;main.c: 502: lcd_gotoXY( 1, i+1);
-"502
+[; ;main.c: 495: lcd_gotoXY( 1, i+1);
+"495
 [e ( _lcd_gotoXY (2 , -> -> 1 `i `uc -> + _i -> 1 `i `uc ]
-[; ;main.c: 503: lcd_putMessage(m_tabVue[i]);
-"503
+[; ;main.c: 496: lcd_putMessage(m_tabVue[i]);
+"496
 [e ( _lcd_putMessage (1 -> &U *U + &U _m_tabVue * -> -> _i `ui `ux -> * -> # *U &U *U &U _m_tabVue `ui -> + -> 20 `i -> 1 `i `ui `ux `*Cuc ]
-"504
+"497
 }
-"500
+"493
 [e ++ _i -> 1 `i ]
 [e $ < _i -> 4 `i 437  ]
 [e :U 438 ]
-"504
+"497
 }
-[; ;main.c: 504: }
-[; ;main.c: 505: }
-"505
+[; ;main.c: 497: }
+[; ;main.c: 498: }
+"498
 [e :UE 436 ]
 }
 [a 1C 76 65 66 54 32 89 111 117 108 105 97 110 32 72 111 117 101 104 111 117 110 111 117 0 ]
