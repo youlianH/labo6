@@ -20,11 +20,11 @@ sudo usermod -aG YOULIAN sudo
 
 echo 'YOULIAN ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
 
-#Generer une paire de clef ssh
+#Générer une paire de clef ssh
 
 ssh-keygen -b 2048 -t rsa -f /home/YOULIAN/mykey -q -P "" 
 
-#N'accepte pas les connection ave Root
+#N'accepte pas les connections avec Root
 
 sudo sed -i 's/PermitRootLogin yes/PermitRootLogin no/g' /etc/ssh/sshd_config
 

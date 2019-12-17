@@ -5,9 +5,9 @@
  * @brief  Ce programme est une version simplifier du jeu démineur que l'on joue sur un écran LCD à l'aide d'une 
  * manette munie d'un analogue et d'un boutton sw. L'analogue permet au joueur de se déplacer sur toutes les lignes et 
  * colonnes de l'écran LCD. Le bouton sw permet au joueur de sélectionner une case et la dévoiler. Lorsqu'une case vide
- * est dévoilé, les cases ne contenant pas de mine qui se trouve autour de celle-ci sont dévoilé. Le jeu commence avec
- * 12 mines. Le joueur gagne lorsque les nombres de tuile restante est égal au nombre de mines contenue dans le jeu
- * Lorsque le joeur gagne une partie, le nombre de mines augmente de 1
+ * est dévoilé, les cases ne contenant pas de mines qui se trouvent autour de celle-ci sont dévoilées.
+ * Le jeu commence avec * 12 mines. Le joueur gagne lorsque les nombres de tuile restante est égal au nombre 
+ * de mines contenue dans le jeu. Lorsque le joeur gagne une partie, le nombre de mines augmente de 1.
  * @version 1.0
  * Environnement:
  *     Développement: MPLAB X IDE (version 5.05)
@@ -29,8 +29,8 @@
 #define DELAI_TMR0 0x0BDC 
 #define NB_LIGNE 4  //afficheur LCD 4x20
 #define NB_COL 20 // Nombre de collone que contient l'afficheur LCD
-#define AXE_X 6  //canal analogique de l'axe x
-#define AXE_Y 7 // canal analogique de l'axe y
+#define AXE_X 7  //canal analogique de l'axe x
+#define AXE_Y 6 // canal analogique de l'axe y
 #define PORT_SW PORTBbits.RB1 //sw de la manette
 #define TUILE 1 //caractère cgram d'une tuile
 #define MINE 2 //caractère cgram d'une mine
@@ -208,7 +208,6 @@ void metToucheCombien(void)
         }
     }
 }
-
  
 /*
  * @brief Calcul à combien de mines touche la case. Cette méthode est appelée par metToucheCombien()
@@ -331,6 +330,7 @@ char calculToucheCombien(int ligne, int colonne)
     }
     return nb_mine;
 }
+
 /** 
 
  * @brief Si la manette est vers la droite ou la gauche, on déplace le curseur 
@@ -474,6 +474,7 @@ bool gagne(int* pMines)
     }
     return gagne;
 }
+
 /*
  * @brief Affiche le contenue de de m_tabVue sur l'afficheur LCD
  * @param rien
