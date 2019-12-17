@@ -2,12 +2,12 @@
  * @file main.c,Labo6  
  * @author Youlan Houehounou
  * @date 16 décembre 2019  
- * @brief  Ce programme est une version simplifier du jeu déminueur que l'on joue sur un écran LCD à l'aide d'une 
- * manette muni d'un analogue et d'un boutton sw. L'annalogue permet au joueur de se déplacer sur toute les lignes et 
- * colones de l'écran LCD. Le bouttons sw permet au joueur de sélectionner une case et la dévoilé. Lorsqu'une case vide
- * est dévoillé, les cases ne contenant pas de mine qui se trouve autour de celle-ci sont dévoillé. Le jeu commence avec
- * 12 mines. Le joueur gagne lorque les nombre de tuile restant est égale au nombre de mines contenue dans le jeu.
- * Lorsque le joeur gagne une partie,le nombre de mine augmente de 1.
+ * @brief  Ce programme est une version simplifier du jeu démineur que l'on joue sur un écran LCD à l'aide d'une 
+ * manette munie d'un analogue et d'un boutton sw. L'analogue permet au joueur de se déplacer sur toutes les lignes et 
+ * colonnes de l'écran LCD. Le bouton sw permet au joueur de sélectionner une case et la dévoiler. Lorsqu'une case vide
+ * est dévoilé, les cases ne contenant pas de mine qui se trouve autour de celle-ci sont dévoilé. Le jeu commence avec
+ * 12 mines. Le joueur gagne lorsque les nombres de tuile restante est égal au nombre de mines contenue dans le jeu
+ * Lorsque le joeur gagne une partie, le nombre de mines augmente de 1
  * @version 1.0
  * Environnement:
  *     Développement: MPLAB X IDE (version 5.05)
@@ -28,7 +28,7 @@
 #define _XTAL_FREQ 1000000 //Constante utilisée par __delay_ms(x). Doit = fréq interne du uC
 #define DELAI_TMR0 0x0BDC 
 #define NB_LIGNE 4  //afficheur LCD 4x20
-#define NB_COL 20 // Nombre de collone que contient l'afficheur 7 segments
+#define NB_COL 20 // Nombre de collone que contient l'afficheur LCD
 #define AXE_X 6  //canal analogique de l'axe x
 #define AXE_Y 7 // canal analogique de l'axe y
 #define PORT_SW PORTBbits.RB1 //sw de la manette
@@ -67,7 +67,7 @@ void main(void)
     afficheTabVue();
     while(1) //boucle principale
     {
-        deplace(&x,&y);//Méthode qui permet de déplacer le cuseur sur l'ecran LCD
+        deplace(&x,&y);//Méthode qui permet de déplacer le curseur sur l'écran LCD
         if (PORT_SW ==false)
         {
             if((demine(x,y)==false)||(gagne(&NBMines)==true))
@@ -131,7 +131,7 @@ void initTabVue(void)
     int j=0;
     for ( i=0;i<NB_LIGNE;i++)
     {
-        for (j=0;j<=(NB_COL);j++)//Cette boucle attribue le code ASCII pour une tuile dans les case 0 à 19 du tableau m_tabVue[][].
+        for (j=0;j<=(NB_COL);j++)//Cette boucle attribue le caratère ccgram pour une tuile dans les case 0 à 19 du tableau m_tabVue[][].
         {
             if(i<20)
             {
@@ -161,7 +161,7 @@ void rempliMines(int nb)
     char y =0;
     char nbMine =0;
     
-    for (int i=0;i<NB_LIGNE;i++)//La boucle mets le codes ASCII d'un espace dans chaque adresse de m_tabMines[][]
+    for (int i=0;i<NB_LIGNE;i++)//La boucle mets le codes ASCII d'un espace dans chaque adresse de m_tabMines[][].
     {
         for (int j=0;j<NB_COL;j++)
         {
@@ -169,7 +169,7 @@ void rempliMines(int nb)
         }
     }  
     
-    while (nbMine!=nb)//Cette boucle attiue une position alléatoire à chaque minue dans le tableau m_tabMines[][]
+    while (nbMine!=nb)//Cette boucle attribue une position aléatoire à chaque mine dans le tableau m_tabMines[][].
     {
         x = rand()%20;
         y = rand()%4;
@@ -209,7 +209,7 @@ void metToucheCombien(void)
                 }
                 if (mine>0)
                 {
-                    m_tabMines[i][j]= (mine+48);//cette commande attibue la valeur ASCII du nombre de mine auquelle la case touche.
+                    m_tabMines[i][j]= (mine+48);//cette commande attribue la valeur ASCII du nombre de mine auquelle la case touche.
                 }
             }  
         }
@@ -241,7 +241,7 @@ char calculToucheCombien(int ligne, int colonne)
             }
         }
     }
-    if((ligne==0)&&(colonne==0))
+    if((ligne==0)&&(colonne==0))//Pour ne pas regarder hors du tableau m_tabMines[][].
     {
         if(m_tabMines[ligne][colonne+1]==MINE)
         {
@@ -255,7 +255,7 @@ char calculToucheCombien(int ligne, int colonne)
             }
         }
     }
-    if((ligne==0)&&(colonne==20))
+    if((ligne==0)&&(colonne==20))//Pour ne pas regarder hors du tableau m_tabMines[][].
     {
         if(m_tabMines[ligne][colonne-1]==MINE)
         {
@@ -269,7 +269,7 @@ char calculToucheCombien(int ligne, int colonne)
             }
         }
     }    
-    if((ligne==0)&&(colonne<20)&&(colonne>0))
+    if((ligne==0)&&(colonne<20)&&(colonne>0))//Pour ne pas regarder hors du tableau m_tabMines[][].
     {
         for(i=-1;i<=1;i++)
         {
@@ -290,7 +290,7 @@ char calculToucheCombien(int ligne, int colonne)
             }
         }
     } 
-    if((ligne==3)&&(colonne==0))
+    if((ligne==3)&&(colonne==0))//Pour ne pas regarder hors du tableau m_tabMines[][].
     {
         if(m_tabMines[ligne-1][colonne]==MINE)
         {
@@ -304,7 +304,7 @@ char calculToucheCombien(int ligne, int colonne)
             }
         }
     }
-    if((ligne==3)&&(colonne==20))
+    if((ligne==3)&&(colonne==20))//Pour ne pas regarder hors du tableau m_tabMines[][].
     {
         for(i=-1;i<1;i++)
         {
@@ -318,7 +318,7 @@ char calculToucheCombien(int ligne, int colonne)
             nb_mine++;
         }   
     }
-    if((ligne==3)&&(colonne<20)&&(colonne>0))
+    if((ligne==3)&&(colonne<20)&&(colonne>0))//Pour ne pas regarder hors du tableau m_tabMines[][].
     {
         for(j=-1;j<=1;j++)
         {
@@ -350,7 +350,7 @@ void deplace(char* x, char* y)
     if(getAnalog(AXE_X)>220)//Lorsque l'analogue est dirigé vers la droite la position du cursseur augmente de 1.  <110
     {
        (*x)= (*x) +1;
-       if (*x > 20)//Lorsque le cursseur dépasse le 20e segment du LCD il réapparaît sur le 1er segment.
+       if (*x > 20)//Lorsque le cursseur dépasse le 20eme segment du LCD il réapparaît sur le 1er segment.
        {
            *x=1;
        }
@@ -360,13 +360,13 @@ void deplace(char* x, char* y)
        (*x)=(*x)-1;
        if((*x)<1)
        {
-           (*x)=20;//Lorsque le cursseur dépasse le 1er segment du LCD il réapparaît sur le 20ème segment.
+           (*x)=20;//Lorsque le cursseur dépasse ler 1e segment du LCD il réapparaît sur le 20ème segment.
        }
     }
     if(getAnalog(AXE_Y)<110)
     {
         (*y)= (*y) +1;
-        if ((*y )> 4)//Lorsque le cursseur dépasse 4eme 1e segment du LCD il réapparaît sur le 1er segment.
+        if ((*y )> 4)//Lorsque le cursseur dépasse 4eme 1e segment du LCD il réapparaît sur  1er segment.
         {
             (*y)=1;
         }
@@ -374,7 +374,7 @@ void deplace(char* x, char* y)
     else if(getAnalog(AXE_Y)>200)
     {
         (*y)=(*y) - 1;
-        if (*y < 1)//Lorsque le cursseur dépasse le 1 segment du LCD il réapparaît sur le 4eme segment.
+        if (*y < 1)//Lorsque le cursseur dépasse 1er segment du LCD il réapparaît sur le 4eme segment.
         {
             (*y)=4;
         }
@@ -451,8 +451,6 @@ bool demine(char x, char y)
         }
     }
 }       
-     
-
  
 /*
  * @brief Vérifie si gagné. On a gagné quand le nombre de tuiles non dévoilées
