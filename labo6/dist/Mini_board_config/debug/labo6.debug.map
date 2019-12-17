@@ -3,17 +3,17 @@ Microchip MPLAB XC8 Compiler V2.10 ()
 Linker command line:
 
 --edf=C:\Program Files (x86)\Microchip\xc8\v2.10\pic\dat\en_msgs.txt -cs \
-  -h+dist/Mini_board_config/production\labo6.production.sym \
-  --cmf=dist/Mini_board_config/production\labo6.production.cmf -z \
-  -Q18F45K20 -oC:\Users\Youlian\AppData\Local\Temp\s29c.2 \
-  --defsym=__MPLAB_BUILD=1 \
-  -Mdist/Mini_board_config/production/labo6.production.map -E1 -ver=XC8 \
-  --acfsm=1493 -ASTACK=0194h-05FFh -pstack=STACK -ACODE=00h-07FFFh \
-  -ACONST=00h-07FFFh -ASMALLCONST=0600h-06FFhx122 \
-  -AMEDIUMCONST=0600h-07FFFh -ACOMRAM=01h-05Fh -AABS1=00h-05FFh \
-  -ABIGRAM=01h-05FFh -ARAM=060h-0FFh,0100h-01FFhx5 -ABANK0=060h-0FFh \
+  -h+dist/Mini_board_config/debug\labo6.debug.sym \
+  --cmf=dist/Mini_board_config/debug\labo6.debug.cmf -z -Q18F45K20 \
+  -oC:\Users\Youlian\AppData\Local\Temp\skl4.2 --defsym=__MPLAB_BUILD=1 \
+  -Mdist/Mini_board_config/debug/labo6.debug.map -E1 -ver=XC8 --acfsm=1493 \
+  -ASTACK=0194h-05EEh -pstack=STACK -ACODE=00h-07D3Fh -ACONST=00h-07D3Fh \
+  -ASMALLCONST=0600h-06FFhx119,07D00h-07D3Fh -AMEDIUMCONST=0600h-07D3Fh \
+  -ACOMRAM=01h-05Fh -AABS1=00h-05EEh -ABIGRAM=01h-05EEh \
+  -ARAM=060h-0FFh,0100h-01FFhx4,0500h-05EEh -ABANK0=060h-0FFh \
   -ABANK1=0100h-01FFh -ABANK2=0200h-02FFh -ABANK3=0300h-03FFh \
-  -ABANK4=0400h-04FFh -ABANK5=0500h-05FFh -ASFR=0F60h-0FFFh \
+  -ABANK4=0400h-04FFh -ABANK5=0500h-05EEh \
+  -ASFR=0F60h-0F9Bh,0F9Dh-0FD3h,0FD5h-0FDAh,0FE0h-0FE2h,0FE8h-0FEAh,0FF0h-0FFBh \
   -preset_vec=00h,intcode,intcodelo,powerup,init -pramtop=0600h \
   -psmallconst=SMALLCONST -pmediumconst=MEDIUMCONST -pconst=CONST \
   -AFARRAM=00h-00h -ACONFIG=0300000h-030000Dh -pconfig=CONFIG \
@@ -23,8 +23,8 @@ Linker command line:
   -pfarbss=FARRAM,fardata=FARRAM,nvFARRAM=FARRAM \
   -pintsave_regs=BIGRAM,bigbss=BIGRAM,bigdata=BIGRAM -pbss=RAM \
   -pidata=CODE,irdata=CODE,ibigdata=CODE,ifardata=CODE -pparam0=BANK0 \
-  C:\Users\Youlian\AppData\Local\Temp\s29c.o \
-  dist/Mini_board_config/production\labo6.production.o 
+  C:\Users\Youlian\AppData\Local\Temp\skl4.o \
+  dist/Mini_board_config/debug\labo6.debug.o 
 
 Object code version is 3.11
 
@@ -36,11 +36,11 @@ Call graph: (short form)
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\Youlian\AppData\Local\Temp\s29c.o
+C:\Users\Youlian\AppData\Local\Temp\skl4.o
                 init                                  0        0        4        0       0
                 idloc                            200000   200000        8   200000       0
                 config                           300000   300000        E   300000       0
-dist/Mini_board_config/production\labo6.production.o
+dist/Mini_board_config/debug\labo6.debug.o
                 smallconst                          600      600       1A      300       0
                 text30                             258E     258E       28      30D       0
                 text29                             2634     2634        6      30D       0
@@ -187,22 +187,27 @@ UNUSED ADDRESS RANGES
         BANK2            000200-0002FF              100
         BANK3            000300-0003FF              100
         BANK4            000400-0004FF              100
-        BANK5            000500-0005FF              100
+        BANK5            000500-0005EE               EF
         BIGRAM           000001-00005F               5F
                          0000E1-0000FF               1F
-                         000194-0005FF              46C
+                         000194-0005EE              45B
         CODE             000004-0005FF              5FC
-                         00263E-007FFF             59C2
+                         00263E-007D3F             5702
         COMRAM           000001-00005F               5F
         CONST            000004-0005FF              5FC
-                         00263E-007FFF             59C2
+                         00263E-007D3F             5702
         EEDATA           F00000-F000FF              100
-        MEDIUMCONST      00263E-007FFF             59C2
+        MEDIUMCONST      00263E-007D3F             5702
         RAM              0000E1-0000FF               1F
-                         000194-0005FF              100
-        SFR              000F60-000FFF               A0
-        SMALLCONST       00263E-007FFF              100
-        STACK            000194-0005FF              46C
+                         000194-0005EE              100
+        SFR              000F60-000F9B               3C
+                         000F9D-000FD3               37
+                         000FD5-000FDA                6
+                         000FE0-000FE2                3
+                         000FE8-000FEA                3
+                         000FF0-000FFB                C
+        SMALLCONST       00263E-007D3F              100
+        STACK            000194-0005EE              45B
 
                                   Symbol Table
 
@@ -669,7 +674,7 @@ rempliMines@nb                cstackBANK0  0000C8
 rempliMines@nbMine            cstackBANK0  0000D3
 rempliMines@x                 cstackBANK0  0000D1
 rempliMines@y                 cstackBANK0  0000D2
-stackhi                       (abs)        0005FF
+stackhi                       (abs)        0005EE
 stacklo                       (abs)        000194
 start                         init         000000
 start_initialization          cinit        00237C

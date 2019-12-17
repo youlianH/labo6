@@ -127,7 +127,7 @@ __Ldata 0 0 ABS 0
 __CFG_EBTR3$OFF 0 0 ABS 0
 _afficheTabVue 207C 0 CODE 0
 _demine 1818 0 CODE 0
-stackhi 5FF 0 ABS 0
+stackhi 5EE 0 ABS 0
 __HcstackBANK0 0 0 ABS 0
 __LcstackBANK0 0 0 ABS 0
 __pcstackBANK0 B4 0 BANK0 1
@@ -474,9 +474,9 @@ bssBANK0 60 E0 BANK0 60 1
 bssBANK1 100 193 BANK1 100 1
 text6 61A 263D CODE 61A 0
 %locals
-dist/Mini_board_config/production\labo6.production.o
+dist/Mini_board_config/debug\labo6.debug.o
 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f45k20.h
-C:\Users\Youlian\AppData\Local\Temp\s29c.s
+C:\Users\Youlian\AppData\Local\Temp\skl4.s
 1562 237C 0 CODE 0
 1564 237C 0 CODE 0
 1567 237C 0 CODE 0

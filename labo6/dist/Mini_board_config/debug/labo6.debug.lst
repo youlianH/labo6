@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.10 build 88905656 
-                                                                                               Mon Dec 16 12:46:37 2019
+                                                                                               Mon Dec 16 12:49:54 2019
 
 Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1 
      1                           	processor	18F45K20
@@ -173,25 +173,25 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
    159  002505  00                 	db	0
    160  0000                     _PORTAbits	set	3968
    161  0000                     _PORTD	set	3971
-   162  0000                     _RCREG	set	4014
-   163  0000                     _TXREG	set	4013
-   164  0000                     _RCSTAbits	set	4011
-   165  0000                     _TXSTAbits	set	4012
-   166  0000                     _BAUDCONbits	set	4024
-   167  0000                     _SPBRG	set	4015
-   168  0000                     _SPBRGH	set	4016
-   169  0000                     _TRISCbits	set	3988
-   170  0000                     _ADRESH	set	4036
-   171  0000                     _ADCON2bits	set	4032
-   172  0000                     _ADCON1	set	4033
-   173  0000                     _ADCON0bits	set	4034
-   174  0000                     _ANSELbits	set	3966
-   175  0000                     _TRISA	set	3986
-   176  0000                     _ANSEL	set	3966
-   177  0000                     _TRISB	set	3987
-   178  0000                     _ANSELH	set	3967
-   179  0000                     _TRISD	set	3989
-   180  0000                     _PORTBbits	set	3969
+   162  0000                     _TRISCbits	set	3988
+   163  0000                     _ANSELbits	set	3966
+   164  0000                     _TRISA	set	3986
+   165  0000                     _ANSEL	set	3966
+   166  0000                     _TRISB	set	3987
+   167  0000                     _ANSELH	set	3967
+   168  0000                     _TRISD	set	3989
+   169  0000                     _PORTBbits	set	3969
+   170  0000                     _RCREG	set	4014
+   171  0000                     _TXREG	set	4013
+   172  0000                     _RCSTAbits	set	4011
+   173  0000                     _TXSTAbits	set	4012
+   174  0000                     _BAUDCONbits	set	4024
+   175  0000                     _SPBRG	set	4015
+   176  0000                     _SPBRGH	set	4016
+   177  0000                     _ADRESH	set	4036
+   178  0000                     _ADCON2bits	set	4032
+   179  0000                     _ADCON1	set	4033
+   180  0000                     _ADCON0bits	set	4034
    181  0000                     _RCIF	set	31989
    182                           
    183                           	psect	smallconst
@@ -4480,12 +4480,12 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   4461  0019A2                     _deplace:
   4462                           	opt callstack 26
   4463  0019A2                     
-  4464                           ;main.c: 354: if(getAnalog(6)>210)
+  4464                           ;main.c: 354: if(getAnalog(6)>220)
   4465  0019A2  0E06               	movlw	6
   4466  0019A4  EC9D  F012         	call	_getAnalog
   4467  0019A8  0100               	movlb	0	; force () banked
   4468  0019AA  6FBD               	movwf	??_deplace& (0+255),b
-  4469  0019AC  0ED2               	movlw	210
+  4469  0019AC  0EDC               	movlw	220
   4470  0019AE  65BD               	cpfsgt	??_deplace& (0+255),b
   4471  0019B0  EFDC  F00C         	goto	u2371
   4472  0019B4  EFDE  F00C         	goto	u2370
@@ -6565,7 +6565,7 @@ Auto Spaces:
     BANK2           256      0       0
     BANK3           256      0       0
     BANK4           256      0       0
-    BANK5           256      0       0
+    BANK5           239      0       0
 
 Pointer List with Targets:
 
@@ -6918,33 +6918,43 @@ Call Graph Tables:
 
  Address spaces:
 Name               Size   Autos  Total    Cost      Usage
-BIGRAM             5FF      0       0      17        0.0%
+BIGRAM             5EE      0       0      16        0.0%
 EEDATA             100      0       0       0        0.0%
-BITBANK5           100      0       0      16        0.0%
-BANK5              100      0       0      14        0.0%
-BITBANK4           100      0       0      12        0.0%
-BANK4              100      0       0      13        0.0%
-BITBANK3           100      0       0      10        0.0%
-BANK3              100      0       0      11        0.0%
-BITBANK2           100      0       0       8        0.0%
-BANK2              100      0       0       9        0.0%
-BITBANK1           100      0       0       6        0.0%
-BANK1              100      0      94       7       57.8%
-BITBANK0            A0      0       0       4        0.0%
-BANK0               A0     29      81       5       80.6%
+BITBANK4           100      0       0      11        0.0%
+BANK4              100      0       0      12        0.0%
+BITBANK3           100      0       0       9        0.0%
+BANK3              100      0       0      10        0.0%
+BITBANK2           100      0       0       7        0.0%
+BANK2              100      0       0       8        0.0%
+BITBANK1           100      0       0       5        0.0%
+BANK1              100      0      94       6       57.8%
+BITBANK5            EF      0       0      15        0.0%
+BANK5               EF      0       0      13        0.0%
+BITBANK0            A0      0       0       3        0.0%
+BANK0               A0     29      81       4       80.6%
 BITCOMRAM           5F      0       0       0        0.0%
 COMRAM              5F      0       0       1        0.0%
+BITSFR_5             0      0       0     200        0.0%
+SFR_5                0      0       0     200        0.0%
+BITSFR_4             0      0       0     200        0.0%
+SFR_4                0      0       0     200        0.0%
+BITSFR_3             0      0       0     200        0.0%
+SFR_3                0      0       0     200        0.0%
+BITSFR_2             0      0       0     200        0.0%
+SFR_2                0      0       0     200        0.0%
+BITSFR_1             0      0       0     200        0.0%
+SFR_1                0      0       0     200        0.0%
 BITSFR               0      0       0     200        0.0%
 SFR                  0      0       0     200        0.0%
 STACK                0      0       0       2        0.0%
 NULL                 0      0       0       0        0.0%
-ABS                  0      0     115      15        0.0%
-DATA                 0      0     115       3        0.0%
+ABS                  0      0     115      14        0.0%
+DATA                 0      0     115      17        0.0%
 CODE                 0      0       0       0        0.0%
 
 
 Microchip Technology PIC18 Macro Assembler V2.10 build 88905656 
-Symbol Table                                                                                   Mon Dec 16 12:46:37 2019
+Symbol Table                                                                                   Mon Dec 16 12:49:54 2019
 
  __end_of_calculToucheCombien 114E                            l82 25DA                            l74 1ED6  
                           l85 2554                            l88 2564                            l97 1CA0  

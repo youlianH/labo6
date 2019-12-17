@@ -12,47 +12,47 @@
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
 $dist/Mini_board_config/production\labo6.production.o
-cinit CODE 0 210C 210C 5E 1
-text0 CODE 0 1B16 1B16 EC 1
-text1 CODE 0 1618 1618 1E2 1
-text2 CODE 0 216A 216A 56 1
-text3 CODE 0 1FCA 1FCA 6C 1
-text4 CODE 0 1CB6 1CB6 B2 1
-text5 CODE 0 141E 141E 1FA 1
-text6 CODE 0 233E 233E 28 1
-text7 CODE 0 20A2 20A2 6A 1
-text8 CODE 0 1EB6 1EB6 A2 1
-text9 CODE 0 23E8 23E8 8 1
-text10 CODE 0 238E 238E 20 1
-text11 CODE 0 23AE 23AE 1E 1
-text12 CODE 0 199C 199C 17A 1
-text13 CODE 0 2402 2402 2 1
-text14 CODE 0 17FA 17FA 1A2 1
-text15 CODE 0 2312 2312 2C 1
-text16 CODE 0 1E12 1E12 A4 1
-text17 CODE 0 114E 114E 2D0 1
-text18 CODE 0 2214 2214 48 1
-text19 CODE 0 61A 61A B34 1
-text20 CODE 0 1D68 1D68 AA 1
-text21 CODE 0 1C02 1C02 B4 1
-text22 CODE 0 21C0 21C0 54 1
-text23 CODE 0 22DE 22DE 34 1
-text24 CODE 0 1F58 1F58 72 1
-text25 CODE 0 2036 2036 6C 1
-text26 CODE 0 23F0 23F0 8 1
-text27 CODE 0 23CC 23CC 1C 1
-text28 CODE 0 225C 225C 42 1
-text29 CODE 0 23F8 23F8 6 1
-text30 CODE 0 2366 2366 28 1
-cstackBANK0 BANK0 1 B4 B4 30 1
+cinit CODE 0 237C 237C 5E 1
+text0 CODE 0 1E1C 1E1C FA 1
+text1 CODE 0 1636 1636 1E2 1
+text2 CODE 0 23DA 23DA 56 1
+text3 CODE 0 223A 223A 6C 1
+text4 CODE 0 1FCA 1FCA B2 1
+text5 CODE 0 143C 143C 1FA 1
+text6 CODE 0 61A 61A B34 1
+text7 CODE 0 2566 2566 28 1
+text8 CODE 0 2312 2312 6A 1
+text9 CODE 0 2126 2126 A2 1
+text10 CODE 0 2624 2624 8 1
+text11 CODE 0 25B6 25B6 26 1
+text12 CODE 0 25DC 25DC 1E 1
+text13 CODE 0 1B28 1B28 17A 1
+text14 CODE 0 1CA2 1CA2 17A 1
+text15 CODE 0 2616 2616 E 1
+text16 CODE 0 19A2 19A2 186 1
+text17 CODE 0 253A 253A 2C 1
+text18 CODE 0 1818 1818 18A 1
+text19 CODE 0 114E 114E 2EE 1
+text20 CODE 0 207C 207C AA 1
+text21 CODE 0 1F16 1F16 B4 1
+text22 CODE 0 2430 2430 54 1
+text23 CODE 0 2506 2506 34 1
+text24 CODE 0 21C8 21C8 72 1
+text25 CODE 0 22A6 22A6 6C 1
+text26 CODE 0 262C 262C 8 1
+text27 CODE 0 25FA 25FA 1C 1
+text28 CODE 0 2484 2484 42 1
+text29 CODE 0 2634 2634 6 1
+text30 CODE 0 258E 258E 28 1
+cstackBANK0 BANK0 1 B4 B4 29 1
 bssBANK0 BANK0 1 60 60 54 1
 bssBANK1 BANK1 1 100 100 54 1
 smallconst SMALLCONST 0 600 600 1A 1
-idataBANK0 CODE 0 23FE 23FE 4 1
-idataBANK1 CODE 0 229E 229E 40 1
-dataBANK0 BANK0 1 E4 E4 4 1
+idataBANK0 CODE 0 263A 263A 4 1
+idataBANK1 CODE 0 24C6 24C6 40 1
+dataBANK0 BANK0 1 DD DD 4 1
 dataBANK1 BANK1 1 154 154 40 1
-$C:\Users\Youlian\AppData\Local\Temp\s304.o
+$C:\Users\Youlian\AppData\Local\Temp\s29c.o
 idloc IDLOC 0 200000 200000 8 1
 init CODE 0 0 0 4 1
 config CONFIG 0 300000 300000 E 1
@@ -62,27 +62,27 @@ config CONFIG 0 300000 300000 E 1
 #    <class name> <range> <delta>
 # Addresses given in the range are in hexadecimal and units of delta.
 %UNUSED
-RAM E8-FF 1
+RAM E1-FF 1
 RAM 194-5FF 1
 SFR F60-FFF 1
-BANK0 E8-FF 1
+BANK0 E1-FF 1
 BANK1 194-1FF 1
 BANK2 200-2FF 1
 BANK3 300-3FF 1
 BANK4 400-4FF 1
 BANK5 500-5FF 1
 CONST 4-5FF 1
-CONST 2404-7FFF 1
+CONST 263E-7FFF 1
 STACK 194-5FF 1
-SMALLCONST 2404-7FFF 1
+SMALLCONST 263E-7FFF 1
 CODE 4-5FF 1
-CODE 2404-7FFF 1
+CODE 263E-7FFF 1
 BIGRAM 1-5F 1
-BIGRAM E8-FF 1
+BIGRAM E1-FF 1
 BIGRAM 194-5FF 1
 COMRAM 1-5F 1
 EEDATA F00000-F000FF 1
-MEDIUMCONST 2404-7FFF 1
+MEDIUMCONST 263E-7FFF 1
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
 # The beginning of the section is indicated by %LINETAB.
@@ -97,460 +97,484 @@ MEDIUMCONST 2404-7FFF 1
 # All other numeric values are in decimal.
 %LINETAB
 $dist/Mini_board_config/production\labo6.production.o
-2366 text30 CODE >15:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\Umul16.c
-2366 text30 CODE >37:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\Umul16.c
-2374 text30 CODE >38:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\Umul16.c
-237C text30 CODE >39:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\Umul16.c
-2384 text30 CODE >52:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\Umul16.c
-238C text30 CODE >53:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\Umul16.c
-23F8 text29 CODE >93:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-23F8 text29 CODE >96:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-23FC text29 CODE >98:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-225C text28 CODE >124:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-225C text28 CODE >128:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-225E text28 CODE >129:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-2260 text28 CODE >131:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-2260 text28 CODE >133:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-2262 text28 CODE >134:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-2264 text28 CODE >135:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-2274 text28 CODE >136:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-2276 text28 CODE >137:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-2276 text28 CODE >138:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-2278 text28 CODE >139:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-227A text28 CODE >140:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-2282 text28 CODE >141:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-2284 text28 CODE >142:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-2284 text28 CODE >144:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-2294 text28 CODE >146:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-2296 text28 CODE >147:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-229C text28 CODE >148:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-23CC text27 CODE >107:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-23D0 text27 CODE >110:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-23E6 text27 CODE >115:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-23F0 text26 CODE >431:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-23F0 text26 CODE >433:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-23F2 text26 CODE >434:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-23F4 text26 CODE >435:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-23F6 text26 CODE >436:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-2036 text25 CODE >156:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-203A text25 CODE >158:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-203E text25 CODE >160:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-2042 text25 CODE >161:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-2042 text25 CODE >163:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-2044 text25 CODE >164:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-2046 text25 CODE >166:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-2050 text25 CODE >167:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-2054 text25 CODE >168:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-2054 text25 CODE >170:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-205C text25 CODE >171:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-2060 text25 CODE >172:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-2068 text25 CODE >174:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-208E text25 CODE >175:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-2098 text25 CODE >177:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-209C text25 CODE >178:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-209C text25 CODE >179:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-20A0 text25 CODE >180:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-1F58 text24 CODE >314:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-1F5C text24 CODE >316:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-1F60 text24 CODE >319:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-1F6C text24 CODE >320:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-1F70 text24 CODE >322:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-1F7C text24 CODE >323:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-1F80 text24 CODE >325:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-1F8C text24 CODE >326:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-1F90 text24 CODE >328:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-1F9C text24 CODE >329:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-1FA0 text24 CODE >316:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-1FC8 text24 CODE >331:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-22DE text23 CODE >188:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-22E2 text23 CODE >190:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-22E6 text23 CODE >191:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-22EA text23 CODE >192:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-22EA text23 CODE >194:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-22EC text23 CODE >195:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-22EE text23 CODE >197:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-22F8 text23 CODE >198:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-22FC text23 CODE >199:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-22FC text23 CODE >201:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-2304 text23 CODE >202:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-2308 text23 CODE >203:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-2308 text23 CODE >205:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-230C text23 CODE >206:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-230C text23 CODE >207:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-2310 text23 CODE >208:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-21C0 text22 CODE >359:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-21C4 text22 CODE >363:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-21D0 text22 CODE >364:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-21D4 text22 CODE >367:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-21DA text22 CODE >368:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-21DE text22 CODE >370:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-21E4 text22 CODE >371:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-21E8 text22 CODE >373:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-21EE text22 CODE >374:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-21F2 text22 CODE >364:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-2212 text22 CODE >376:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-1C02 text21 CODE >387:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-1C02 text21 CODE >391:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-1C0C text21 CODE >392:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-1C58 text21 CODE >391:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-1CB4 text21 CODE >393:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-1D68 text20 CODE >496:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-1D68 text20 CODE >498:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-1D72 text20 CODE >499:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-1D9C text20 CODE >501:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-1DAA text20 CODE >502:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-1DEC text20 CODE >499:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-1E10 text20 CODE >504:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-61A text19 CODE >235:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-61A text19 CODE >237:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-624 text19 CODE >238:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-62E text19 CODE >239:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-638 text19 CODE >240:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-6AC text19 CODE >242:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-6D4 text19 CODE >243:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-6D4 text19 CODE >244:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-6FC text19 CODE >246:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-788 text19 CODE >248:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-78E text19 CODE >244:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-78E text19 CODE >249:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-7B2 text19 CODE >242:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-7D6 text19 CODE >253:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-7FE text19 CODE >255:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-85C text19 CODE >257:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-862 text19 CODE >259:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-88E text19 CODE >261:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-8FC text19 CODE >263:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-902 text19 CODE >259:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-902 text19 CODE >264:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-926 text19 CODE >267:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-974 text19 CODE >269:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-99C text19 CODE >271:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-A02 text19 CODE >273:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-A08 text19 CODE >274:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-A08 text19 CODE >275:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-A0E text19 CODE >269:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-A30 text19 CODE >277:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-A5C text19 CODE >278:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-A5C text19 CODE >279:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-A84 text19 CODE >281:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-B10 text19 CODE >283:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-B16 text19 CODE >279:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-B16 text19 CODE >284:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-B3A text19 CODE >277:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-B5E text19 CODE >288:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-B88 text19 CODE >290:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-BEE text19 CODE >292:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-BF4 text19 CODE >294:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-C1A text19 CODE >296:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-C88 text19 CODE >298:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-C8E text19 CODE >294:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-C8E text19 CODE >299:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-CB0 text19 CODE >302:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-CDA text19 CODE >304:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-D40 text19 CODE >306:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-D46 text19 CODE >308:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-D6C text19 CODE >310:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-DF0 text19 CODE >312:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-DF6 text19 CODE >308:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-DF6 text19 CODE >313:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-E18 text19 CODE >316:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-E68 text19 CODE >318:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-E90 text19 CODE >320:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-F06 text19 CODE >322:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-F0C text19 CODE >318:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-F0C text19 CODE >323:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-F30 text19 CODE >325:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-F58 text19 CODE >327:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-FBE text19 CODE >329:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-FC4 text19 CODE >330:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-FC4 text19 CODE >331:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-FCA text19 CODE >325:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-FEC text19 CODE >334:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-1018 text19 CODE >336:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-103E text19 CODE >338:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-10B4 text19 CODE >340:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-10BA text19 CODE >336:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-10BA text19 CODE >341:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-10DC text19 CODE >343:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-1142 text19 CODE >345:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-1148 text19 CODE >348:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-114C text19 CODE >349:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-2214 text18 CODE >8:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\strcpy.c
-2214 text18 CODE >18:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\strcpy.c
-221C text18 CODE >19:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\strcpy.c
-2220 text18 CODE >20:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\strcpy.c
-2226 text18 CODE >21:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\strcpy.c
-222A text18 CODE >19:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\strcpy.c
-2252 text18 CODE >23:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\strcpy.c
-225A text18 CODE >24:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\strcpy.c
-114E text17 CODE >425:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-1152 text17 CODE >427:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-115C text17 CODE >428:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-1166 text17 CODE >429:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-1170 text17 CODE >430:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-1190 text17 CODE >431:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-11A4 text17 CODE >433:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-11D4 text17 CODE >435:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-11F0 text17 CODE >437:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-1224 text17 CODE >438:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-124C text17 CODE >439:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-124C text17 CODE >440:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-1274 text17 CODE >442:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-12F8 text17 CODE >444:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-13D4 text17 CODE >440:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-13F8 text17 CODE >438:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-141C text17 CODE >477:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-1E12 text16 CODE >403:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-1E16 text16 CODE >405:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-1E1C text16 CODE >407:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-1E5A text16 CODE >409:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-1E60 text16 CODE >411:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-1E9E text16 CODE >413:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-1EA4 text16 CODE >414:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-1EB0 text16 CODE >416:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-1EB4 text16 CODE >417:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-2312 text15 CODE >120:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-2316 text15 CODE >122:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-232A text15 CODE >123:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-232A text15 CODE >124:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-232C text15 CODE >125:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-232C text15 CODE >126:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-233A text15 CODE >127:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-233C text15 CODE >128:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-17FA text14 CODE >357:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-17FA text14 CODE >359:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-1816 text14 CODE >360:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-1830 text14 CODE >362:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-184A text14 CODE >363:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-1862 text14 CODE >365:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-1872 text14 CODE >368:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-188C text14 CODE >370:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-18A6 text14 CODE >371:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-18BE text14 CODE >373:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-18CA text14 CODE >376:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-18E4 text14 CODE >378:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-18FE text14 CODE >379:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-1916 text14 CODE >381:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-1926 text14 CODE >384:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-1940 text14 CODE >386:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-195A text14 CODE >387:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-1972 text14 CODE >389:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-197E text14 CODE >392:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-199A text14 CODE >393:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-2402 text13 CODE >486:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-2402 text13 CODE >490:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-199C text12 CODE >137:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-199C text12 CODE >139:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-19A6 text12 CODE >140:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-19B0 text12 CODE >141:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-19DC text12 CODE >143:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-1A08 text12 CODE >145:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-1A26 text12 CODE >147:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-1A6E text12 CODE >150:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-1A84 text12 CODE >152:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-1ACC text12 CODE >143:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-1AF0 text12 CODE >141:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-1B14 text12 CODE >157:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-23AE text11 CODE >29:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\serie.c
-23AE text11 CODE >32:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\serie.c
-23B0 text11 CODE >33:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\serie.c
-23B2 text11 CODE >37:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\serie.c
-23B6 text11 CODE >38:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\serie.c
-23BA text11 CODE >39:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\serie.c
-23BC text11 CODE >40:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\serie.c
-23BE text11 CODE >43:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\serie.c
-23C0 text11 CODE >44:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\serie.c
-23C2 text11 CODE >45:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\serie.c
-23C4 text11 CODE >46:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\serie.c
-23C6 text11 CODE >47:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\serie.c
-23CA text11 CODE >48:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\serie.c
-238E text10 CODE >96:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-238E text10 CODE >98:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-2392 text10 CODE >103:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-2396 text10 CODE >104:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-239A text10 CODE >106:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-239C text10 CODE >108:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-239E text10 CODE >109:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-23A2 text10 CODE >111:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-23A4 text10 CODE >112:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-23A8 text10 CODE >113:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-23AC text10 CODE >114:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-23E8 text9 CODE >288:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-23E8 text9 CODE >290:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-23EE text9 CODE >291:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-1EB6 text8 CODE >417:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-1EB6 text8 CODE >421:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-1EBC text8 CODE >422:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-1ED8 text8 CODE >424:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-1EF4 text8 CODE >425:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-1F26 text8 CODE >424:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-1F3C text8 CODE >422:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-1F52 text8 CODE >427:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-1F56 text8 CODE >428:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-20A2 text7 CODE >221:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-20A2 text7 CODE >226:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-20A6 text7 CODE >228:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-20BA text7 CODE >229:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-20BC text7 CODE >230:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-20BE text7 CODE >232:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-20C4 text7 CODE >233:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-20C8 text7 CODE >234:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-20D0 text7 CODE >237:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-20D6 text7 CODE >238:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-20DA text7 CODE >239:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-20E2 text7 CODE >241:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-20E8 text7 CODE >242:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-20EC text7 CODE >243:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-20F4 text7 CODE >245:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-20FA text7 CODE >246:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-20FE text7 CODE >247:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-2106 text7 CODE >249:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-210A text7 CODE >250:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-233E text6 CODE >258:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-233E text6 CODE >261:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-2342 text6 CODE >262:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-2348 text6 CODE >263:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-234E text6 CODE >264:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-2354 text6 CODE >265:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-235A text6 CODE >266:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-2360 text6 CODE >267:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-2364 text6 CODE >268:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
-141E text5 CODE >203:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-141E text5 CODE >205:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-1428 text5 CODE >206:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-1432 text5 CODE >207:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-143C text5 CODE >209:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-1468 text5 CODE >211:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-1494 text5 CODE >213:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-14EA text5 CODE >215:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-150A text5 CODE >216:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-151E text5 CODE >218:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-1566 text5 CODE >220:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-1582 text5 CODE >222:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-15CE text5 CODE >211:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-15F2 text5 CODE >209:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-1616 text5 CODE >227:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-1CB6 text4 CODE >7:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\awmod.c
-1CB6 text4 CODE >12:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\awmod.c
-1CBC text4 CODE >13:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\awmod.c
-1CCA text4 CODE >14:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\awmod.c
-1CD2 text4 CODE >15:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\awmod.c
-1CD6 text4 CODE >17:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\awmod.c
-1CE4 text4 CODE >18:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\awmod.c
-1CEC text4 CODE >19:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\awmod.c
-1CFE text4 CODE >20:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\awmod.c
-1D02 text4 CODE >21:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\awmod.c
-1D06 text4 CODE >22:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\awmod.c
-1D0C text4 CODE >23:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\awmod.c
-1D0E text4 CODE >21:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\awmod.c
-1D1C text4 CODE >26:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\awmod.c
-1D32 text4 CODE >27:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\awmod.c
-1D3A text4 CODE >28:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\awmod.c
-1D40 text4 CODE >29:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\awmod.c
-1D46 text4 CODE >31:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\awmod.c
-1D56 text4 CODE >32:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\awmod.c
-1D5E text4 CODE >33:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\awmod.c
-1D66 text4 CODE >34:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\awmod.c
-1FCA text3 CODE >15:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\Umul32.c
-1FCA text3 CODE >119:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\Umul32.c
-1FDC text3 CODE >121:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\Umul32.c
-1FEA text3 CODE >122:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\Umul32.c
-1FFA text3 CODE >123:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\Umul32.c
-2004 text3 CODE >124:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\Umul32.c
-200E text3 CODE >125:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\Umul32.c
-2024 text3 CODE >128:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\Umul32.c
-2034 text3 CODE >129:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\Umul32.c
-216A text2 CODE >12:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\rand.c
-216A text2 CODE >14:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\rand.c
-21A0 text2 CODE >15:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\rand.c
-21B2 text2 CODE >16:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\rand.c
-21BE text2 CODE >17:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\rand.c
-1618 text1 CODE >166:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-1618 text1 CODE >168:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-1622 text1 CODE >169:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-162C text1 CODE >170:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-1632 text1 CODE >171:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-1638 text1 CODE >172:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-163E text1 CODE >174:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-166A text1 CODE >176:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-1696 text1 CODE >178:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-16DE text1 CODE >176:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-1702 text1 CODE >174:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-172A text1 CODE >184:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-174C text1 CODE >185:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-175A text1 CODE >186:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-1798 text1 CODE >188:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-17C8 text1 CODE >189:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-17CE text1 CODE >182:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-17F8 text1 CODE >192:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-1B16 text0 CODE >52:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-1B16 text0 CODE >54:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-1B1A text0 CODE >55:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-1B1E text0 CODE >56:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-1B22 text0 CODE >57:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-1B26 text0 CODE >58:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-1B2A text0 CODE >60:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-1B34 text0 CODE >61:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-1B3A text0 CODE >62:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-1B40 text0 CODE >63:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-1B58 text0 CODE >64:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-1B64 text0 CODE >65:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-1B68 text0 CODE >66:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-1B6C text0 CODE >70:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-1B84 text0 CODE >71:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-1B92 text0 CODE >73:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-1BCA text0 CODE >75:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-1BCE text0 CODE >77:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-1BDC text0 CODE >78:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-1BE0 text0 CODE >79:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-1BE4 text0 CODE >80:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-1BE8 text0 CODE >82:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
-210C cinit CODE >1554:C:\Users\Youlian\AppData\Local\Temp\s304.s
-210C cinit CODE >1556:C:\Users\Youlian\AppData\Local\Temp\s304.s
-210C cinit CODE >1559:C:\Users\Youlian\AppData\Local\Temp\s304.s
-210C cinit CODE >1593:C:\Users\Youlian\AppData\Local\Temp\s304.s
-210E cinit CODE >1594:C:\Users\Youlian\AppData\Local\Temp\s304.s
-2110 cinit CODE >1595:C:\Users\Youlian\AppData\Local\Temp\s304.s
-2112 cinit CODE >1596:C:\Users\Youlian\AppData\Local\Temp\s304.s
-2114 cinit CODE >1597:C:\Users\Youlian\AppData\Local\Temp\s304.s
-2116 cinit CODE >1598:C:\Users\Youlian\AppData\Local\Temp\s304.s
-2118 cinit CODE >1599:C:\Users\Youlian\AppData\Local\Temp\s304.s
-211C cinit CODE >1600:C:\Users\Youlian\AppData\Local\Temp\s304.s
-2120 cinit CODE >1601:C:\Users\Youlian\AppData\Local\Temp\s304.s
-2120 cinit CODE >1602:C:\Users\Youlian\AppData\Local\Temp\s304.s
-2122 cinit CODE >1603:C:\Users\Youlian\AppData\Local\Temp\s304.s
-2126 cinit CODE >1604:C:\Users\Youlian\AppData\Local\Temp\s304.s
-2128 cinit CODE >1605:C:\Users\Youlian\AppData\Local\Temp\s304.s
-212A cinit CODE >1606:C:\Users\Youlian\AppData\Local\Temp\s304.s
-212C cinit CODE >1610:C:\Users\Youlian\AppData\Local\Temp\s304.s
-212E cinit CODE >1611:C:\Users\Youlian\AppData\Local\Temp\s304.s
-2130 cinit CODE >1612:C:\Users\Youlian\AppData\Local\Temp\s304.s
-2132 cinit CODE >1613:C:\Users\Youlian\AppData\Local\Temp\s304.s
-2134 cinit CODE >1614:C:\Users\Youlian\AppData\Local\Temp\s304.s
-2136 cinit CODE >1615:C:\Users\Youlian\AppData\Local\Temp\s304.s
-2138 cinit CODE >1616:C:\Users\Youlian\AppData\Local\Temp\s304.s
-213C cinit CODE >1617:C:\Users\Youlian\AppData\Local\Temp\s304.s
-2140 cinit CODE >1618:C:\Users\Youlian\AppData\Local\Temp\s304.s
-2140 cinit CODE >1619:C:\Users\Youlian\AppData\Local\Temp\s304.s
-2142 cinit CODE >1620:C:\Users\Youlian\AppData\Local\Temp\s304.s
-2146 cinit CODE >1621:C:\Users\Youlian\AppData\Local\Temp\s304.s
-2148 cinit CODE >1622:C:\Users\Youlian\AppData\Local\Temp\s304.s
-214A cinit CODE >1623:C:\Users\Youlian\AppData\Local\Temp\s304.s
-214C cinit CODE >1627:C:\Users\Youlian\AppData\Local\Temp\s304.s
-2150 cinit CODE >1628:C:\Users\Youlian\AppData\Local\Temp\s304.s
-2152 cinit CODE >1629:C:\Users\Youlian\AppData\Local\Temp\s304.s
-2152 cinit CODE >1630:C:\Users\Youlian\AppData\Local\Temp\s304.s
-2154 cinit CODE >1631:C:\Users\Youlian\AppData\Local\Temp\s304.s
-2156 cinit CODE >1632:C:\Users\Youlian\AppData\Local\Temp\s304.s
-2158 cinit CODE >1635:C:\Users\Youlian\AppData\Local\Temp\s304.s
-215C cinit CODE >1636:C:\Users\Youlian\AppData\Local\Temp\s304.s
-215E cinit CODE >1637:C:\Users\Youlian\AppData\Local\Temp\s304.s
-215E cinit CODE >1638:C:\Users\Youlian\AppData\Local\Temp\s304.s
-2160 cinit CODE >1639:C:\Users\Youlian\AppData\Local\Temp\s304.s
-2162 cinit CODE >1640:C:\Users\Youlian\AppData\Local\Temp\s304.s
-2164 cinit CODE >1646:C:\Users\Youlian\AppData\Local\Temp\s304.s
-2164 cinit CODE >1648:C:\Users\Youlian\AppData\Local\Temp\s304.s
-2166 cinit CODE >1649:C:\Users\Youlian\AppData\Local\Temp\s304.s
+258E text30 CODE >15:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\Umul16.c
+258E text30 CODE >37:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\Umul16.c
+259C text30 CODE >38:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\Umul16.c
+25A4 text30 CODE >39:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\Umul16.c
+25AC text30 CODE >52:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\Umul16.c
+25B4 text30 CODE >53:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\Umul16.c
+2634 text29 CODE >93:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+2634 text29 CODE >96:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+2638 text29 CODE >98:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+2484 text28 CODE >124:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+2484 text28 CODE >128:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+2486 text28 CODE >129:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+2488 text28 CODE >131:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+2488 text28 CODE >133:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+248A text28 CODE >134:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+248C text28 CODE >135:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+249C text28 CODE >136:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+249E text28 CODE >137:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+249E text28 CODE >138:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+24A0 text28 CODE >139:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+24A2 text28 CODE >140:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+24AA text28 CODE >141:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+24AC text28 CODE >142:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+24AC text28 CODE >144:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+24BC text28 CODE >146:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+24BE text28 CODE >147:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+24C4 text28 CODE >148:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+25FA text27 CODE >107:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+25FE text27 CODE >110:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+2614 text27 CODE >115:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+262C text26 CODE >431:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+262C text26 CODE >433:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+262E text26 CODE >434:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+2630 text26 CODE >435:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+2632 text26 CODE >436:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+22A6 text25 CODE >156:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+22AA text25 CODE >158:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+22AE text25 CODE >160:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+22B2 text25 CODE >161:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+22B2 text25 CODE >163:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+22B4 text25 CODE >164:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+22B6 text25 CODE >166:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+22C0 text25 CODE >167:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+22C4 text25 CODE >168:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+22C4 text25 CODE >170:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+22CC text25 CODE >171:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+22D0 text25 CODE >172:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+22D8 text25 CODE >174:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+22FE text25 CODE >175:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+2308 text25 CODE >177:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+230C text25 CODE >178:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+230C text25 CODE >179:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+2310 text25 CODE >180:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+21C8 text24 CODE >314:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+21CC text24 CODE >316:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+21D0 text24 CODE >319:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+21DC text24 CODE >320:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+21E0 text24 CODE >322:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+21EC text24 CODE >323:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+21F0 text24 CODE >325:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+21FC text24 CODE >326:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+2200 text24 CODE >328:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+220C text24 CODE >329:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+2210 text24 CODE >316:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+2238 text24 CODE >331:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+2506 text23 CODE >188:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+250A text23 CODE >190:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+250E text23 CODE >191:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+2512 text23 CODE >192:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+2512 text23 CODE >194:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+2514 text23 CODE >195:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+2516 text23 CODE >197:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+2520 text23 CODE >198:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+2524 text23 CODE >199:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+2524 text23 CODE >201:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+252C text23 CODE >202:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+2530 text23 CODE >203:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+2530 text23 CODE >205:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+2534 text23 CODE >206:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+2534 text23 CODE >207:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+2538 text23 CODE >208:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+2430 text22 CODE >359:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+2434 text22 CODE >363:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+2440 text22 CODE >364:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+2444 text22 CODE >367:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+244A text22 CODE >368:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+244E text22 CODE >370:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+2454 text22 CODE >371:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+2458 text22 CODE >373:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+245E text22 CODE >374:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+2462 text22 CODE >364:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+2482 text22 CODE >376:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+1F16 text21 CODE >387:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+1F16 text21 CODE >391:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+1F20 text21 CODE >392:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+1F6C text21 CODE >391:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+1FC8 text21 CODE >393:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+207C text20 CODE >497:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+207C text20 CODE >499:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+2086 text20 CODE >500:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+20B0 text20 CODE >502:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+20BE text20 CODE >503:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+2100 text20 CODE >500:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+2124 text20 CODE >505:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+114E text19 CODE >426:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+1152 text19 CODE >428:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+1158 text19 CODE >429:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+1162 text19 CODE >431:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+1192 text19 CODE >432:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+11BA text19 CODE >434:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+11E2 text19 CODE >436:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+11EC text19 CODE >438:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+1214 text19 CODE >440:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+123C text19 CODE >442:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+1246 text19 CODE >444:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+1306 text19 CODE >445:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+132A text19 CODE >446:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+138E text19 CODE >447:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+13B6 text19 CODE >449:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+13C0 text19 CODE >438:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+13E4 text19 CODE >452:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+140C text19 CODE >454:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+1416 text19 CODE >432:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+143A text19 CODE >457:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+1818 text18 CODE >397:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+181C text18 CODE >399:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+1822 text18 CODE >400:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+1828 text18 CODE >401:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+182E text18 CODE >402:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+186C text18 CODE >404:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+1872 text18 CODE >405:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+1876 text18 CODE >406:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+18F2 text18 CODE >408:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+18F8 text18 CODE >409:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+1904 text18 CODE >410:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+1908 text18 CODE >413:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+190E text18 CODE >414:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+196A text18 CODE >415:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+199C text18 CODE >417:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+19A0 text18 CODE >418:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+253A text17 CODE >115:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+253E text17 CODE >117:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+2552 text17 CODE >118:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+2552 text17 CODE >119:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+2554 text17 CODE >120:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+2554 text17 CODE >121:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+2562 text17 CODE >122:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+2564 text17 CODE >123:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+19A2 text16 CODE >352:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+19A2 text16 CODE >354:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+19BC text16 CODE >356:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+19D6 text16 CODE >357:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+19EE text16 CODE >359:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+19FE text16 CODE >362:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+1A18 text16 CODE >364:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+1A32 text16 CODE >365:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+1A4A text16 CODE >367:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+1A56 text16 CODE >370:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+1A70 text16 CODE >372:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+1A8A text16 CODE >373:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+1AA2 text16 CODE >375:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+1AB2 text16 CODE >378:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+1ACC text16 CODE >380:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+1AE6 text16 CODE >381:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+1AFE text16 CODE >383:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+1B0A text16 CODE >386:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+1B26 text16 CODE >387:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+2616 text15 CODE >276:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+2616 text15 CODE >278:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+261C text15 CODE >279:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+2622 text15 CODE >280:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+1CA2 text14 CODE >468:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+1CA2 text14 CODE >470:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+1CAC text14 CODE >471:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+1CB2 text14 CODE >472:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+1CBC text14 CODE >473:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+1CC6 text14 CODE >474:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+1CF2 text14 CODE >476:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+1D1E text14 CODE >478:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+1D72 text14 CODE >480:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+1D78 text14 CODE >476:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+1D78 text14 CODE >481:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+1D9C text14 CODE >474:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+1DC0 text14 CODE >484:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+1DE2 text14 CODE >486:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+1DE6 text14 CODE >487:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+1E10 text14 CODE >488:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+1E16 text14 CODE >490:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+1E1A text14 CODE >491:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+1B28 text13 CODE >132:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+1B28 text13 CODE >134:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+1B32 text13 CODE >135:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+1B3C text13 CODE >136:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+1B68 text13 CODE >138:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+1B94 text13 CODE >140:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+1BB2 text13 CODE >142:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+1BFA text13 CODE >145:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+1C10 text13 CODE >147:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+1C58 text13 CODE >138:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+1C7C text13 CODE >136:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+1CA0 text13 CODE >152:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+25DC text12 CODE >29:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\serie.c
+25DC text12 CODE >32:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\serie.c
+25DE text12 CODE >33:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\serie.c
+25E0 text12 CODE >37:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\serie.c
+25E4 text12 CODE >38:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\serie.c
+25E8 text12 CODE >39:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\serie.c
+25EA text12 CODE >40:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\serie.c
+25EC text12 CODE >43:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\serie.c
+25EE text12 CODE >44:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\serie.c
+25F0 text12 CODE >45:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\serie.c
+25F2 text12 CODE >46:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\serie.c
+25F4 text12 CODE >47:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\serie.c
+25F8 text12 CODE >48:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\serie.c
+25B6 text11 CODE >91:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+25B6 text11 CODE >93:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+25BA text11 CODE >95:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+25BE text11 CODE >96:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+25C0 text11 CODE >98:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+25C4 text11 CODE >99:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+25C8 text11 CODE >101:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+25CA text11 CODE >103:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+25CC text11 CODE >104:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+25D0 text11 CODE >106:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+25D2 text11 CODE >107:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+25D6 text11 CODE >108:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+25DA text11 CODE >109:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+2624 text10 CODE >288:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+2624 text10 CODE >290:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+262A text10 CODE >291:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+2126 text9 CODE >417:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+2126 text9 CODE >421:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+212C text9 CODE >422:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+2148 text9 CODE >424:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+2164 text9 CODE >425:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+2196 text9 CODE >424:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+21AC text9 CODE >422:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+21C2 text9 CODE >427:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+21C6 text9 CODE >428:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+2312 text8 CODE >221:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+2312 text8 CODE >226:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+2316 text8 CODE >228:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+232A text8 CODE >229:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+232C text8 CODE >230:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+232E text8 CODE >232:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+2334 text8 CODE >233:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+2338 text8 CODE >234:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+2340 text8 CODE >237:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+2346 text8 CODE >238:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+234A text8 CODE >239:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+2352 text8 CODE >241:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+2358 text8 CODE >242:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+235C text8 CODE >243:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+2364 text8 CODE >245:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+236A text8 CODE >246:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+236E text8 CODE >247:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+2376 text8 CODE >249:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+237A text8 CODE >250:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+2566 text7 CODE >258:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+2566 text7 CODE >261:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+256A text7 CODE >262:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+2570 text7 CODE >263:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+2576 text7 CODE >264:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+257C text7 CODE >265:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+2582 text7 CODE >266:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+2588 text7 CODE >267:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+258C text7 CODE >268:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
+61A text6 CODE >230:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+61A text6 CODE >232:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+624 text6 CODE >233:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+62E text6 CODE >234:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+638 text6 CODE >235:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+6AC text6 CODE >237:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+6D4 text6 CODE >238:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+6D4 text6 CODE >239:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+6FC text6 CODE >241:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+788 text6 CODE >243:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+78E text6 CODE >239:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+78E text6 CODE >244:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+7B2 text6 CODE >237:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+7D6 text6 CODE >248:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+7FE text6 CODE >250:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+85C text6 CODE >252:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+862 text6 CODE >254:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+88E text6 CODE >256:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+8FC text6 CODE >258:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+902 text6 CODE >254:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+902 text6 CODE >259:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+926 text6 CODE >262:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+974 text6 CODE >264:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+99C text6 CODE >266:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+A02 text6 CODE >268:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+A08 text6 CODE >269:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+A08 text6 CODE >270:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+A0E text6 CODE >264:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+A30 text6 CODE >272:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+A5C text6 CODE >273:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+A5C text6 CODE >274:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+A84 text6 CODE >276:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+B10 text6 CODE >278:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+B16 text6 CODE >274:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+B16 text6 CODE >279:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+B3A text6 CODE >272:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+B5E text6 CODE >283:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+B88 text6 CODE >285:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+BEE text6 CODE >287:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+BF4 text6 CODE >289:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+C1A text6 CODE >291:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+C88 text6 CODE >293:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+C8E text6 CODE >289:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+C8E text6 CODE >294:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+CB0 text6 CODE >297:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+CDA text6 CODE >299:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+D40 text6 CODE >301:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+D46 text6 CODE >303:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+D6C text6 CODE >305:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+DF0 text6 CODE >307:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+DF6 text6 CODE >303:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+DF6 text6 CODE >308:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+E18 text6 CODE >311:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+E68 text6 CODE >313:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+E90 text6 CODE >315:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+F06 text6 CODE >317:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+F0C text6 CODE >313:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+F0C text6 CODE >318:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+F30 text6 CODE >320:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+F58 text6 CODE >322:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+FBE text6 CODE >324:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+FC4 text6 CODE >325:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+FC4 text6 CODE >326:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+FCA text6 CODE >320:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+FEC text6 CODE >329:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+1018 text6 CODE >331:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+103E text6 CODE >333:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+10B4 text6 CODE >335:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+10BA text6 CODE >331:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+10BA text6 CODE >336:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+10DC text6 CODE >338:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+1142 text6 CODE >340:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+1148 text6 CODE >343:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+114C text6 CODE >344:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+143C text5 CODE >198:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+143C text5 CODE >200:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+1446 text5 CODE >201:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+1450 text5 CODE >202:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+145A text5 CODE >204:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+1486 text5 CODE >206:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+14B2 text5 CODE >208:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+1508 text5 CODE >210:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+1528 text5 CODE >211:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+153C text5 CODE >213:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+1584 text5 CODE >215:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+15A0 text5 CODE >217:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+15EC text5 CODE >206:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+1610 text5 CODE >204:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+1634 text5 CODE >222:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+1FCA text4 CODE >7:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\awmod.c
+1FCA text4 CODE >12:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\awmod.c
+1FD0 text4 CODE >13:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\awmod.c
+1FDE text4 CODE >14:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\awmod.c
+1FE6 text4 CODE >15:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\awmod.c
+1FEA text4 CODE >17:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\awmod.c
+1FF8 text4 CODE >18:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\awmod.c
+2000 text4 CODE >19:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\awmod.c
+2012 text4 CODE >20:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\awmod.c
+2016 text4 CODE >21:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\awmod.c
+201A text4 CODE >22:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\awmod.c
+2020 text4 CODE >23:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\awmod.c
+2022 text4 CODE >21:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\awmod.c
+2030 text4 CODE >26:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\awmod.c
+2046 text4 CODE >27:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\awmod.c
+204E text4 CODE >28:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\awmod.c
+2054 text4 CODE >29:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\awmod.c
+205A text4 CODE >31:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\awmod.c
+206A text4 CODE >32:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\awmod.c
+2072 text4 CODE >33:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\awmod.c
+207A text4 CODE >34:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\awmod.c
+223A text3 CODE >15:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\Umul32.c
+223A text3 CODE >119:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\Umul32.c
+224C text3 CODE >121:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\Umul32.c
+225A text3 CODE >122:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\Umul32.c
+226A text3 CODE >123:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\Umul32.c
+2274 text3 CODE >124:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\Umul32.c
+227E text3 CODE >125:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\Umul32.c
+2294 text3 CODE >128:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\Umul32.c
+22A4 text3 CODE >129:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\Umul32.c
+23DA text2 CODE >12:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\rand.c
+23DA text2 CODE >14:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\rand.c
+2410 text2 CODE >15:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\rand.c
+2422 text2 CODE >16:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\rand.c
+242E text2 CODE >17:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\rand.c
+1636 text1 CODE >161:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+1636 text1 CODE >163:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+1640 text1 CODE >164:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+164A text1 CODE >165:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+1650 text1 CODE >166:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+1656 text1 CODE >167:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+165C text1 CODE >169:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+1688 text1 CODE >171:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+16B4 text1 CODE >173:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+16FC text1 CODE >171:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+1720 text1 CODE >169:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+1748 text1 CODE >179:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+176A text1 CODE >180:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+1778 text1 CODE >181:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+17B6 text1 CODE >183:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+17E6 text1 CODE >184:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+17EC text1 CODE >177:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+1816 text1 CODE >187:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+1E1C text0 CODE >51:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+1E1C text0 CODE >53:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+1E20 text0 CODE >54:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+1E24 text0 CODE >55:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+1E28 text0 CODE >56:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+1E2C text0 CODE >57:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+1E30 text0 CODE >59:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+1E3A text0 CODE >60:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+1E40 text0 CODE >61:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+1E46 text0 CODE >63:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+1E5E text0 CODE >64:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+1E6A text0 CODE >65:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+1E6E text0 CODE >66:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+1E72 text0 CODE >69:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+1E8A text0 CODE >70:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+1E98 text0 CODE >72:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+1ED2 text0 CODE >74:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+1ED6 text0 CODE >75:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+1EE4 text0 CODE >76:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+1EE8 text0 CODE >77:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+1EF4 text0 CODE >78:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+1EF8 text0 CODE >79:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+1EFC text0 CODE >82:C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+237C cinit CODE >1562:C:\Users\Youlian\AppData\Local\Temp\s29c.s
+237C cinit CODE >1564:C:\Users\Youlian\AppData\Local\Temp\s29c.s
+237C cinit CODE >1567:C:\Users\Youlian\AppData\Local\Temp\s29c.s
+237C cinit CODE >1601:C:\Users\Youlian\AppData\Local\Temp\s29c.s
+237E cinit CODE >1602:C:\Users\Youlian\AppData\Local\Temp\s29c.s
+2380 cinit CODE >1603:C:\Users\Youlian\AppData\Local\Temp\s29c.s
+2382 cinit CODE >1604:C:\Users\Youlian\AppData\Local\Temp\s29c.s
+2384 cinit CODE >1605:C:\Users\Youlian\AppData\Local\Temp\s29c.s
+2386 cinit CODE >1606:C:\Users\Youlian\AppData\Local\Temp\s29c.s
+2388 cinit CODE >1607:C:\Users\Youlian\AppData\Local\Temp\s29c.s
+238C cinit CODE >1608:C:\Users\Youlian\AppData\Local\Temp\s29c.s
+2390 cinit CODE >1609:C:\Users\Youlian\AppData\Local\Temp\s29c.s
+2390 cinit CODE >1610:C:\Users\Youlian\AppData\Local\Temp\s29c.s
+2392 cinit CODE >1611:C:\Users\Youlian\AppData\Local\Temp\s29c.s
+2396 cinit CODE >1612:C:\Users\Youlian\AppData\Local\Temp\s29c.s
+2398 cinit CODE >1613:C:\Users\Youlian\AppData\Local\Temp\s29c.s
+239A cinit CODE >1614:C:\Users\Youlian\AppData\Local\Temp\s29c.s
+239C cinit CODE >1618:C:\Users\Youlian\AppData\Local\Temp\s29c.s
+239E cinit CODE >1619:C:\Users\Youlian\AppData\Local\Temp\s29c.s
+23A0 cinit CODE >1620:C:\Users\Youlian\AppData\Local\Temp\s29c.s
+23A2 cinit CODE >1621:C:\Users\Youlian\AppData\Local\Temp\s29c.s
+23A4 cinit CODE >1622:C:\Users\Youlian\AppData\Local\Temp\s29c.s
+23A6 cinit CODE >1623:C:\Users\Youlian\AppData\Local\Temp\s29c.s
+23A8 cinit CODE >1624:C:\Users\Youlian\AppData\Local\Temp\s29c.s
+23AC cinit CODE >1625:C:\Users\Youlian\AppData\Local\Temp\s29c.s
+23B0 cinit CODE >1626:C:\Users\Youlian\AppData\Local\Temp\s29c.s
+23B0 cinit CODE >1627:C:\Users\Youlian\AppData\Local\Temp\s29c.s
+23B2 cinit CODE >1628:C:\Users\Youlian\AppData\Local\Temp\s29c.s
+23B6 cinit CODE >1629:C:\Users\Youlian\AppData\Local\Temp\s29c.s
+23B8 cinit CODE >1630:C:\Users\Youlian\AppData\Local\Temp\s29c.s
+23BA cinit CODE >1631:C:\Users\Youlian\AppData\Local\Temp\s29c.s
+23BC cinit CODE >1635:C:\Users\Youlian\AppData\Local\Temp\s29c.s
+23C0 cinit CODE >1636:C:\Users\Youlian\AppData\Local\Temp\s29c.s
+23C2 cinit CODE >1637:C:\Users\Youlian\AppData\Local\Temp\s29c.s
+23C2 cinit CODE >1638:C:\Users\Youlian\AppData\Local\Temp\s29c.s
+23C4 cinit CODE >1639:C:\Users\Youlian\AppData\Local\Temp\s29c.s
+23C6 cinit CODE >1640:C:\Users\Youlian\AppData\Local\Temp\s29c.s
+23C8 cinit CODE >1643:C:\Users\Youlian\AppData\Local\Temp\s29c.s
+23CC cinit CODE >1644:C:\Users\Youlian\AppData\Local\Temp\s29c.s
+23CE cinit CODE >1645:C:\Users\Youlian\AppData\Local\Temp\s29c.s
+23CE cinit CODE >1646:C:\Users\Youlian\AppData\Local\Temp\s29c.s
+23D0 cinit CODE >1647:C:\Users\Youlian\AppData\Local\Temp\s29c.s
+23D2 cinit CODE >1648:C:\Users\Youlian\AppData\Local\Temp\s29c.s
+23D4 cinit CODE >1654:C:\Users\Youlian\AppData\Local\Temp\s29c.s
+23D4 cinit CODE >1656:C:\Users\Youlian\AppData\Local\Temp\s29c.s
+23D6 cinit CODE >1657:C:\Users\Youlian\AppData\Local\Temp\s29c.s
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -567,30 +591,30 @@ lcd_ecritChar@car B7 0 BANK0 1 cstackBANK0 dist/Mini_board_config/production\lab
 __LdataBANK0 0 0 ABS 0 dataBANK0 dist/Mini_board_config/production\labo6.production.o
 __LdataBANK1 0 0 ABS 0 dataBANK1 dist/Mini_board_config/production\labo6.production.o
 __Lmediumconst 0 0 MEDIUMCONST 0 mediumconst dist/Mini_board_config/production\labo6.production.o
-__end_of_calculToucheCombien 114E 0 CODE 0 text19 dist/Mini_board_config/production\labo6.production.o
+__end_of_calculToucheCombien 114E 0 CODE 0 text6 dist/Mini_board_config/production\labo6.production.o
 _matCGRAM 154 0 BANK1 1 dataBANK1 dist/Mini_board_config/production\labo6.production.o
 __Hspace_0 30000E 0 ABS 0 - dist/Mini_board_config/production\labo6.production.o
 __Hspace_1 194 0 ABS 0 - dist/Mini_board_config/production\labo6.production.o
 __Hspace_2 0 0 ABS 0 - dist/Mini_board_config/production\labo6.production.o
 __CFG_IESO$OFF 0 0 ABS 0 - dist/Mini_board_config/production\labo6.production.o
-__end_of_lcd_curseurHome 23F0 0 CODE 0 text9 dist/Mini_board_config/production\labo6.production.o
+__end_of_lcd_curseurHome 262C 0 CODE 0 text10 dist/Mini_board_config/production\labo6.production.o
 __HidataBANK0 0 0 ABS 0 idataBANK0 dist/Mini_board_config/production\labo6.production.o
 __HidataBANK1 0 0 ABS 0 idataBANK1 dist/Mini_board_config/production\labo6.production.o
 __Hibigdata 0 0 CODE 0 ibigdata dist/Mini_board_config/production\labo6.production.o
-_lcd_ecrireDonnees 23CC 0 CODE 0 text27 dist/Mini_board_config/production\labo6.production.o
-__mediumconst 0 0 MEDIUMCONST 0 mediumconst C:\Users\Youlian\AppData\Local\Temp\s304.o
+_lcd_ecrireDonnees 25FA 0 CODE 0 text27 dist/Mini_board_config/production\labo6.production.o
+__mediumconst 0 0 MEDIUMCONST 0 mediumconst C:\Users\Youlian\AppData\Local\Temp\s29c.o
 rempliMines@nbMine D3 0 BANK0 1 cstackBANK0 dist/Mini_board_config/production\labo6.production.o
 __Heeprom_data 0 0 EEDATA 0 eeprom_data dist/Mini_board_config/production\labo6.production.o
 __CFG_MCLRE$ON 0 0 ABS 0 - dist/Mini_board_config/production\labo6.production.o
-main@x E2 0 BANK0 1 cstackBANK0 dist/Mini_board_config/production\labo6.production.o
-main@y E3 0 BANK0 1 cstackBANK0 dist/Mini_board_config/production\labo6.production.o
+main@x DB 0 BANK0 1 cstackBANK0 dist/Mini_board_config/production\labo6.production.o
+main@y DC 0 BANK0 1 cstackBANK0 dist/Mini_board_config/production\labo6.production.o
 __Lsmallconst 600 0 SMALLCONST 0 smallconst dist/Mini_board_config/production\labo6.production.o
 _RCIF 7CF5 0 ABS 0 - dist/Mini_board_config/production\labo6.production.o
-___sp 0 0 STACK 2 stack C:\Users\Youlian\AppData\Local\Temp\s304.o
-_main 1B16 0 CODE 0 text0 dist/Mini_board_config/production\labo6.production.o
-_rand 216A 0 CODE 0 text2 dist/Mini_board_config/production\labo6.production.o
+___sp 0 0 STACK 2 stack C:\Users\Youlian\AppData\Local\Temp\s29c.o
+_main 1E1C 0 CODE 0 text0 dist/Mini_board_config/production\labo6.production.o
+_rand 23DA 0 CODE 0 text2 dist/Mini_board_config/production\labo6.production.o
 getAnalog@canal B5 0 BANK0 1 cstackBANK0 dist/Mini_board_config/production\labo6.production.o
-start 0 0 CODE 0 init C:\Users\Youlian\AppData\Local\Temp\s304.o
+start 0 0 CODE 0 init C:\Users\Youlian\AppData\Local\Temp\s29c.o
 __size_of___awmod 0 0 ABS 0 - dist/Mini_board_config/production\labo6.production.o
 __size_of_main 0 0 ABS 0 - dist/Mini_board_config/production\labo6.production.o
 __size_of_rand 0 0 ABS 0 - dist/Mini_board_config/production\labo6.production.o
@@ -604,22 +628,22 @@ calculToucheCombien@nb_mine C3 0 BANK0 1 cstackBANK0 dist/Mini_board_config/prod
 lcd_wrCom@commande B6 0 BANK0 1 cstackBANK0 dist/Mini_board_config/production\labo6.production.o
 __LidataBANK0 0 0 ABS 0 idataBANK0 dist/Mini_board_config/production\labo6.production.o
 __LidataBANK1 0 0 ABS 0 idataBANK1 dist/Mini_board_config/production\labo6.production.o
-__end_of_metToucheCombien 1618 0 CODE 0 text5 dist/Mini_board_config/production\labo6.production.o
+__end_of_metToucheCombien 1636 0 CODE 0 text5 dist/Mini_board_config/production\labo6.production.o
 __Hpowerup 0 0 CODE 0 powerup dist/Mini_board_config/production\labo6.production.o
 ___awmod@sign C7 0 BANK0 1 cstackBANK0 dist/Mini_board_config/production\labo6.production.o
-__end_of_lcd_gotoXY 1FCA 0 CODE 0 text24 dist/Mini_board_config/production\labo6.production.o
-demine@mine DD 0 BANK0 1 cstackBANK0 dist/Mini_board_config/production\labo6.production.o
-__end_of_lcd_wrCom 20A2 0 CODE 0 text25 dist/Mini_board_config/production\labo6.production.o
+__end_of_lcd_gotoXY 223A 0 CODE 0 text24 dist/Mini_board_config/production\labo6.production.o
+demine@mine CB 0 BANK0 1 cstackBANK0 dist/Mini_board_config/production\labo6.production.o
+__end_of_lcd_wrCom 2312 0 CODE 0 text25 dist/Mini_board_config/production\labo6.production.o
 __size_of_metToucheCombien 0 0 ABS 0 - dist/Mini_board_config/production\labo6.production.o
-_lcd_curseurHome 23E8 0 CODE 0 text9 dist/Mini_board_config/production\labo6.production.o
-_lcd_wrData 22DE 0 CODE 0 text23 dist/Mini_board_config/production\labo6.production.o
-__accesstop 60 0 ABS 0 - C:\Users\Youlian\AppData\Local\Temp\s304.o
-intlevel0 0 0 CODE 0 text C:\Users\Youlian\AppData\Local\Temp\s304.o
-intlevel1 0 0 CODE 0 text C:\Users\Youlian\AppData\Local\Temp\s304.o
-intlevel2 0 0 CODE 0 text C:\Users\Youlian\AppData\Local\Temp\s304.o
-intlevel3 0 0 CODE 0 text C:\Users\Youlian\AppData\Local\Temp\s304.o
+_lcd_curseurHome 2624 0 CODE 0 text10 dist/Mini_board_config/production\labo6.production.o
+_lcd_wrData 2506 0 CODE 0 text23 dist/Mini_board_config/production\labo6.production.o
+__accesstop 60 0 ABS 0 - C:\Users\Youlian\AppData\Local\Temp\s29c.o
+intlevel0 0 0 CODE 0 text C:\Users\Youlian\AppData\Local\Temp\s29c.o
+intlevel1 0 0 CODE 0 text C:\Users\Youlian\AppData\Local\Temp\s29c.o
+intlevel2 0 0 CODE 0 text C:\Users\Youlian\AppData\Local\Temp\s29c.o
+intlevel3 0 0 CODE 0 text C:\Users\Youlian\AppData\Local\Temp\s29c.o
 __size_of_lcd_wrCom 0 0 ABS 0 - dist/Mini_board_config/production\labo6.production.o
-_lcd_resetSequence 20A2 0 CODE 0 text7 dist/Mini_board_config/production\labo6.production.o
+_lcd_resetSequence 2312 0 CODE 0 text8 dist/Mini_board_config/production\labo6.production.o
 __size_of_initTabVue 0 0 ABS 0 - dist/Mini_board_config/production\labo6.production.o
 __LnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/Mini_board_config/production\labo6.production.o
 __CFG_EBTR0$OFF 0 0 ABS 0 - dist/Mini_board_config/production\labo6.production.o
@@ -628,49 +652,49 @@ __CFG_EBTR2$OFF 0 0 ABS 0 - dist/Mini_board_config/production\labo6.production.o
 __CFG_EBTR3$OFF 0 0 ABS 0 - dist/Mini_board_config/production\labo6.production.o
 __CFG_EBTRB$OFF 0 0 ABS 0 - dist/Mini_board_config/production\labo6.production.o
 __Hifardata 0 0 CODE 0 ifardata dist/Mini_board_config/production\labo6.production.o
-demine@x DE 0 BANK0 1 cstackBANK0 dist/Mini_board_config/production\labo6.production.o
-demine@y D9 0 BANK0 1 cstackBANK0 dist/Mini_board_config/production\labo6.production.o
+demine@x CC 0 BANK0 1 cstackBANK0 dist/Mini_board_config/production\labo6.production.o
+demine@y C6 0 BANK0 1 cstackBANK0 dist/Mini_board_config/production\labo6.production.o
 __Hclrtext 0 0 ABS 0 clrtext dist/Mini_board_config/production\labo6.production.o
-_deplace 17FA 0 CODE 0 text14 dist/Mini_board_config/production\labo6.production.o
-_lcd_wrCom 2036 0 CODE 0 text25 dist/Mini_board_config/production\labo6.production.o
+_deplace 19A2 0 CODE 0 text16 dist/Mini_board_config/production\labo6.production.o
+_lcd_wrCom 22A6 0 CODE 0 text25 dist/Mini_board_config/production\labo6.production.o
 __size_of_lcd_initCGRam 0 0 ABS 0 - dist/Mini_board_config/production\labo6.production.o
 ___wmul@multiplicand B6 0 BANK0 1 cstackBANK0 dist/Mini_board_config/production\labo6.production.o
 __CFG_FOSC$INTIO67 0 0 ABS 0 - dist/Mini_board_config/production\labo6.production.o
 _ADCON1 FC1 0 ABS 0 - dist/Mini_board_config/production\labo6.production.o
 _ADRESH FC4 0 ABS 0 - dist/Mini_board_config/production\labo6.production.o
-__end_of_enleveTuilesAutour 141E 0 CODE 0 text17 dist/Mini_board_config/production\labo6.production.o
-___inthi_sp 0 0 STACK 2 stack C:\Users\Youlian\AppData\Local\Temp\s304.o
-___intlo_sp 0 0 STACK 2 stack C:\Users\Youlian\AppData\Local\Temp\s304.o
+_ANSELH F7F 0 ABS 0 - dist/Mini_board_config/production\labo6.production.o
+__end_of_enleveTuilesAutour 143C 0 CODE 0 text19 dist/Mini_board_config/production\labo6.production.o
+___inthi_sp 0 0 STACK 2 stack C:\Users\Youlian\AppData\Local\Temp\s29c.o
+___intlo_sp 0 0 STACK 2 stack C:\Users\Youlian\AppData\Local\Temp\s29c.o
 __size_of_lcd_putMessage 0 0 ABS 0 - dist/Mini_board_config/production\labo6.production.o
 __Hintcode_body 0 0 ABS 0 intcode_body dist/Mini_board_config/production\labo6.production.o
-_initialisation 238E 0 CODE 0 text10 dist/Mini_board_config/production\labo6.production.o
-__end_of___lmul 2036 0 CODE 0 text3 dist/Mini_board_config/production\labo6.production.o
-__end_of___wmul 238E 0 CODE 0 text30 dist/Mini_board_config/production\labo6.production.o
+_initialisation 25B6 0 CODE 0 text11 dist/Mini_board_config/production\labo6.production.o
+__end_of___lmul 22A6 0 CODE 0 text3 dist/Mini_board_config/production\labo6.production.o
+__end_of___wmul 25B6 0 CODE 0 text30 dist/Mini_board_config/production\labo6.production.o
 __Lintsave_regs 0 0 BIGRAM 1 intsave_regs dist/Mini_board_config/production\labo6.production.o
-__end_of_getAnalog 233E 0 CODE 0 text15 dist/Mini_board_config/production\labo6.production.o
+__end_of_getAnalog 2566 0 CODE 0 text17 dist/Mini_board_config/production\labo6.production.o
 _BAUDCONbits FB8 0 ABS 0 - dist/Mini_board_config/production\labo6.production.o
 __Hmediumconst 0 0 MEDIUMCONST 0 mediumconst dist/Mini_board_config/production\labo6.production.o
 __size_of_getAnalog 0 0 ABS 0 - dist/Mini_board_config/production\labo6.production.o
 __size_of_init_serie 0 0 ABS 0 - dist/Mini_board_config/production\labo6.production.o
 __Hintcodelo 0 0 CODE 0 intcodelo dist/Mini_board_config/production\labo6.production.o
-__end_of___awmod 1D68 0 CODE 0 text4 dist/Mini_board_config/production\labo6.production.o
-__end_of_lcd_initCGRam 1F58 0 CODE 0 text8 dist/Mini_board_config/production\labo6.production.o
-__end_of_lcd_wrData 2312 0 CODE 0 text23 dist/Mini_board_config/production\labo6.production.o
-__end_of_demine 1EB6 0 CODE 0 text16 dist/Mini_board_config/production\labo6.production.o
-?_strcpy BA 0 BANK0 1 cstackBANK0 dist/Mini_board_config/production\labo6.production.o
-_enleveTuilesAutour 114E 0 CODE 0 text17 dist/Mini_board_config/production\labo6.production.o
-_getAnalog 2312 0 CODE 0 text15 dist/Mini_board_config/production\labo6.production.o
+__end_of___awmod 207C 0 CODE 0 text4 dist/Mini_board_config/production\labo6.production.o
+__end_of_lcd_initCGRam 21C8 0 CODE 0 text9 dist/Mini_board_config/production\labo6.production.o
+__end_of_lcd_wrData 253A 0 CODE 0 text23 dist/Mini_board_config/production\labo6.production.o
+__end_of_demine 19A2 0 CODE 0 text18 dist/Mini_board_config/production\labo6.production.o
+_enleveTuilesAutour 114E 0 CODE 0 text19 dist/Mini_board_config/production\labo6.production.o
+_getAnalog 253A 0 CODE 0 text17 dist/Mini_board_config/production\labo6.production.o
 __size_of_gagne 0 0 ABS 0 - dist/Mini_board_config/production\labo6.production.o
 __size_of_lcd_strobeEnableBit 0 0 ABS 0 - dist/Mini_board_config/production\labo6.production.o
-__end_of_rempliMines 17FA 0 CODE 0 text1 dist/Mini_board_config/production\labo6.production.o
+__end_of_rempliMines 1818 0 CODE 0 text1 dist/Mini_board_config/production\labo6.production.o
 __Lintcodelo 0 0 CODE 0 intcodelo dist/Mini_board_config/production\labo6.production.o
 __CFG_FCMEN$OFF 0 0 ABS 0 - dist/Mini_board_config/production\labo6.production.o
-start_initialization 210C 0 CODE 0 cinit dist/Mini_board_config/production\labo6.production.o
+start_initialization 237C 0 CODE 0 cinit dist/Mini_board_config/production\labo6.production.o
 __size_of_lcd_curseurHome 0 0 ABS 0 - dist/Mini_board_config/production\labo6.production.o
 __CFG_PBADEN$ON 0 0 ABS 0 - dist/Mini_board_config/production\labo6.production.o
 __HnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/Mini_board_config/production\labo6.production.o
 _TRISCbits F94 0 ABS 0 - dist/Mini_board_config/production\labo6.production.o
-__end_of_initialisation 23AE 0 CODE 0 text10 dist/Mini_board_config/production\labo6.production.o
+__end_of_initialisation 25DC 0 CODE 0 text11 dist/Mini_board_config/production\labo6.production.o
 lcd_wrData@caractere B6 0 BANK0 1 cstackBANK0 dist/Mini_board_config/production\labo6.production.o
 ___rparam_used 0 0 ABS 0 - dist/Mini_board_config/production\labo6.production.o
 deplace@x B9 0 BANK0 1 cstackBANK0 dist/Mini_board_config/production\labo6.production.o
@@ -680,7 +704,7 @@ __CFG_WDTPS$32768 0 0 ABS 0 - dist/Mini_board_config/production\labo6.production
 _SPBRGH FB0 0 ABS 0 - dist/Mini_board_config/production\labo6.production.o
 __pcstackBANK0 B4 0 BANK0 1 cstackBANK0 dist/Mini_board_config/production\labo6.production.o
 lcd_busy@adresse B5 0 BANK0 1 cstackBANK0 dist/Mini_board_config/production\labo6.production.o
-_lcd_strobeEnableBit 23F0 0 CODE 0 text26 dist/Mini_board_config/production\labo6.production.o
+_lcd_strobeEnableBit 262C 0 CODE 0 text26 dist/Mini_board_config/production\labo6.production.o
 __Hbank0 0 0 ABS 0 bank0 dist/Mini_board_config/production\labo6.production.o
 __Hbank1 0 0 ABS 0 bank1 dist/Mini_board_config/production\labo6.production.o
 __Hbank2 0 0 ABS 0 bank2 dist/Mini_board_config/production\labo6.production.o
@@ -689,7 +713,6 @@ __Hbank4 0 0 ABS 0 bank4 dist/Mini_board_config/production\labo6.production.o
 __Hbank5 0 0 ABS 0 bank5 dist/Mini_board_config/production\labo6.production.o
 __Hcinit 0 0 ABS 0 cinit dist/Mini_board_config/production\labo6.production.o
 __Hconst 0 0 CONST 0 const dist/Mini_board_config/production\labo6.production.o
-__end_of_strcpy 225C 0 CODE 0 text18 dist/Mini_board_config/production\labo6.production.o
 __Hidata 0 0 CODE 0 idata dist/Mini_board_config/production\labo6.production.o
 __Hidloc 200008 0 IDLOC 0 idloc dist/Mini_board_config/production\labo6.production.o
 __Hnvbit 0 0 COMRAM 1 nvbit dist/Mini_board_config/production\labo6.production.o
@@ -709,7 +732,7 @@ __Htext9 0 0 ABS 0 text9 dist/Mini_board_config/production\labo6.production.o
 _m_tabVue 100 0 BANK1 1 bssBANK1 dist/Mini_board_config/production\labo6.production.o
 __Hbigbss 0 0 BIGRAM 1 bigbss dist/Mini_board_config/production\labo6.production.o
 __Hbigram 0 0 ABS 0 bigram dist/Mini_board_config/production\labo6.production.o
-__smallconst 600 0 SMALLCONST 0 smallconst C:\Users\Youlian\AppData\Local\Temp\s304.o
+__smallconst 600 0 SMALLCONST 0 smallconst C:\Users\Youlian\AppData\Local\Temp\s29c.o
 __size_of_lcd_busy 0 0 ABS 0 - dist/Mini_board_config/production\labo6.production.o
 __size_of_lcd_init 0 0 ABS 0 - dist/Mini_board_config/production\labo6.production.o
 __Hcomram 0 0 ABS 0 comram dist/Mini_board_config/production\labo6.production.o
@@ -759,8 +782,9 @@ __Lrbss 0 0 COMRAM 1 rbss dist/Mini_board_config/production\labo6.production.o
 __Ltemp 0 0 COMRAM 1 temp dist/Mini_board_config/production\labo6.production.o
 __Ltext 0 0 ABS 0 text dist/Mini_board_config/production\labo6.production.o
 __CFG_XINST$OFF 0 0 ABS 0 - dist/Mini_board_config/production\labo6.production.o
-___lmul 1FCA 0 CODE 0 text3 dist/Mini_board_config/production\labo6.production.o
-___wmul 2366 0 CODE 0 text30 dist/Mini_board_config/production\labo6.production.o
+___lmul 223A 0 CODE 0 text3 dist/Mini_board_config/production\labo6.production.o
+___wmul 258E 0 CODE 0 text30 dist/Mini_board_config/production\labo6.production.o
+gagne@gagne C1 0 BANK0 1 cstackBANK0 dist/Mini_board_config/production\labo6.production.o
 __LcstackBANK0 0 0 ABS 0 cstackBANK0 dist/Mini_board_config/production\labo6.production.o
 __Hintret 0 0 ABS 0 intret dist/Mini_board_config/production\labo6.production.o
 __Hirdata 0 0 CODE 0 irdata dist/Mini_board_config/production\labo6.production.o
@@ -769,20 +793,19 @@ __S1 194 0 ABS 0 - dist/Mini_board_config/production\labo6.production.o
 __S2 0 0 ABS 0 - dist/Mini_board_config/production\labo6.production.o
 _m_tabMines 60 0 BANK0 1 bssBANK0 dist/Mini_board_config/production\labo6.production.o
 calculToucheCombien@ligne BA 0 BANK0 1 cstackBANK0 dist/Mini_board_config/production\labo6.production.o
-_demine 1E12 0 CODE 0 text16 dist/Mini_board_config/production\labo6.production.o
+_demine 1818 0 CODE 0 text18 dist/Mini_board_config/production\labo6.production.o
 __Lbigdata 0 0 BIGRAM 1 bigdata dist/Mini_board_config/production\labo6.production.o
 __Hnvrram 0 0 COMRAM 1 nvrram dist/Mini_board_config/production\labo6.production.o
-strcpy@cp BE 0 BANK0 1 cstackBANK0 dist/Mini_board_config/production\labo6.production.o
-strcpy@to BA 0 BANK0 1 cstackBANK0 dist/Mini_board_config/production\labo6.production.o
 __Hparam0 0 0 BANK0 1 param0 dist/Mini_board_config/production\labo6.production.o
 __CFG_CCP2MX$PORTC 0 0 ABS 0 - dist/Mini_board_config/production\labo6.production.o
-_lcd_busy 225C 0 CODE 0 text28 dist/Mini_board_config/production\labo6.production.o
-_lcd_init 233E 0 CODE 0 text6 dist/Mini_board_config/production\labo6.production.o
+_lcd_busy 2484 0 CODE 0 text28 dist/Mini_board_config/production\labo6.production.o
+_lcd_init 2566 0 CODE 0 text7 dist/Mini_board_config/production\labo6.production.o
+gagne@nb_Tuile BF 0 BANK0 1 cstackBANK0 dist/Mini_board_config/production\labo6.production.o
 afficheTabVue@i C5 0 BANK0 1 cstackBANK0 dist/Mini_board_config/production\labo6.production.o
 __Lintentry 0 0 ABS 0 intentry dist/Mini_board_config/production\labo6.production.o
 __Hramtop 600 0 RAM 0 ramtop dist/Mini_board_config/production\labo6.production.o
-main@NBMines E0 0 BANK0 1 cstackBANK0 dist/Mini_board_config/production\labo6.production.o
-__pdataBANK0 E4 0 BANK0 1 dataBANK0 dist/Mini_board_config/production\labo6.production.o
+main@NBMines D9 0 BANK0 1 cstackBANK0 dist/Mini_board_config/production\labo6.production.o
+__pdataBANK0 DD 0 BANK0 1 dataBANK0 dist/Mini_board_config/production\labo6.production.o
 __pdataBANK1 154 0 BANK1 1 dataBANK1 dist/Mini_board_config/production\labo6.production.o
 __activetblptr 3 0 ABS 0 - dist/Mini_board_config/production\labo6.production.o
 __size_of_lcd_wrData 0 0 ABS 0 - dist/Mini_board_config/production\labo6.production.o
@@ -790,10 +813,10 @@ __size_of_rempliMines 0 0 ABS 0 - dist/Mini_board_config/production\labo6.produc
 __Hstruct 0 0 COMRAM 1 struct dist/Mini_board_config/production\labo6.production.o
 __size_of___lmul 0 0 ABS 0 - dist/Mini_board_config/production\labo6.production.o
 __size_of___wmul 0 0 ABS 0 - dist/Mini_board_config/production\labo6.production.o
-__end_of_lcd_busy 229E 0 CODE 0 text28 dist/Mini_board_config/production\labo6.production.o
+__end_of_lcd_busy 24C6 0 CODE 0 text28 dist/Mini_board_config/production\labo6.production.o
 __LbssBANK0 0 0 ABS 0 bssBANK0 dist/Mini_board_config/production\labo6.production.o
 __LbssBANK1 0 0 ABS 0 bssBANK1 dist/Mini_board_config/production\labo6.production.o
-__end_of_lcd_init 2366 0 CODE 0 text6 dist/Mini_board_config/production\labo6.production.o
+__end_of_lcd_init 258E 0 CODE 0 text7 dist/Mini_board_config/production\labo6.production.o
 __Htext10 0 0 ABS 0 text10 dist/Mini_board_config/production\labo6.production.o
 __Htext11 0 0 ABS 0 text11 dist/Mini_board_config/production\labo6.production.o
 __Htext12 0 0 ABS 0 text12 dist/Mini_board_config/production\labo6.production.o
@@ -818,33 +841,34 @@ __Htext30 0 0 ABS 0 text30 dist/Mini_board_config/production\labo6.production.o
 lcd_putMessage@chaine BA 0 BANK0 1 cstackBANK0 dist/Mini_board_config/production\labo6.production.o
 ___awmod@counter C6 0 BANK0 1 cstackBANK0 dist/Mini_board_config/production\labo6.production.o
 _RCSTAbits FAB 0 ABS 0 - dist/Mini_board_config/production\labo6.production.o
-_afficheTabVue 1D68 0 CODE 0 text20 dist/Mini_board_config/production\labo6.production.o
-__end_of_lcd_strobeEnableBit 23F8 0 CODE 0 text26 dist/Mini_board_config/production\labo6.production.o
+_afficheTabVue 207C 0 CODE 0 text20 dist/Mini_board_config/production\labo6.production.o
+__end_of_lcd_strobeEnableBit 2634 0 CODE 0 text26 dist/Mini_board_config/production\labo6.production.o
 __CFG_HFOFST$ON 0 0 ABS 0 - dist/Mini_board_config/production\labo6.production.o
-__ptext10 238E 0 CODE 0 text10 dist/Mini_board_config/production\labo6.production.o
-__ptext11 23AE 0 CODE 0 text11 dist/Mini_board_config/production\labo6.production.o
-__ptext12 199C 0 CODE 0 text12 dist/Mini_board_config/production\labo6.production.o
-__ptext13 2402 0 CODE 0 text13 dist/Mini_board_config/production\labo6.production.o
-__ptext14 17FA 0 CODE 0 text14 dist/Mini_board_config/production\labo6.production.o
-__ptext15 2312 0 CODE 0 text15 dist/Mini_board_config/production\labo6.production.o
-__ptext16 1E12 0 CODE 0 text16 dist/Mini_board_config/production\labo6.production.o
-__ptext17 114E 0 CODE 0 text17 dist/Mini_board_config/production\labo6.production.o
-__ptext18 2214 0 CODE 0 text18 dist/Mini_board_config/production\labo6.production.o
-__ptext19 61A 0 CODE 0 text19 dist/Mini_board_config/production\labo6.production.o
-__ptext20 1D68 0 CODE 0 text20 dist/Mini_board_config/production\labo6.production.o
-__ptext21 1C02 0 CODE 0 text21 dist/Mini_board_config/production\labo6.production.o
-__ptext22 21C0 0 CODE 0 text22 dist/Mini_board_config/production\labo6.production.o
-__ptext23 22DE 0 CODE 0 text23 dist/Mini_board_config/production\labo6.production.o
-__ptext24 1F58 0 CODE 0 text24 dist/Mini_board_config/production\labo6.production.o
-__ptext25 2036 0 CODE 0 text25 dist/Mini_board_config/production\labo6.production.o
-__ptext26 23F0 0 CODE 0 text26 dist/Mini_board_config/production\labo6.production.o
-__ptext27 23CC 0 CODE 0 text27 dist/Mini_board_config/production\labo6.production.o
-__ptext28 225C 0 CODE 0 text28 dist/Mini_board_config/production\labo6.production.o
-__ptext29 23F8 0 CODE 0 text29 dist/Mini_board_config/production\labo6.production.o
-__ptext30 2366 0 CODE 0 text30 dist/Mini_board_config/production\labo6.production.o
+__ptext10 2624 0 CODE 0 text10 dist/Mini_board_config/production\labo6.production.o
+__ptext11 25B6 0 CODE 0 text11 dist/Mini_board_config/production\labo6.production.o
+__ptext12 25DC 0 CODE 0 text12 dist/Mini_board_config/production\labo6.production.o
+__ptext13 1B28 0 CODE 0 text13 dist/Mini_board_config/production\labo6.production.o
+__ptext14 1CA2 0 CODE 0 text14 dist/Mini_board_config/production\labo6.production.o
+__ptext15 2616 0 CODE 0 text15 dist/Mini_board_config/production\labo6.production.o
+__ptext16 19A2 0 CODE 0 text16 dist/Mini_board_config/production\labo6.production.o
+__ptext17 253A 0 CODE 0 text17 dist/Mini_board_config/production\labo6.production.o
+__ptext18 1818 0 CODE 0 text18 dist/Mini_board_config/production\labo6.production.o
+__ptext19 114E 0 CODE 0 text19 dist/Mini_board_config/production\labo6.production.o
+__ptext20 207C 0 CODE 0 text20 dist/Mini_board_config/production\labo6.production.o
+__ptext21 1F16 0 CODE 0 text21 dist/Mini_board_config/production\labo6.production.o
+__ptext22 2430 0 CODE 0 text22 dist/Mini_board_config/production\labo6.production.o
+__ptext23 2506 0 CODE 0 text23 dist/Mini_board_config/production\labo6.production.o
+__ptext24 21C8 0 CODE 0 text24 dist/Mini_board_config/production\labo6.production.o
+__ptext25 22A6 0 CODE 0 text25 dist/Mini_board_config/production\labo6.production.o
+__ptext26 262C 0 CODE 0 text26 dist/Mini_board_config/production\labo6.production.o
+__ptext27 25FA 0 CODE 0 text27 dist/Mini_board_config/production\labo6.production.o
+__ptext28 2484 0 CODE 0 text28 dist/Mini_board_config/production\labo6.production.o
+__ptext29 2634 0 CODE 0 text29 dist/Mini_board_config/production\labo6.production.o
+__ptext30 258E 0 CODE 0 text30 dist/Mini_board_config/production\labo6.production.o
+__size_of_lcd_effaceAffichage 0 0 ABS 0 - dist/Mini_board_config/production\labo6.production.o
 __size_of_lcd_ecrireDonnees 0 0 ABS 0 - dist/Mini_board_config/production\labo6.production.o
-__end_of_lcd_lireDonnees 23FE 0 CODE 0 text29 dist/Mini_board_config/production\labo6.production.o
-___awmod 1CB6 0 CODE 0 text4 dist/Mini_board_config/production\labo6.production.o
+__end_of_lcd_lireDonnees 263A 0 CODE 0 text29 dist/Mini_board_config/production\labo6.production.o
+___awmod 1FCA 0 CODE 0 text4 dist/Mini_board_config/production\labo6.production.o
 __Lbigbss 0 0 BIGRAM 1 bigbss dist/Mini_board_config/production\labo6.production.o
 __Lbigram 0 0 ABS 0 bigram dist/Mini_board_config/production\labo6.production.o
 __CFG_BORV$18 0 0 ABS 0 - dist/Mini_board_config/production\labo6.production.o
@@ -854,62 +878,60 @@ __size_of_deplace 0 0 ABS 0 - dist/Mini_board_config/production\labo6.production
 ?_rand C0 0 BANK0 1 cstackBANK0 dist/Mini_board_config/production\labo6.production.o
 __Lcomram 0 0 ABS 0 comram dist/Mini_board_config/production\labo6.production.o
 __Lconfig 300000 0 CONFIG 0 config dist/Mini_board_config/production\labo6.production.o
-_lcd_ecritChar 21C0 0 CODE 0 text22 dist/Mini_board_config/production\labo6.production.o
+_lcd_ecritChar 2430 0 CODE 0 text22 dist/Mini_board_config/production\labo6.production.o
 ___wmul@multiplier B4 0 BANK0 1 cstackBANK0 dist/Mini_board_config/production\labo6.production.o
 __size_of_enleveTuilesAutour 0 0 ABS 0 - dist/Mini_board_config/production\labo6.production.o
 lcd_initCGRam@i B9 0 BANK0 1 cstackBANK0 dist/Mini_board_config/production\labo6.production.o
 lcd_initCGRam@j BA 0 BANK0 1 cstackBANK0 dist/Mini_board_config/production\labo6.production.o
 __Lfarbss 0 0 FARRAM 0 farbss dist/Mini_board_config/production\labo6.production.o
-_lcd_putMessage 1C02 0 CODE 0 text21 dist/Mini_board_config/production\labo6.production.o
-_strcpy 2214 0 CODE 0 text18 dist/Mini_board_config/production\labo6.production.o
+_lcd_putMessage 1F16 0 CODE 0 text21 dist/Mini_board_config/production\labo6.production.o
 __Lfardata 0 0 FARRAM 0 fardata dist/Mini_board_config/production\labo6.production.o
-stackhi 5FF 0 ABS 0 - C:\Users\Youlian\AppData\Local\Temp\s304.o
-stacklo 194 0 ABS 0 - C:\Users\Youlian\AppData\Local\Temp\s304.o
+stackhi 5FF 0 ABS 0 - C:\Users\Youlian\AppData\Local\Temp\s29c.o
+stacklo 194 0 ABS 0 - C:\Users\Youlian\AppData\Local\Temp\s29c.o
 __Lintcode 0 0 CODE 0 intcode dist/Mini_board_config/production\labo6.production.o
 __Lintret 0 0 ABS 0 intret dist/Mini_board_config/production\labo6.production.o
 __Lirdata 0 0 CODE 0 irdata dist/Mini_board_config/production\labo6.production.o
 _ADCON0bits FC2 0 ABS 0 - dist/Mini_board_config/production\labo6.production.o
 _ADCON2bits FC0 0 ABS 0 - dist/Mini_board_config/production\labo6.production.o
 __CFG_LVP$OFF 0 0 ABS 0 - dist/Mini_board_config/production\labo6.production.o
-_initTabVue 199C 0 CODE 0 text12 dist/Mini_board_config/production\labo6.production.o
-strcpy@from BC 0 BANK0 1 cstackBANK0 dist/Mini_board_config/production\labo6.production.o
+_initTabVue 1B28 0 CODE 0 text13 dist/Mini_board_config/production\labo6.production.o
 __Lspace_0 0 0 ABS 0 - dist/Mini_board_config/production\labo6.production.o
 __Lspace_1 0 0 ABS 0 - dist/Mini_board_config/production\labo6.production.o
 __Lspace_2 0 0 ABS 0 - dist/Mini_board_config/production\labo6.production.o
 __size_of_calculToucheCombien 0 0 ABS 0 - dist/Mini_board_config/production\labo6.production.o
 metToucheCombien@mine CC 0 BANK0 1 cstackBANK0 dist/Mini_board_config/production\labo6.production.o
 __HcstackBANK0 0 0 ABS 0 cstackBANK0 dist/Mini_board_config/production\labo6.production.o
+_lcd_effaceAffichage 2616 0 CODE 0 text15 dist/Mini_board_config/production\labo6.production.o
 __size_of_lcd_resetSequence 0 0 ABS 0 - dist/Mini_board_config/production\labo6.production.o
-end_of_initialization 2164 0 CODE 0 cinit dist/Mini_board_config/production\labo6.production.o
-_lcd_lireDonnees 23F8 0 CODE 0 text29 dist/Mini_board_config/production\labo6.production.o
+end_of_initialization 23D4 0 CODE 0 cinit dist/Mini_board_config/production\labo6.production.o
+_lcd_lireDonnees 2634 0 CODE 0 text29 dist/Mini_board_config/production\labo6.production.o
 lcd_putMessage@j C2 0 BANK0 1 cstackBANK0 dist/Mini_board_config/production\labo6.production.o
 __Lnvrram 0 0 COMRAM 1 nvrram dist/Mini_board_config/production\labo6.production.o
 __Hintentry 0 0 ABS 0 intentry dist/Mini_board_config/production\labo6.production.o
 __CFG_STVREN$ON 0 0 ABS 0 - dist/Mini_board_config/production\labo6.production.o
 ?___awmod C2 0 BANK0 1 cstackBANK0 dist/Mini_board_config/production\labo6.production.o
 __Lparam0 0 0 BANK0 1 param0 dist/Mini_board_config/production\labo6.production.o
-gagne@pMines B4 0 BANK0 1 cstackBANK0 dist/Mini_board_config/production\labo6.production.o
+gagne@pMines BA 0 BANK0 1 cstackBANK0 dist/Mini_board_config/production\labo6.production.o
 __Hreset_vec 0 0 CODE 0 reset_vec dist/Mini_board_config/production\labo6.production.o
 __HbssBANK0 0 0 ABS 0 bssBANK0 dist/Mini_board_config/production\labo6.production.o
 __HbssBANK1 0 0 ABS 0 bssBANK1 dist/Mini_board_config/production\labo6.production.o
 ___awmod@dividend C2 0 BANK0 1 cstackBANK0 dist/Mini_board_config/production\labo6.production.o
 __Lramtop 600 0 RAM 0 ramtop dist/Mini_board_config/production\labo6.production.o
-__size_of_strcpy 0 0 ABS 0 - dist/Mini_board_config/production\labo6.production.o
 __size_of_initialisation 0 0 ABS 0 - dist/Mini_board_config/production\labo6.production.o
-__pcinit 210C 0 CODE 0 cinit dist/Mini_board_config/production\labo6.production.o
+__pcinit 237C 0 CODE 0 cinit dist/Mini_board_config/production\labo6.production.o
 initTabVue@i BC 0 BANK0 1 cstackBANK0 dist/Mini_board_config/production\labo6.production.o
 initTabVue@j BE 0 BANK0 1 cstackBANK0 dist/Mini_board_config/production\labo6.production.o
-__end_of_lcd_putMessage 1CB6 0 CODE 0 text21 dist/Mini_board_config/production\labo6.production.o
-__ptext0 1B16 0 CODE 0 text0 dist/Mini_board_config/production\labo6.production.o
-__ptext1 1618 0 CODE 0 text1 dist/Mini_board_config/production\labo6.production.o
-__ptext2 216A 0 CODE 0 text2 dist/Mini_board_config/production\labo6.production.o
-__ptext3 1FCA 0 CODE 0 text3 dist/Mini_board_config/production\labo6.production.o
-__ptext4 1CB6 0 CODE 0 text4 dist/Mini_board_config/production\labo6.production.o
-__ptext5 141E 0 CODE 0 text5 dist/Mini_board_config/production\labo6.production.o
-__ptext6 233E 0 CODE 0 text6 dist/Mini_board_config/production\labo6.production.o
-__ptext7 20A2 0 CODE 0 text7 dist/Mini_board_config/production\labo6.production.o
-__ptext8 1EB6 0 CODE 0 text8 dist/Mini_board_config/production\labo6.production.o
-__ptext9 23E8 0 CODE 0 text9 dist/Mini_board_config/production\labo6.production.o
+__end_of_lcd_putMessage 1FCA 0 CODE 0 text21 dist/Mini_board_config/production\labo6.production.o
+__ptext0 1E1C 0 CODE 0 text0 dist/Mini_board_config/production\labo6.production.o
+__ptext1 1636 0 CODE 0 text1 dist/Mini_board_config/production\labo6.production.o
+__ptext2 23DA 0 CODE 0 text2 dist/Mini_board_config/production\labo6.production.o
+__ptext3 223A 0 CODE 0 text3 dist/Mini_board_config/production\labo6.production.o
+__ptext4 1FCA 0 CODE 0 text4 dist/Mini_board_config/production\labo6.production.o
+__ptext5 143C 0 CODE 0 text5 dist/Mini_board_config/production\labo6.production.o
+__ptext6 61A 0 CODE 0 text6 dist/Mini_board_config/production\labo6.production.o
+__ptext7 2566 0 CODE 0 text7 dist/Mini_board_config/production\labo6.production.o
+__ptext8 2312 0 CODE 0 text8 dist/Mini_board_config/production\labo6.production.o
+__ptext9 2126 0 CODE 0 text9 dist/Mini_board_config/production\labo6.production.o
 __Lstruct 0 0 COMRAM 1 struct dist/Mini_board_config/production\labo6.production.o
 __Ltext10 0 0 ABS 0 text10 dist/Mini_board_config/production\labo6.production.o
 __Ltext11 0 0 ABS 0 text11 dist/Mini_board_config/production\labo6.production.o
@@ -932,44 +954,44 @@ __Ltext27 0 0 ABS 0 text27 dist/Mini_board_config/production\labo6.production.o
 __Ltext28 0 0 ABS 0 text28 dist/Mini_board_config/production\labo6.production.o
 __Ltext29 0 0 ABS 0 text29 dist/Mini_board_config/production\labo6.production.o
 __Ltext30 0 0 ABS 0 text30 dist/Mini_board_config/production\labo6.production.o
-__ramtop 600 0 RAM 0 ramtop C:\Users\Youlian\AppData\Local\Temp\s304.o
+__ramtop 600 0 RAM 0 ramtop C:\Users\Youlian\AppData\Local\Temp\s29c.o
 __size_of_afficheTabVue 0 0 ABS 0 - dist/Mini_board_config/production\labo6.production.o
 __Lpowerup 0 0 CODE 0 powerup dist/Mini_board_config/production\labo6.production.o
 __Leeprom_data 0 0 EEDATA 0 eeprom_data dist/Mini_board_config/production\labo6.production.o
-_init_serie 23AE 0 CODE 0 text11 dist/Mini_board_config/production\labo6.production.o
-_calculToucheCombien 61A 0 CODE 0 text19 dist/Mini_board_config/production\labo6.production.o
+_init_serie 25DC 0 CODE 0 text12 dist/Mini_board_config/production\labo6.production.o
+_calculToucheCombien 61A 0 CODE 0 text6 dist/Mini_board_config/production\labo6.production.o
 __psmallconst 600 0 SMALLCONST 0 smallconst dist/Mini_board_config/production\labo6.production.o
-__end_of_deplace 199C 0 CODE 0 text14 dist/Mini_board_config/production\labo6.production.o
+__end_of_deplace 1B28 0 CODE 0 text16 dist/Mini_board_config/production\labo6.production.o
 __Lreset_vec 0 0 CODE 0 reset_vec dist/Mini_board_config/production\labo6.production.o
 rempliMines@i CD 0 BANK0 1 cstackBANK0 dist/Mini_board_config/production\labo6.production.o
 rempliMines@j CF 0 BANK0 1 cstackBANK0 dist/Mini_board_config/production\labo6.production.o
 rempliMines@x D1 0 BANK0 1 cstackBANK0 dist/Mini_board_config/production\labo6.production.o
 rempliMines@y D2 0 BANK0 1 cstackBANK0 dist/Mini_board_config/production\labo6.production.o
-__end_of_initTabVue 1B16 0 CODE 0 text12 dist/Mini_board_config/production\labo6.production.o
+__end_of_initTabVue 1CA2 0 CODE 0 text13 dist/Mini_board_config/production\labo6.production.o
 __size_of_lcd_ecritChar 0 0 ABS 0 - dist/Mini_board_config/production\labo6.production.o
 ___param_bank 0 0 ABS 0 - dist/Mini_board_config/production\labo6.production.o
 __Hbigdata 0 0 BIGRAM 1 bigdata dist/Mini_board_config/production\labo6.production.o
-__end_of__initialization 2164 0 CODE 0 cinit dist/Mini_board_config/production\labo6.production.o
+__end_of__initialization 23D4 0 CODE 0 cinit dist/Mini_board_config/production\labo6.production.o
 ___awmod@divisor C4 0 BANK0 1 cstackBANK0 dist/Mini_board_config/production\labo6.production.o
 __CFG_WRT0$OFF 0 0 ABS 0 - dist/Mini_board_config/production\labo6.production.o
 __CFG_WRT1$OFF 0 0 ABS 0 - dist/Mini_board_config/production\labo6.production.o
 __CFG_WRT2$OFF 0 0 ABS 0 - dist/Mini_board_config/production\labo6.production.o
 __CFG_WRT3$OFF 0 0 ABS 0 - dist/Mini_board_config/production\labo6.production.o
-__end_of_lcd_ecrireDonnees 23E8 0 CODE 0 text27 dist/Mini_board_config/production\labo6.production.o
-enleveTuilesAutour@i D4 0 BANK0 1 cstackBANK0 dist/Mini_board_config/production\labo6.production.o
-enleveTuilesAutour@j D6 0 BANK0 1 cstackBANK0 dist/Mini_board_config/production\labo6.production.o
-enleveTuilesAutour@x D8 0 BANK0 1 cstackBANK0 dist/Mini_board_config/production\labo6.production.o
-enleveTuilesAutour@y C9 0 BANK0 1 cstackBANK0 dist/Mini_board_config/production\labo6.production.o
+__end_of_lcd_ecrireDonnees 2616 0 CODE 0 text27 dist/Mini_board_config/production\labo6.production.o
+enleveTuilesAutour@i C4 0 BANK0 1 cstackBANK0 dist/Mini_board_config/production\labo6.production.o
+enleveTuilesAutour@j C2 0 BANK0 1 cstackBANK0 dist/Mini_board_config/production\labo6.production.o
+enleveTuilesAutour@x C1 0 BANK0 1 cstackBANK0 dist/Mini_board_config/production\labo6.production.o
+enleveTuilesAutour@y BA 0 BANK0 1 cstackBANK0 dist/Mini_board_config/production\labo6.production.o
 __CFG_WRTB$OFF 0 0 ABS 0 - dist/Mini_board_config/production\labo6.production.o
 __Libigdata 0 0 CODE 0 ibigdata dist/Mini_board_config/production\labo6.production.o
 __CFG_WRTC$OFF 0 0 ABS 0 - dist/Mini_board_config/production\labo6.production.o
 __CFG_WRTD$OFF 0 0 ABS 0 - dist/Mini_board_config/production\labo6.production.o
-enleveTuilesAutour@mine D2 0 BANK0 1 cstackBANK0 dist/Mini_board_config/production\labo6.production.o
-__pidataBANK0 23FE 0 CODE 0 idataBANK0 dist/Mini_board_config/production\labo6.production.o
-__pidataBANK1 229E 0 CODE 0 idataBANK1 dist/Mini_board_config/production\labo6.production.o
+enleveTuilesAutour@mine BF 0 BANK0 1 cstackBANK0 dist/Mini_board_config/production\labo6.production.o
+__pidataBANK0 263A 0 CODE 0 idataBANK0 dist/Mini_board_config/production\labo6.production.o
+__pidataBANK1 24C6 0 CODE 0 idataBANK1 dist/Mini_board_config/production\labo6.production.o
 __Lclrtext 0 0 ABS 0 clrtext dist/Mini_board_config/production\labo6.production.o
 ___lmul@product BC 0 BANK0 1 cstackBANK0 dist/Mini_board_config/production\labo6.production.o
-__end_of_afficheTabVue 1E12 0 CODE 0 text20 dist/Mini_board_config/production\labo6.production.o
+__end_of_afficheTabVue 2126 0 CODE 0 text20 dist/Mini_board_config/production\labo6.production.o
 ___lmul@multiplicand B8 0 BANK0 1 cstackBANK0 dist/Mini_board_config/production\labo6.production.o
 __CFG_PWRT$OFF 0 0 ABS 0 - dist/Mini_board_config/production\labo6.production.o
 _ANSELbits F7E 0 ABS 0 - dist/Mini_board_config/production\labo6.production.o
@@ -979,20 +1001,24 @@ calculToucheCombien@j C5 0 BANK0 1 cstackBANK0 dist/Mini_board_config/production
 lcd_gotoXY@x B8 0 BANK0 1 cstackBANK0 dist/Mini_board_config/production\labo6.production.o
 lcd_gotoXY@y B7 0 BANK0 1 cstackBANK0 dist/Mini_board_config/production\labo6.production.o
 __CFG_BOREN$SBORDIS 0 0 ABS 0 - dist/Mini_board_config/production\labo6.production.o
+gagne@i C2 0 BANK0 1 cstackBANK0 dist/Mini_board_config/production\labo6.production.o
+gagne@j C4 0 BANK0 1 cstackBANK0 dist/Mini_board_config/production\labo6.production.o
 calculToucheCombien@colonne BC 0 BANK0 1 cstackBANK0 dist/Mini_board_config/production\labo6.production.o
-__end_of_main 1C02 0 CODE 0 text0 dist/Mini_board_config/production\labo6.production.o
-__end_of_rand 21C0 0 CODE 0 text2 dist/Mini_board_config/production\labo6.production.o
-_rempliMines 1618 0 CODE 0 text1 dist/Mini_board_config/production\labo6.production.o
-rempliMines@i_380 D4 0 BANK0 1 cstackBANK0 dist/Mini_board_config/production\labo6.production.o
-rempliMines@j_381 D6 0 BANK0 1 cstackBANK0 dist/Mini_board_config/production\labo6.production.o
-__end_of_lcd_ecritChar 2214 0 CODE 0 text22 dist/Mini_board_config/production\labo6.production.o
+__end_of_main 1F16 0 CODE 0 text0 dist/Mini_board_config/production\labo6.production.o
+__end_of_rand 2430 0 CODE 0 text2 dist/Mini_board_config/production\labo6.production.o
+_rempliMines 1636 0 CODE 0 text1 dist/Mini_board_config/production\labo6.production.o
+rempliMines@i_384 D4 0 BANK0 1 cstackBANK0 dist/Mini_board_config/production\labo6.production.o
+rempliMines@j_385 D6 0 BANK0 1 cstackBANK0 dist/Mini_board_config/production\labo6.production.o
+__end_of_lcd_ecritChar 2484 0 CODE 0 text22 dist/Mini_board_config/production\labo6.production.o
 _ANSEL F7E 0 ABS 0 - dist/Mini_board_config/production\labo6.production.o
-__end_of_gagne 2404 0 CODE 0 text13 dist/Mini_board_config/production\labo6.production.o
+__end_of_lcd_effaceAffichage 2624 0 CODE 0 text15 dist/Mini_board_config/production\labo6.production.o
+__end_of_gagne 1E1C 0 CODE 0 text14 dist/Mini_board_config/production\labo6.production.o
 __size_of_lcd_lireDonnees 0 0 ABS 0 - dist/Mini_board_config/production\labo6.production.o
 _PORTD F83 0 ABS 0 - dist/Mini_board_config/production\labo6.production.o
 _RCREG FAE 0 ABS 0 - dist/Mini_board_config/production\labo6.production.o
 _SPBRG FAF 0 ABS 0 - dist/Mini_board_config/production\labo6.production.o
 _TRISA F92 0 ABS 0 - dist/Mini_board_config/production\labo6.production.o
+_TRISB F93 0 ABS 0 - dist/Mini_board_config/production\labo6.production.o
 _TRISD F95 0 ABS 0 - dist/Mini_board_config/production\labo6.production.o
 _TXREG FAD 0 ABS 0 - dist/Mini_board_config/production\labo6.production.o
 __CFG_CP0$OFF 0 0 ABS 0 - dist/Mini_board_config/production\labo6.production.o
@@ -1007,25 +1033,25 @@ __Lram 0 0 ABS 0 ram dist/Mini_board_config/production\labo6.production.o
 __Lsfr 0 0 ABS 0 sfr dist/Mini_board_config/production\labo6.production.o
 __CFG_CP2$OFF 0 0 ABS 0 - dist/Mini_board_config/production\labo6.production.o
 __CFG_CP3$OFF 0 0 ABS 0 - dist/Mini_board_config/production\labo6.production.o
-_gagne 2402 0 CODE 0 text13 dist/Mini_board_config/production\labo6.production.o
+_gagne 1CA2 0 CODE 0 text14 dist/Mini_board_config/production\labo6.production.o
 __CFG_CPB$OFF 0 0 ABS 0 - dist/Mini_board_config/production\labo6.production.o
 __CFG_CPD$OFF 0 0 ABS 0 - dist/Mini_board_config/production\labo6.production.o
-_randx E4 0 BANK0 1 dataBANK0 dist/Mini_board_config/production\labo6.production.o
-_metToucheCombien 141E 0 CODE 0 text5 dist/Mini_board_config/production\labo6.production.o
+_randx DD 0 BANK0 1 dataBANK0 dist/Mini_board_config/production\labo6.production.o
+_metToucheCombien 143C 0 CODE 0 text5 dist/Mini_board_config/production\labo6.production.o
 lcd_ecritChar@posRam B8 0 BANK0 1 cstackBANK0 dist/Mini_board_config/production\labo6.production.o
-__end_of_init_serie 23CC 0 CODE 0 text11 dist/Mini_board_config/production\labo6.production.o
+__end_of_init_serie 25FA 0 CODE 0 text12 dist/Mini_board_config/production\labo6.production.o
 __HdataBANK0 0 0 ABS 0 dataBANK0 dist/Mini_board_config/production\labo6.production.o
 __HdataBANK1 0 0 ABS 0 dataBANK1 dist/Mini_board_config/production\labo6.production.o
-__end_of_lcd_resetSequence 210C 0 CODE 0 text7 dist/Mini_board_config/production\labo6.production.o
-__initialization 210C 0 CODE 0 cinit dist/Mini_board_config/production\labo6.production.o
+__end_of_lcd_resetSequence 237C 0 CODE 0 text8 dist/Mini_board_config/production\labo6.production.o
+__initialization 237C 0 CODE 0 cinit dist/Mini_board_config/production\labo6.production.o
 __pbssBANK0 60 0 BANK0 1 bssBANK0 dist/Mini_board_config/production\labo6.production.o
 __pbssBANK1 100 0 BANK1 1 bssBANK1 dist/Mini_board_config/production\labo6.production.o
 __Hfardata 0 0 FARRAM 0 fardata dist/Mini_board_config/production\labo6.production.o
 ___wmul@product B8 0 BANK0 1 cstackBANK0 dist/Mini_board_config/production\labo6.production.o
 __Hsmallconst 61A 0 SMALLCONST 0 smallconst dist/Mini_board_config/production\labo6.production.o
 __Lifardata 0 0 CODE 0 ifardata dist/Mini_board_config/production\labo6.production.o
-_lcd_gotoXY 1F58 0 CODE 0 text24 dist/Mini_board_config/production\labo6.production.o
-_lcd_initCGRam 1EB6 0 CODE 0 text8 dist/Mini_board_config/production\labo6.production.o
+_lcd_gotoXY 21C8 0 CODE 0 text24 dist/Mini_board_config/production\labo6.production.o
+_lcd_initCGRam 2126 0 CODE 0 text9 dist/Mini_board_config/production\labo6.production.o
 __Hintsave_regs 0 0 BIGRAM 1 intsave_regs dist/Mini_board_config/production\labo6.production.o
 __Hintcode 0 0 CODE 0 intcode dist/Mini_board_config/production\labo6.production.o
 # %SPLITSTAB Section
@@ -1053,9 +1079,9 @@ __Hintcode 0 0 CODE 0 intcode dist/Mini_board_config/production\labo6.production
 # All other numeric quantities are in decimal.
 %SEGMENTS
 idloc 0 200000 200000 8 1
-text19 0 61A 61A 1DEA 1
+text6 0 61A 61A 2024 1
 reset_vec 0 0 0 4 1
-bssBANK0 1 60 60 88 1
+bssBANK0 1 60 60 81 1
 bssBANK1 1 100 100 94 1
 smallconst 0 600 600 1A 1
 config 0 300000 300000 E 1

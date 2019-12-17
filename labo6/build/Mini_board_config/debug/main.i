@@ -1,5 +1,5 @@
 
-# 1 "Lcd4Lignes.c"
+# 1 "main.c"
 
 # 18 "C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\xc.h"
 extern const char __xc8_OPTIM_SPEED;
@@ -4743,6 +4743,61 @@ extern __nonreentrant void _delay3(unsigned char);
 # 15 "C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\c90\stdbool.h"
 typedef unsigned char bool;
 
+# 29 "C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\c90\errno.h"
+extern int errno;
+
+# 12 "C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\c90\conio.h"
+extern void init_uart(void);
+
+extern char getch(void);
+extern char getche(void);
+extern void putch(char);
+extern void ungetch(char);
+
+extern __bit kbhit(void);
+
+# 23
+extern char * cgets(char *);
+extern void cputs(const char *);
+
+# 4 "C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\__size_t.h"
+typedef unsigned size_t;
+
+# 14 "C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\c90\string.h"
+extern void * memcpy(void *, const void *, size_t);
+extern void * memmove(void *, const void *, size_t);
+extern void * memset(void *, int, size_t);
+
+# 36
+extern char * strcat(char *, const char *);
+extern char * strcpy(char *, const char *);
+extern char * strncat(char *, const char *, size_t);
+extern char * strncpy(char *, const char *, size_t);
+extern char * strdup(const char *);
+extern char * strtok(char *, const char *);
+
+
+extern int memcmp(const void *, const void *, size_t);
+extern int strcmp(const char *, const char *);
+extern int stricmp(const char *, const char *);
+extern int strncmp(const char *, const char *, size_t);
+extern int strnicmp(const char *, const char *, size_t);
+extern void * memchr(const void *, int, size_t);
+extern size_t strcspn(const char *, const char *);
+extern char * strpbrk(const char *, const char *);
+extern size_t strspn(const char *, const char *);
+extern char * strstr(const char *, const char *);
+extern char * stristr(const char *, const char *);
+extern char * strerror(int);
+extern size_t strlen(const char *);
+extern char * strchr(const char *, int);
+extern char * strichr(const char *, int);
+extern char * strrchr(const char *, int);
+extern char * strrichr(const char *, int);
+
+# 15 "C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\c90\stdbool.h"
+typedef unsigned char bool;
+
 # 27 "Lcd4Lignes.h"
 void lcd_init(void);
 
@@ -4773,276 +4828,563 @@ void lcd_cacheCurseur(void);
 # 78
 void lcd_montreCurseur(void);
 
-# 66 "Lcd4Lignes.c"
-char matCGRAM[8][8] =
+# 11 "serie.h"
+void init_serie(void);
+
+# 7 "C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\c90\stdarg.h"
+typedef void * va_list[1];
+
+#pragma intrinsic(__va_start)
+extern void * __va_start(void);
+
+#pragma intrinsic(__va_arg)
+extern void * __va_arg(void *, ...);
+
+# 43 "C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\c90\stdio.h"
+struct __prbuf
 {
-{8,4,4,0x0A,0x11,0x1F,0x11,0},
-{0B00000,0B01110,0B01110,0B01110,0B01110,0B01110,0B01110,0B00000},
-{0B00000,0B00000,0B00100,0B01110,0B01110,0B01110,0B00100,0B00000},
-{8,4,0x0E,0x11,0x1F,0x10,0x0E,0},
-{8,4,0x1F,0x10,0x1E,0x10,0x1F,0},
-{4,0x0A,0x0E,0x11,0x1F,0x10,0x0E,0},
-{8,4,0x0E,01,0x0F,0x11,0x0F,0},
-{4,0x0A,0x0E,1,0x0F,0x11,0x0F,0},
+char * ptr;
+void (* func)(char);
 };
 
+# 88
+extern int cprintf(char *, ...);
+#pragma printf_check(cprintf)
 
 
-static unsigned char lcd_busy(void);
-static unsigned char lcd_wrCom(unsigned char cCommande);
-static unsigned char lcd_wrData(unsigned char nCaractere);
-static unsigned char lcd_lireDonnees(void);
-static void lcd_ecrireDonnees(unsigned char cDonnee);
-static void lcd_resetSequence(void);
-static void lcd_initCGRam(void);
-static void lcd_strobeEnableBit(void);
 
-# 93
-static unsigned char lcd_lireDonnees(void)
+extern int _doprnt(struct __prbuf *, const register char *, register va_list);
+
+
+# 180
+#pragma printf_check(vprintf) const
+#pragma printf_check(vsprintf) const
+
+extern char * gets(char *);
+extern int puts(const char *);
+extern int scanf(const char *, ...) __attribute__((unsupported("scanf() is not supported by this compiler")));
+extern int sscanf(const char *, const char *, ...) __attribute__((unsupported("sscanf() is not supported by this compiler")));
+extern int vprintf(const char *, va_list) __attribute__((unsupported("vprintf() is not supported by this compiler")));
+extern int vsprintf(char *, const char *, va_list) __attribute__((unsupported("vsprintf() is not supported by this compiler")));
+extern int vscanf(const char *, va_list ap) __attribute__((unsupported("vscanf() is not supported by this compiler")));
+extern int vsscanf(const char *, const char *, va_list) __attribute__((unsupported("vsscanf() is not supported by this compiler")));
+
+#pragma printf_check(printf) const
+#pragma printf_check(sprintf) const
+extern int sprintf(char *, const char *, ...);
+extern int printf(const char *, ...);
+
+# 7 "C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\c90\stdlib.h"
+typedef unsigned short wchar_t;
+
+# 15
+typedef struct {
+int rem;
+int quot;
+} div_t;
+typedef struct {
+unsigned rem;
+unsigned quot;
+} udiv_t;
+typedef struct {
+long quot;
+long rem;
+} ldiv_t;
+typedef struct {
+unsigned long quot;
+unsigned long rem;
+} uldiv_t;
+
+# 65
+extern double atof(const char *);
+extern double strtod(const char *, const char **);
+extern int atoi(const char *);
+extern unsigned xtoi(const char *);
+extern long atol(const char *);
+
+# 73
+extern long strtol(const char *, char **, int);
+
+extern int rand(void);
+extern void srand(unsigned int);
+extern void * calloc(size_t, size_t);
+extern div_t div(int numer, int denom);
+extern udiv_t udiv(unsigned numer, unsigned denom);
+extern ldiv_t ldiv(long numer, long denom);
+extern uldiv_t uldiv(unsigned long numer,unsigned long denom);
+
+# 85
+extern unsigned long _lrotl(unsigned long value, unsigned int shift);
+extern unsigned long _lrotr(unsigned long value, unsigned int shift);
+extern unsigned int _rotl(unsigned int value, unsigned int shift);
+extern unsigned int _rotr(unsigned int value, unsigned int shift);
+
+
+
+
+extern void * malloc(size_t);
+extern void free(void *);
+extern void * realloc(void *, size_t);
+
+# 104
+extern int atexit(void (*)(void));
+extern char * getenv(const char *);
+extern char ** environ;
+extern int system(char *);
+extern void qsort(void *, size_t, size_t, int (*)(const void *, const void *));
+extern void * bsearch(const void *, void *, size_t, size_t, int(*)(const void *, const void *));
+extern int abs(int);
+extern long labs(long);
+
+extern char * itoa(char * buf, int val, int base);
+extern char * utoa(char * buf, unsigned val, int base);
+
+
+
+
+extern char * ltoa(char * buf, long val, int base);
+extern char * ultoa(char * buf, unsigned long val, int base);
+
+extern char * ftoa(float f, int * status);
+
+# 8 "C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\c90\time.h"
+typedef long time_t;
+struct tm {
+int tm_sec;
+int tm_min;
+int tm_hour;
+int tm_mday;
+int tm_mon;
+int tm_year;
+int tm_wday;
+int tm_yday;
+int tm_isdst;
+};
+
+# 25
+extern int time_zone;
+
+# 30
+extern time_t time(time_t *);
+extern int stime(time_t *);
+
+# 47
+extern char * asctime(const struct tm *) ;
+extern char * ctime(const time_t *) ;
+extern struct tm * gmtime(const time_t *) ;
+extern struct tm * localtime(const time_t *) ;
+extern size_t strftime(char *, size_t, const char *, const struct tm *) ;
+extern time_t mktime(struct tm *);
+
+# 35 "main.c"
+void initialisation(void);
+void initTabVue(void);
+void rempliMines(int nb);
+void metToucheCombien(void);
+char calculToucheCombien(int ligne, int colonne);
+void deplace(char* x, char* y);
+bool demine(char x, char y);
+void enleveTuilesAutour(char x, char y);
+bool gagne(int* pMines);
+void afficheTabVue(void);
+
+
+char m_tabVue[4][20+1];
+char m_tabMines[4][20+1];
+
+
+void main(void)
 {
+initialisation();
+init_serie();
+lcd_init();
+initTabVue();
+lcd_curseurHome();
 
-return (PORTD & 0x0f);
+int NBMines=12;
+char x =(20/2);
+char y = (4/2);
 
+lcd_putMessage("LAB6 Youlian Houehounou");
+rempliMines(NBMines);
+metToucheCombien();
+afficheTabVue();
+while(1)
+{
+deplace(&x,&y);
+if (PORTBbits.RB1 ==0)
+{
+if((demine(x,y)==0)||(gagne(&NBMines)==1))
+{
+afficheTabVue();
+while(PORTBbits.RB1==1);
+initTabVue();
+rempliMines(NBMines);
+metToucheCombien();
+afficheTabVue();
+}
+}
+_delay((unsigned long)((100)*(1000000/4000.0)));
+}
 }
 
-# 107
-static void lcd_ecrireDonnees(unsigned char donnee)
+# 91
+void initialisation(void)
 {
+TRISD = 0;
 
-PORTD = (donnee & 0x0F) | (PORTD & 0xF0);
+ANSELH = 0;
+TRISB = 0xFF;
+
+ANSEL = 0;
+TRISA = 0;
+
+ANSELbits.ANS7 = 1;
+
+ADCON0bits.ADON = 1;
+ADCON1 = 0;
+
+ADCON2bits.ADFM = 0;
+ADCON2bits.ACQT = 0;
+ADCON2bits.ADCS = 0;
+}
 
 # 115
+char getAnalog(char canal)
+{
+ADCON0bits.CHS = canal;
+_delay((unsigned long)((1)*(1000000/4000000.0)));
+ADCON0bits.GO_DONE = 1;
+while (ADCON0bits.GO_DONE == 1)
+;
+return ADRESH;
 }
 
-# 124
-static unsigned char lcd_busy(void)
+# 132
+void initTabVue(void)
 {
-unsigned char adresse;
-
-PORTAbits.RA0 = 0;
-PORTAbits.RA1 = 1;
-
-do
+int i=0;
+int j=0;
+for ( i=0;i<4;i++)
 {
-PORTAbits.RA2 = 1;
-__nop();
-adresse = lcd_lireDonnees() << 4;
-PORTAbits.RA2 = 0;
-_delay((unsigned long)((2)*(1000000/4000000.0)));
-PORTAbits.RA2 = 1;
-__nop();
-adresse |= lcd_lireDonnees();
-PORTAbits.RA2 = 0;
-_delay((unsigned long)((2)*(1000000/4000000.0)));
-}
-while(adresse&0x80);
-
-PORTAbits.RA1 = 0;
-return(adresse&0x7f);
+for (j=0;j<=(20);j++)
+{
+if(i<20)
+{
+m_tabVue[i][j]= 1;
 }
 
-# 156
-static unsigned char lcd_wrCom(unsigned char commande)
+if (j==20)
 {
-lcd_busy();
-
-TRISD = 0b00000000;
-_delay((unsigned long)((2)*(1000000/4000000.0)));
-
-PORTAbits.RA0 = 0;
-PORTAbits.RA1 = 0;
-
-lcd_ecrireDonnees(commande >> 4);
-lcd_strobeEnableBit();
-_delay((unsigned long)((2)*(1000000/4000000.0)));
-
-lcd_ecrireDonnees(commande);
-lcd_strobeEnableBit();
-_delay((unsigned long)((40)*(1000000/4000000.0)));
-
-if ((commande == 0x01) || commande == 0x02)
-_delay((unsigned long)((2)*(1000000/4000.0)));
-
-TRISD = 0b00001111;
-_delay((unsigned long)((2)*(1000000/4000000.0)));
-return(lcd_busy());
+m_tabVue[i][j]= '\0';
 }
-
-# 188
-static unsigned char lcd_wrData(unsigned char caractere)
-{
-lcd_busy();
-TRISD = 0b00000000;
-_delay((unsigned long)((2)*(1000000/4000000.0)));
-
-PORTAbits.RA0 = 1;
-PORTAbits.RA1 = 0;
-
-lcd_ecrireDonnees(caractere >> 4);
-lcd_strobeEnableBit();
-_delay((unsigned long)((2)*(1000000/4000000.0)));
-
-lcd_ecrireDonnees(caractere);
-lcd_strobeEnableBit();
-_delay((unsigned long)((2)*(1000000/4000000.0)));
-
-TRISD = 0b00001111;
-_delay((unsigned long)((2)*(1000000/4000000.0)));
-return(lcd_busy());
-}
-
-# 221
-static void lcd_resetSequence(void)
-{
-
-
-
-TRISD = 0b00000000;
-
-_delay((unsigned long)((40)*(1000000/4000.0)));
-PORTAbits.RA0 = 0;
-PORTAbits.RA1 = 0;
-
-lcd_ecrireDonnees(0x03);
-lcd_strobeEnableBit();
-_delay((unsigned long)((40)*(1000000/4000000.0)));
-
-
-lcd_ecrireDonnees(0x03);
-lcd_strobeEnableBit();
-_delay((unsigned long)((40)*(1000000/4000000.0)));
-
-lcd_ecrireDonnees(0x03);
-lcd_strobeEnableBit();
-_delay((unsigned long)((40)*(1000000/4000000.0)));
-
-lcd_ecrireDonnees(0x02);
-lcd_strobeEnableBit();
-_delay((unsigned long)((40)*(1000000/4000000.0)));
-
-TRISD = 0b00001111;
-}
-
-# 258
-void lcd_init(void)
-{
-
-lcd_resetSequence();
-lcd_wrCom(0x28);
-lcd_wrCom(0x0F);
-lcd_wrCom(0x01);
-lcd_wrCom(0x06);
-lcd_wrCom(0x80);
-lcd_initCGRam();
-}
-
-# 276
-void lcd_effaceAffichage(void)
-{
-lcd_wrCom(0x01);
-lcd_wrCom(0x80);
-}
-
-# 288
-void lcd_curseurHome(void)
-{
-lcd_wrCom(0x02);
-}
-
-# 300
-void lcd_effaceChar(unsigned char nbr)
-{
-char i;
-for(i=0;i<nbr;i++)
-lcd_wrData(' ');
-}
-
-# 314
-void lcd_gotoXY(unsigned char x, unsigned char y)
-{
-switch(y)
-{
-case 1:
-lcd_wrCom((x-1+0x80)|0x80);
-break;
-case 2:
-lcd_wrCom((x-1+0xC0)|0x80);
-break;
-case 3:
-lcd_wrCom((x-1+0x94)|0x80);
-break;
-case 4:
-lcd_wrCom((x-1+0xD4)|0x80);
-break;
 }
 }
 
-# 339
-void lcd_effaceLigne(unsigned char y)
-{
-lcd_gotoXY(1,y);
-lcd_effaceChar(20);
-lcd_gotoXY(1,y);
 }
 
-# 359
-void lcd_ecritChar(unsigned char car)
+# 161
+void rempliMines(int nb)
 {
-unsigned char posRam;
+int i=0;
+int j=0;
+char x =0;
+char y =0;
+char nbMine =0;
 
-posRam = lcd_wrData(car);
-switch(posRam)
+for (int i=0;i<4;i++)
 {
-case 0x94:
-lcd_wrCom(0xC0|0x80);
-break;
-case 0xD4:
-lcd_wrCom(0x94|0x80);
-break;
-case 0xC0:
-lcd_wrCom(0xD4|0x80);
-break;
+for (int j=0;j<20;j++)
+{
+m_tabMines[i][j]=32;
 }
 }
 
-# 387
-void lcd_putMessage(const unsigned char *chaine)
+while (nbMine!=nb)
 {
-unsigned char j;
-
-for(j = 0; chaine[j] != 0; j++)
-lcd_ecritChar(chaine[j]);
+x = rand()%20;
+y = rand()%4;
+if (m_tabMines[y][x]==32)
+{
+m_tabMines[y][x] = 2;
+nbMine = nbMine + 1;
+}
+}
 }
 
-# 401
-void lcd_cacheCurseur(void)
+# 198
+void metToucheCombien(void)
 {
-lcd_wrCom(0x0C);
+int i=0;
+int j=0;
+int mine=0;
+
+for ( i=0;i<4;i++)
+{
+for (j=0;j<20;j++)
+{
+if(m_tabMines[i][j]!= 2)
+{
+mine = calculToucheCombien(i,j);
+if (mine==0)
+{
+m_tabMines[i][j]=32;
+}
+if (mine>0)
+{
+m_tabMines[i][j]= (mine+48);
+}
+}
+}
+}
 }
 
-# 412
-void lcd_montreCurseur(void)
+# 230
+char calculToucheCombien(int ligne, int colonne)
 {
-lcd_wrCom(0x0F);
+int nb_mine =0;
+int i=0;
+int j=0;
+if ((ligne<3)&&(ligne>0)&&(colonne>0)&&(colonne<20))
+{
+for(i=-1;i<2;i++)
+{
+for(j=-1;j<=1;j++)
+{
+if (m_tabMines[ligne+(i)][colonne+(j)]== 2)
+{
+nb_mine++;
+}
+}
+}
+}
+if((ligne==0)&&(colonne==0))
+{
+if(m_tabMines[ligne][colonne+1]==2)
+{
+nb_mine++;
+}
+for(j=0;j<=1;j++)
+{
+if(m_tabMines[ligne+1][colonne+(j)]==2)
+{
+nb_mine++;
+}
+}
+}
+if((ligne==0)&&(colonne<20)&&(colonne>0))
+{
+for(i=-1;i<=1;i++)
+{
+if(m_tabMines[ligne][colonne+(i)]==2)
+{
+nb_mine ++;
+}
+i++;
+}
+for(i=1;i<=1;i++)
+{
+for(j=-1;j<=1;j++)
+{
+if(m_tabMines[ligne+(i)][colonne+(j)]==2)
+{
+nb_mine ++;
+}
+}
+}
+}
+if((ligne==0)&&(colonne==20))
+{
+if(m_tabMines[ligne][colonne-1]==2)
+{
+nb_mine++;
+}
+for(i=-1;i<1;i++)
+{
+if(m_tabMines[ligne+1][colonne+i]==2)
+{
+nb_mine++;
+}
+}
+}
+if((ligne==3)&&(colonne==0))
+{
+if(m_tabMines[ligne-1][colonne]==2)
+{
+nb_mine++;
+}
+for(i=-1;i<=0;i++)
+{
+if(m_tabMines[ligne+(i)][colonne+1]==2)
+{
+nb_mine++;
+}
+}
+}
+if((ligne==3)&&(colonne<20)&&(colonne>0))
+{
+for(j=-1;j<=1;j++)
+{
+if(m_tabMines[ligne-1][(colonne+j)]== 2)
+{
+nb_mine++;
+}
+}
+for(i=-1;i<=1;i++)
+{
+if(m_tabMines[ligne][(colonne+i)]==2)
+{
+nb_mine++;
+}
+i++;
+}
+}
+if((ligne==3)&&(colonne==20))
+{
+for(i=-1;i<1;i++)
+{
+if(m_tabMines[ligne-1][colonne+i]== 2)
+{
+nb_mine++;
+}
+}
+if(m_tabMines[ligne][colonne-1]==2)
+{
+nb_mine++;
+}
+}
+return nb_mine;
 }
 
-static void lcd_initCGRam(void)
+# 352
+void deplace(char* x, char* y)
 {
-char i,j;
-
-lcd_wrCom(0x40);
-for(i=0;i<8;i++)
+if(getAnalog(6)>220)
 {
-for(j=0;j<8;j++)
-lcd_wrData(matCGRAM[i][j]);
+(*x)= (*x) +1;
+if (*x > 20)
+{
+*x=1;
 }
-lcd_curseurHome();
+}
+else if(getAnalog(6)<110)
+{
+(*x)=(*x)-1;
+if((*x)<1)
+{
+(*x)=20;
+}
+}
+if(getAnalog(7)<110)
+{
+(*y)= (*y) +1;
+if ((*y )> 4)
+{
+(*y)=1;
+}
+}
+else if(getAnalog(7)>200)
+{
+(*y)=(*y) - 1;
+if (*y < 1)
+{
+(*y)=4;
+}
+}
+lcd_gotoXY(*x ,*y);
 }
 
-
-static void lcd_strobeEnableBit(void)
+# 397
+bool demine(char x, char y)
 {
-PORTAbits.RA2 = 1;
-__nop();
-PORTAbits.RA2 = 0;
+x=x-1;
+y=y-1;
+bool mine= 1;
+if (m_tabMines[(y)][(x)]== 2)
+{
+mine=0;
+}
+else if ((m_tabMines[(y)][(x)]!= 2)&&(m_tabMines[(y)][(x)]==32))
+{
+mine=1;
+enleveTuilesAutour((x),(y));
+}
+else
+{
+mine=1;
+m_tabVue[y][x]=m_tabMines[y][x];
+lcd_ecritChar(m_tabVue[y][x]);
+}
+return mine;
+}
+
+# 426
+void enleveTuilesAutour(char x, char y)
+{
+int i=-1;
+int mine=0;
+
+m_tabVue[y][x]=32;
+for ( i=-1;i<=1;i++)
+{
+if((y==0)&&(i==-1))
+{
+i=0;
+}
+for(int j=-1;j<=1;j++)
+{
+if((x==0)&&(j==-1))
+{
+j=0;
+}
+m_tabVue[y+i][x+j]= m_tabMines[y+i][x+j];
+lcd_gotoXY(x+1+j,y+i+1);
+lcd_ecritChar(m_tabVue[y+i][x+j]);
+if((x==19)&&(j==0))
+{
+j=1;
+}
+}
+if((y==3)&&(i==0))
+{
+i=1;
+}
+}
+}
+
+# 468
+bool gagne(int* pMines)
+{
+int nb_Tuile =0;
+bool gagne= 0;
+int i=0;
+int j=0;
+for(i=0;i<4;i++)
+{
+for(j=0;j<20;j++)
+{
+if(m_tabVue[i][j]==1)
+{
+nb_Tuile++;
+}
+}
+}
+if (*pMines == nb_Tuile)
+{
+lcd_effaceAffichage();
+(*pMines)=(*pMines) +1;
+gagne=1;
+}
+return gagne;
+}
+
+# 497
+void afficheTabVue(void)
+{
+int i=0;
+for(i=0;i<4;i++)
+{
+lcd_gotoXY( 1, i+1);
+lcd_putMessage(m_tabVue[i]);
+}
 }

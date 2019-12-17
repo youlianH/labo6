@@ -4233,9 +4233,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _y `*uc ~T0 @X0 1 r2 ]
 "353
 [f ]
-[; ;main.c: 354: if(getAnalog(6)>210)
+[; ;main.c: 354: if(getAnalog(6)>220)
 "354
-[e $ ! > -> ( _getAnalog (1 -> -> 6 `i `uc `i -> 210 `i 401  ]
+[e $ ! > -> ( _getAnalog (1 -> -> 6 `i `uc `i -> 220 `i 401  ]
 [; ;main.c: 355: {
 "355
 {
