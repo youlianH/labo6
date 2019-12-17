@@ -14,7 +14,7 @@ echo -e "tge243\ntge243" | passwd YOULIAN
 
 #Fait partit du groupe sudo
 
-sudo usermod -aG YOULIAN
+sudo usermod -aG YOULIAN sudo
 
 #Pas besoin de demander un mot de passe lors de l'utilisation de sudo pour l'utilisateur
 
