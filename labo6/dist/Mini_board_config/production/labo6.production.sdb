@@ -61,29 +61,29 @@
 [v _lcd_initCGRam lcd_initCGRam `A(v  1 s 1 lcd_initCGRam ]
 "431
 [v _lcd_strobeEnableBit lcd_strobeEnableBit `A(v  1 s 1 lcd_strobeEnableBit ]
-"51 C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+"52 C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
 [v _main main `A(v  1 e 1 0 ]
-"91
+"92
 [v _initialisation initialisation `A(v  1 e 1 0 ]
-"111
+"112
 [v _getAnalog getAnalog `A(uc  1 e 1 0 ]
-"127
+"128
 [v _initTabVue initTabVue `A(v  1 e 1 0 ]
-"155
+"154
 [v _rempliMines rempliMines `A(v  1 e 1 0 ]
-"192
+"189
 [v _metToucheCombien metToucheCombien `A(v  1 e 1 0 ]
-"224
+"219
 [v _calculToucheCombien calculToucheCombien `A(uc  1 e 1 0 ]
-"346
+"342
 [v _deplace deplace `A(v  1 e 1 0 ]
-"391
+"387
 [v _demine demine `A(uc  1 e 1 0 ]
-"420
+"416
 [v _enleveTuilesAutour enleveTuilesAutour `A(v  1 e 1 0 ]
-"462
+"455
 [v _gagne gagne `A(uc  1 e 1 0 ]
-"491
+"483
 [v _afficheTabVue afficheTabVue `A(v  1 e 1 0 ]
 "29 C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\serie.c
 [v _init_serie init_serie `A(v  1 e 1 0 ]
@@ -103,7 +103,7 @@
 [v _ANSELbits ANSELbits `VES188  1 e 1 @3966 ]
 "508
 [v _ANSELH ANSELH `VEuc  1 e 1 @3967 ]
-[s S665 . 1 `uc 1 RA0 1 0 :1:0 
+[s S663 . 1 `uc 1 RA0 1 0 :1:0 
 `uc 1 RA1 1 0 :1:1 
 `uc 1 RA2 1 0 :1:2 
 `uc 1 RA3 1 0 :1:3 
@@ -113,49 +113,49 @@
 `uc 1 RA7 1 0 :1:7 
 ]
 "618
-[s S674 . 1 `uc 1 AN0 1 0 :1:0 
+[s S672 . 1 `uc 1 AN0 1 0 :1:0 
 `uc 1 AN1 1 0 :1:1 
 `uc 1 AN2 1 0 :1:2 
 `uc 1 AN3 1 0 :1:3 
 `uc 1 . 1 0 :1:4 
 `uc 1 AN4 1 0 :1:5 
 ]
-[s S681 . 1 `uc 1 C12IN0M 1 0 :1:0 
+[s S679 . 1 `uc 1 C12IN0M 1 0 :1:0 
 `uc 1 C12IN1M 1 0 :1:1 
 `uc 1 C2INP 1 0 :1:2 
 `uc 1 C1INP 1 0 :1:3 
 `uc 1 C1OUT 1 0 :1:4 
 `uc 1 C2OUT 1 0 :1:5 
 ]
-[s S688 . 1 `uc 1 C12IN0N 1 0 :1:0 
+[s S686 . 1 `uc 1 C12IN0N 1 0 :1:0 
 `uc 1 C12IN1N 1 0 :1:1 
 `uc 1 VREFM 1 0 :1:2 
 `uc 1 VREFP 1 0 :1:3 
 `uc 1 T0CKI 1 0 :1:4 
 `uc 1 SS 1 0 :1:5 
 ]
-[s S695 . 1 `uc 1 . 1 0 :5:0 
+[s S693 . 1 `uc 1 . 1 0 :5:0 
 `uc 1 NOT_SS 1 0 :1:5 
 ]
-[s S698 . 1 `uc 1 . 1 0 :2:0 
+[s S696 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 VREFN 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 nSS 1 0 :1:5 
 ]
-[s S703 . 1 `uc 1 . 1 0 :2:0 
+[s S701 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 CVREF 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 LVDIN 1 0 :1:5 
 ]
-[s S708 . 1 `uc 1 . 1 0 :5:0 
+[s S706 . 1 `uc 1 . 1 0 :5:0 
 `uc 1 HLVDIN 1 0 :1:5 
 ]
-[s S711 . 1 `uc 1 ULPWUIN 1 0 :1:0 
+[s S709 . 1 `uc 1 ULPWUIN 1 0 :1:0 
 `uc 1 . 1 0 :6:1 
 `uc 1 RJPU 1 0 :1:7 
 ]
-[u S715 . 1 `S665 1 . 1 0 `S674 1 . 1 0 `S681 1 . 1 0 `S688 1 . 1 0 `S695 1 . 1 0 `S698 1 . 1 0 `S703 1 . 1 0 `S708 1 . 1 0 `S711 1 . 1 0 ]
-[v _PORTAbits PORTAbits `VES715  1 e 1 @3968 ]
+[u S713 . 1 `S663 1 . 1 0 `S672 1 . 1 0 `S679 1 . 1 0 `S686 1 . 1 0 `S693 1 . 1 0 `S696 1 . 1 0 `S701 1 . 1 0 `S706 1 . 1 0 `S709 1 . 1 0 ]
+[v _PORTAbits PORTAbits `VES713  1 e 1 @3968 ]
 [s S68 . 1 `uc 1 RB0 1 0 :1:0 
 `uc 1 RB1 1 0 :1:1 
 `uc 1 RB2 1 0 :1:2 
@@ -205,7 +205,7 @@
 [v _TRISA TRISA `VEuc  1 e 1 @3986 ]
 "2254
 [v _TRISB TRISB `VEuc  1 e 1 @3987 ]
-[s S425 . 1 `uc 1 TRISC0 1 0 :1:0 
+[s S423 . 1 `uc 1 TRISC0 1 0 :1:0 
 `uc 1 TRISC1 1 0 :1:1 
 `uc 1 TRISC2 1 0 :1:2 
 `uc 1 TRISC3 1 0 :1:3 
@@ -215,7 +215,7 @@
 `uc 1 TRISC7 1 0 :1:7 
 ]
 "2508
-[s S434 . 1 `uc 1 RC0 1 0 :1:0 
+[s S432 . 1 `uc 1 RC0 1 0 :1:0 
 `uc 1 RC1 1 0 :1:1 
 `uc 1 RC2 1 0 :1:2 
 `uc 1 RC3 1 0 :1:3 
@@ -224,11 +224,11 @@
 `uc 1 RC6 1 0 :1:6 
 `uc 1 RC7 1 0 :1:7 
 ]
-[u S443 . 1 `S425 1 . 1 0 `S434 1 . 1 0 ]
-[v _TRISCbits TRISCbits `VES443  1 e 1 @3988 ]
+[u S441 . 1 `S423 1 . 1 0 `S432 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES441  1 e 1 @3988 ]
 "2698
 [v _TRISD TRISD `VEuc  1 e 1 @3989 ]
-[s S561 . 1 `uc 1 RX9D 1 0 :1:0 
+[s S559 . 1 `uc 1 RX9D 1 0 :1:0 
 `uc 1 OERR 1 0 :1:1 
 `uc 1 FERR 1 0 :1:2 
 `uc 1 ADDEN 1 0 :1:3 
@@ -238,23 +238,23 @@
 `uc 1 SPEN 1 0 :1:7 
 ]
 "3796
-[s S570 . 1 `uc 1 . 1 0 :3:0 
+[s S568 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 ADEN 1 0 :1:3 
 ]
-[s S573 . 1 `uc 1 . 1 0 :5:0 
+[s S571 . 1 `uc 1 . 1 0 :5:0 
 `uc 1 SRENA 1 0 :1:5 
 ]
-[s S576 . 1 `uc 1 . 1 0 :6:0 
+[s S574 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 RC8_9 1 0 :1:6 
 ]
-[s S579 . 1 `uc 1 . 1 0 :6:0 
+[s S577 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 RC9 1 0 :1:6 
 ]
-[s S582 . 1 `uc 1 RCD8 1 0 :1:0 
+[s S580 . 1 `uc 1 RCD8 1 0 :1:0 
 ]
-[u S584 . 1 `S561 1 . 1 0 `S570 1 . 1 0 `S573 1 . 1 0 `S576 1 . 1 0 `S579 1 . 1 0 `S582 1 . 1 0 ]
-[v _RCSTAbits RCSTAbits `VES584  1 e 1 @4011 ]
-[s S509 . 1 `uc 1 TX9D 1 0 :1:0 
+[u S582 . 1 `S559 1 . 1 0 `S568 1 . 1 0 `S571 1 . 1 0 `S574 1 . 1 0 `S577 1 . 1 0 `S580 1 . 1 0 ]
+[v _RCSTAbits RCSTAbits `VES582  1 e 1 @4011 ]
+[s S507 . 1 `uc 1 TX9D 1 0 :1:0 
 `uc 1 TRMT 1 0 :1:1 
 `uc 1 BRGH 1 0 :1:2 
 `uc 1 SENDB 1 0 :1:3 
@@ -264,7 +264,7 @@
 `uc 1 CSRC 1 0 :1:7 
 ]
 "4004
-[s S518 . 1 `uc 1 TX9D1 1 0 :1:0 
+[s S516 . 1 `uc 1 TX9D1 1 0 :1:0 
 `uc 1 TRMT1 1 0 :1:1 
 `uc 1 BRGH1 1 0 :1:2 
 `uc 1 SENDB1 1 0 :1:3 
@@ -273,13 +273,13 @@
 `uc 1 TX91 1 0 :1:6 
 `uc 1 CSRC1 1 0 :1:7 
 ]
-[s S527 . 1 `uc 1 . 1 0 :6:0 
+[s S525 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 TX8_9 1 0 :1:6 
 ]
-[s S530 . 1 `uc 1 TXD8 1 0 :1:0 
+[s S528 . 1 `uc 1 TXD8 1 0 :1:0 
 ]
-[u S532 . 1 `S509 1 . 1 0 `S518 1 . 1 0 `S527 1 . 1 0 `S530 1 . 1 0 ]
-[v _TXSTAbits TXSTAbits `VES532  1 e 1 @4012 ]
+[u S530 . 1 `S507 1 . 1 0 `S516 1 . 1 0 `S525 1 . 1 0 `S528 1 . 1 0 ]
+[v _TXSTAbits TXSTAbits `VES530  1 e 1 @4012 ]
 "4221
 [v _TXREG TXREG `VEuc  1 e 1 @4013 ]
 "4233
@@ -288,7 +288,7 @@
 [v _SPBRG SPBRG `VEuc  1 e 1 @4015 ]
 "4257
 [v _SPBRGH SPBRGH `VEuc  1 e 1 @4016 ]
-[s S467 . 1 `uc 1 ABDEN 1 0 :1:0 
+[s S465 . 1 `uc 1 ABDEN 1 0 :1:0 
 `uc 1 WUE 1 0 :1:1 
 `uc 1 . 1 0 :1:2 
 `uc 1 BRG16 1 0 :1:3 
@@ -298,17 +298,17 @@
 `uc 1 ABDOVF 1 0 :1:7 
 ]
 "4689
-[s S476 . 1 `uc 1 . 1 0 :4:0 
+[s S474 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 SCKP 1 0 :1:4 
 ]
-[s S479 . 1 `uc 1 . 1 0 :5:0 
+[s S477 . 1 `uc 1 . 1 0 :5:0 
 `uc 1 RXCKP 1 0 :1:5 
 ]
-[s S482 . 1 `uc 1 . 1 0 :1:0 
+[s S480 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 W4E 1 0 :1:1 
 ]
-[u S485 . 1 `S467 1 . 1 0 `S476 1 . 1 0 `S479 1 . 1 0 `S482 1 . 1 0 ]
-[v _BAUDCONbits BAUDCONbits `VES485  1 e 1 @4024 ]
+[u S483 . 1 `S465 1 . 1 0 `S474 1 . 1 0 `S477 1 . 1 0 `S480 1 . 1 0 ]
+[v _BAUDCONbits BAUDCONbits `VES483  1 e 1 @4024 ]
 [s S268 . 1 `uc 1 ADCS 1 0 :3:0 
 `uc 1 ACQT 1 0 :3:3 
 `uc 1 . 1 0 :1:6 
@@ -366,41 +366,37 @@
 [v _randx randx `l  1 s 4 randx ]
 "66 C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
 [v _matCGRAM matCGRAM `A[8][8]uc  1 e 64 0 ]
-"47 C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+"49 C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
 [v _m_tabVue m_tabVue `A[4][21]uc  1 e 84 0 ]
-"48
+"50
 [v _m_tabMines m_tabMines `A[4][21]uc  1 e 84 0 ]
-"51
+"52
 [v _main main `A(v  1 e 1 0 ]
 {
-"59
-[v main@NBMines NBMines `i  1 a 2 37 ]
-"61
-[v main@y y `uc  1 a 1 40 ]
 "60
-[v main@x x `uc  1 a 1 39 ]
-"84
+[v main@NBMines NBMines `i  1 a 2 33 ]
+"62
+[v main@y y `uc  1 a 1 36 ]
+"61
+[v main@x x `uc  1 a 1 35 ]
+"85
 } 0
-"155
+"154
 [v _rempliMines rempliMines `A(v  1 e 1 0 ]
 {
-"165
-[v rempliMines@j_385 j `i  1 a 2 34 ]
-"163
-[v rempliMines@i_384 i `i  1 a 2 32 ]
-"158
-[v rempliMines@j j `i  1 a 2 27 ]
-"157
-[v rempliMines@i i `i  1 a 2 25 ]
-"161
-[v rempliMines@nbMine nbMine `uc  1 a 1 31 ]
+"162
+[v rempliMines@j j `i  1 a 2 30 ]
 "160
-[v rempliMines@y y `uc  1 a 1 30 ]
-"159
-[v rempliMines@x x `uc  1 a 1 29 ]
-"155
+[v rempliMines@i i `i  1 a 2 28 ]
+"158
+[v rempliMines@nbMine nbMine `uc  1 a 1 27 ]
+"157
+[v rempliMines@y y `uc  1 a 1 26 ]
+"156
+[v rempliMines@x x `uc  1 a 1 25 ]
+"154
 [v rempliMines@nb nb `i  1 p 2 20 ]
-"181
+"178
 } 0
 "12 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\rand.c
 [v _rand rand `(i  1 e 2 0 ]
@@ -428,30 +424,30 @@
 [v ___awmod@divisor divisor `i  1 p 2 16 ]
 "34
 } 0
-"192 C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+"189 C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
 [v _metToucheCombien metToucheCombien `A(v  1 e 1 0 ]
 {
 "195
 [v metToucheCombien@j j `i  1 a 2 28 ]
-"194
+"193
 [v metToucheCombien@i i `i  1 a 2 26 ]
-"196
+"191
 [v metToucheCombien@mine mine `i  1 a 2 24 ]
-"216
+"211
 } 0
-"224
+"219
 [v _calculToucheCombien calculToucheCombien `A(uc  1 e 1 0 ]
 {
-"227
+"222
 [v calculToucheCombien@i i `i  1 a 2 19 ]
-"228
+"223
 [v calculToucheCombien@j j `i  1 a 2 17 ]
-"226
+"221
 [v calculToucheCombien@nb_mine nb_mine `i  1 a 2 15 ]
-"224
+"219
 [v calculToucheCombien@ligne ligne `i  1 p 2 6 ]
 [v calculToucheCombien@colonne colonne `i  1 p 2 8 ]
-"338
+"334
 } 0
 "258 C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
 [v _lcd_init lcd_init `A(v  1 e 1 0 ]
@@ -476,96 +472,97 @@
 {
 "291
 } 0
-"91 C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+"92 C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
 [v _initialisation initialisation `A(v  1 e 1 0 ]
 {
-"105
+"106
 } 0
 "29 C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\serie.c
 [v _init_serie init_serie `A(v  1 e 1 0 ]
 {
 "48
 } 0
-"127 C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+"128 C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
 [v _initTabVue initTabVue `A(v  1 e 1 0 ]
 {
-"130
+"132
 [v initTabVue@j j `i  1 a 2 10 ]
-"129
+"130
 [v initTabVue@i i `i  1 a 2 8 ]
-"146
+"145
 } 0
-"462
+"455
 [v _gagne gagne `A(uc  1 e 1 0 ]
 {
-"467
-[v gagne@j j `i  1 a 2 16 ]
-"466
-[v gagne@i i `i  1 a 2 14 ]
-"464
-[v gagne@nb_Tuile nb_Tuile `i  1 a 2 11 ]
-[v gagne@gagne gagne `uc  1 a 1 13 ]
 "462
+[v gagne@j j `i  1 a 2 16 ]
+"460
+[v gagne@i i `i  1 a 2 14 ]
+"458
+[v gagne@nb_Tuile nb_Tuile `i  1 a 2 11 ]
+"456
+[v gagne@gagne gagne `uc  1 a 1 13 ]
+"455
 [v gagne@pMines pMines `*.39i  1 p 2 6 ]
-"485
+"477
 } 0
 "276 C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
 [v _lcd_effaceAffichage lcd_effaceAffichage `A(v  1 e 1 0 ]
 {
 "280
 } 0
-"346 C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
+"342 C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\main.c
 [v _deplace deplace `A(v  1 e 1 0 ]
 {
 [v deplace@x x `*.39uc  1 p 2 5 ]
 [v deplace@y y `*.39uc  1 p 2 7 ]
-"381
+"377
 } 0
-"111
+"112
 [v _getAnalog getAnalog `A(uc  1 e 1 0 ]
 {
 [v getAnalog@canal canal `uc  1 a 1 wreg ]
 [v getAnalog@canal canal `uc  1 a 1 wreg ]
-"113
+"114
 [v getAnalog@canal canal `uc  1 a 1 1 ]
-"118
+"119
 } 0
-"391
+"387
 [v _demine demine `A(uc  1 e 1 0 ]
 {
 [v demine@x x `uc  1 a 1 wreg ]
-"395
-[v demine@mine mine `uc  1 a 1 23 ]
 "391
+[v demine@mine mine `uc  1 a 1 23 ]
+"387
 [v demine@x x `uc  1 a 1 wreg ]
 [v demine@y y `uc  1 p 1 18 ]
-"393
+"389
 [v demine@x x `uc  1 a 1 24 ]
-"412
+"408
 } 0
-"420
+"416
 [v _enleveTuilesAutour enleveTuilesAutour `A(v  1 e 1 0 ]
 {
 [v enleveTuilesAutour@x x `uc  1 a 1 wreg ]
-"432
+"427
 [v enleveTuilesAutour@j j `i  1 a 2 14 ]
-"422
+"418
 [v enleveTuilesAutour@i i `i  1 a 2 16 ]
-"423
+"419
 [v enleveTuilesAutour@mine mine `i  1 a 2 11 ]
-"420
+"416
 [v enleveTuilesAutour@x x `uc  1 a 1 wreg ]
 [v enleveTuilesAutour@y y `uc  1 p 1 6 ]
-"422
+"418
 [v enleveTuilesAutour@x x `uc  1 a 1 13 ]
-"451
+"446
 } 0
-"491
+"483
 [v _afficheTabVue afficheTabVue `A(v  1 e 1 0 ]
 {
-"493
+"485
 [v afficheTabVue@i i `i  1 a 2 17 ]
-"498
+"490
 } 0
 "387 C:\Users\Youlian\Desktop\Ecole\Prog structure\labo6\Lcd4Lignes.c
 [v _lcd_putMessage lcd_putMessage `A(v  1 e 1 0 ]

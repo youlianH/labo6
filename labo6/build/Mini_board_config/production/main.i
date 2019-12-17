@@ -4976,7 +4976,7 @@ extern struct tm * localtime(const time_t *) ;
 extern size_t strftime(char *, size_t, const char *, const struct tm *) ;
 extern time_t mktime(struct tm *);
 
-# 35 "main.c"
+# 38 "main.c"
 void initialisation(void);
 void initTabVue(void);
 void rempliMines(int nb);
@@ -4988,10 +4988,8 @@ void enleveTuilesAutour(char x, char y);
 bool gagne(int* pMines);
 void afficheTabVue(void);
 
-
 char m_tabVue[4][20+1];
 char m_tabMines[4][20+1];
-
 
 void main(void)
 {
@@ -5028,7 +5026,7 @@ _delay((unsigned long)((100)*(1000000/4000.0)));
 }
 }
 
-# 91
+# 92
 void initialisation(void)
 {
 TRISD = 0;
@@ -5045,7 +5043,7 @@ ADCON2bits.ACQT = 0;
 ADCON2bits.ADCS = 0;
 }
 
-# 111
+# 112
 char getAnalog(char canal)
 {
 ADCON0bits.CHS = canal;
@@ -5055,14 +5053,12 @@ while (ADCON0bits.GO_DONE == 1);
 return ADRESH;
 }
 
-# 127
+# 128
 void initTabVue(void)
 {
-int i=0;
-int j=0;
-for ( i=0;i<4;i++)
+for (int i=0;i<4;i++)
 {
-for (j=0;j<=(20);j++)
+for (int j=0;j<=(20);j++)
 {
 if(i<20)
 {
@@ -5077,11 +5073,9 @@ m_tabVue[i][j]= '\0';
 
 }
 
-# 155
+# 154
 void rempliMines(int nb)
 {
-int i=0;
-int j=0;
 char x =0;
 char y =0;
 char nbMine =0;
@@ -5106,16 +5100,14 @@ nbMine = nbMine + 1;
 }
 }
 
-# 192
+# 189
 void metToucheCombien(void)
 {
-int i=0;
-int j=0;
 int mine=0;
 
-for ( i=0;i<4;i++)
+for (int i=0;i<4;i++)
 {
-for (j=0;j<20;j++)
+for (int j=0;j<20;j++)
 {
 if(m_tabMines[i][j]!= 2)
 {
@@ -5133,12 +5125,13 @@ m_tabMines[i][j]= (mine+48);
 }
 }
 
-# 224
+# 219
 char calculToucheCombien(int ligne, int colonne)
 {
 int nb_mine =0;
 int i=0;
 int j=0;
+
 if ((ligne<3)&&(ligne>0)&&(colonne>0)&&(colonne<20))
 {
 for(i=-1;i<2;i++)
@@ -5250,7 +5243,7 @@ i++;
 return nb_mine;
 }
 
-# 346
+# 342
 void deplace(char* x, char* y)
 {
 if(getAnalog(6)>220)
@@ -5288,7 +5281,7 @@ if (*y < 1)
 lcd_gotoXY(*x ,*y);
 }
 
-# 391
+# 387
 bool demine(char x, char y)
 {
 x=x-1;
@@ -5312,13 +5305,12 @@ lcd_ecritChar(m_tabVue[y][x]);
 return mine;
 }
 
-# 420
+# 416
 void enleveTuilesAutour(char x, char y)
 {
 int i=0;
 int mine=0;
 
-m_tabVue[y][x]=32;
 for ( i=-1;i<=1;i++)
 {
 if((y==0)&&(i==-1))
@@ -5346,16 +5338,15 @@ i=1;
 }
 }
 
-# 462
+# 455
 bool gagne(int* pMines)
 {
-int nb_Tuile =0;
 bool gagne= 0;
-int i=0;
-int j=0;
-for(i=0;i<4;i++)
+int nb_Tuile =0;
+
+for(int i=0;i<4;i++)
 {
-for(j=0;j<20;j++)
+for(int j=0;j<20;j++)
 {
 if(m_tabVue[i][j]==1)
 {
@@ -5372,7 +5363,7 @@ gagne=1;
 return gagne;
 }
 
-# 491
+# 483
 void afficheTabVue(void)
 {
 for(int i=0;i<4;i++)

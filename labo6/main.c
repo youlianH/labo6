@@ -127,11 +127,9 @@ char getAnalog(char canal)
  */
 void initTabVue(void)
 {
-    int i=0;
-    int j=0;
-    for ( i=0;i<NB_LIGNE;i++)
+    for (int i=0;i<NB_LIGNE;i++)
     {
-        for (j=0;j<=(NB_COL);j++)//Cette boucle attribue le caratère ccgram pour une tuile dans les case 0 à 19 du tableau m_tabVue[][].
+        for (int j=0;j<=(NB_COL);j++)//Cette boucle attribue le caratère cgram pour une tuile dans les case 0 à 19 du tableau m_tabVue[][].
         {
             if(i<20)
             {
@@ -142,8 +140,7 @@ void initTabVue(void)
                 m_tabVue[i][j]= '\0';
             }
         }
-    }
-    
+    }  
 }
  
 /*
@@ -155,8 +152,6 @@ void initTabVue(void)
  */
 void rempliMines(int nb)
 {
-    int i=0;
-    int j=0;
     char x =0;
     char y =0;
     char nbMine =0;
@@ -192,13 +187,11 @@ void rempliMines(int nb)
  */
 void metToucheCombien(void)
 {
-    int i=0;
-    int j=0;
     int mine=0;
     
-    for ( i=0;i<NB_LIGNE;i++)
+    for (int i=0;i<NB_LIGNE;i++)
     {
-        for (j=0;j<NB_COL;j++)
+        for (int j=0;j<NB_COL;j++)
         {
             if(m_tabMines[i][j]!= MINE)
             {
@@ -349,7 +342,7 @@ void deplace(char* x, char* y)
 {
     if(getAnalog(AXE_X)>220)//Lorsque l'analogue est dirigé vers la droite la position du cursseur augmente de 1.  <110
     {
-       (*x)= (*x) +1;
+       (*x)= (*x) +1;//Le curseur se déplace vers la droite.
        if (*x > 20)//Lorsque le cursseur dépasse le 20eme segment du LCD il réapparaît sur le 1er segment.
        {
            *x=1;
@@ -357,7 +350,7 @@ void deplace(char* x, char* y)
     }
     else if(getAnalog(AXE_X)<110)//Lorsque l'analogue est dirigé vers la gauche la position du cursseur diminue de 1.
     {
-       (*x)=(*x)-1;
+       (*x)=(*x)-1;//Le curseur se déplace vers la gauche.
        if((*x)<1)
        {
            (*x)=20;//Lorsque le cursseur dépasse ler 1e segment du LCD il réapparaît sur le 20ème segment.
@@ -406,9 +399,9 @@ bool demine(char x, char y)
     }
     else
     {
-        mine=true;//Lorsqu'on selectionne, avec l'annalogue, une case qui contient une chiffre
+        mine=true;//Lorsqu'on selectionne, avec l'annalogue, une case qui contient une chiffre.
         m_tabVue[y][x]=m_tabMines[y][x];
-        lcd_ecritChar(m_tabVue[y][x]);//Cette commande affiche le chiffre sur l'afficheur LCD
+        lcd_ecritChar(m_tabVue[y][x]);//Cette commande affiche le chiffre sur l'afficheur LCD.
     }
     return mine;    
 }
@@ -424,7 +417,6 @@ bool demine(char x, char y)
     int i=0; 
     int mine=0;
     
-    m_tabVue[y][x]=32;
     for ( i=-1;i<=1;i++)
     {
         if((y==0)&&(i==-1))//Condition pour ne pas copier une case a l'externieur de m_tabMines[y+i][x+j] dans m_tabVue[y+i][x+j]
@@ -461,13 +453,12 @@ bool demine(char x, char y)
  */
 bool gagne(int* pMines)
 {
-    int nb_Tuile =0;
     bool gagne= false;
-    int i=0;
-    int j=0;
-    for(i=0;i<NB_LIGNE;i++)//Cette boucle permet de compter le nombre de Tuille restant dans le tableau m_tabVue[i][j]
+    int nb_Tuile =0;
+
+    for(int i=0;i<NB_LIGNE;i++)//Cette boucle permet de compter le nombre de Tuille restant dans le tableau m_tabVue[i][j]
     {
-        for(j=0;j<NB_COL;j++)
+        for(int j=0;j<NB_COL;j++)
         {
             if(m_tabVue[i][j]==TUILE)
             {
